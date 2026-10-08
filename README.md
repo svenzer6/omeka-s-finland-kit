@@ -12,6 +12,7 @@
 
 Kit kokoaa yhteen [Omeka S](https://omeka.org/s/) -julkaisujärjestelmän, 33 lisäosaa versioineen, lisäosien suomennokset, kaksikielisen demosivuston ja Docker-ympäristön. Yhdellä komennolla saat toimivan arkistopalvelun, jossa on:
 
+- **Aidot arkistokuvat:** 16 vapaasti käytettävää valokuvaa suomalaisista museoista Finnan kautta.
 - **Kaksikielisyys:** suomen- ja englanninkielinen sivusto (`/s/fi`, `/s/en`), jotka näyttävät samat aineistot kielitunnisteiden mukaan suodatettuina.
 - **Suomennetut lisäosat:** julkisen käyttöliittymän tekstit 11 lisäosaan (noin 1 300 merkkijonoa).
 - **Kartat:** aineistot kartalla (Mapping).
@@ -20,7 +21,9 @@ Kit kokoaa yhteen [Omeka S](https://omeka.org/s/) -julkaisujärjestelmän, 33 li
 - **Mukautettava ulkoasu:** Foundation-teema, oma logo, brändiväri ja fontti CSS Editorilla, eikä teematiedostoihin kosketa, joten päivitykset eivät riko mukautuksia.
 - **Toistettava asennus:** kaikki lisäosat on lukittu tiettyyn versioon tiedostossa [`modules.json`](modules.json).
 
-> **Huom.** Demoarkiston aineistot ja kuvat ovat **kuvitteellisia** ja skriptin generoimia. Suomennokset ovat **luonnos (v0.1)**, ja niiden kielentarkastus on kesken. Korjausehdotukset ovat tervetulleita.
+> **Demoaineisto:** 16 aitoa valokuvaa suomalaisten museoiden kokoelmista [Finnan](https://finna.fi) kautta (Public Domain Mark 1.0 / CC0 1.0). Kuvat ladataan Finnasta asennuksen aikana, eikä niitä tallenneta tähän repositorioon.
+>
+> **Huom.** Suomennokset ovat **luonnos (v0.1)**, ja niiden kielentarkastus on kesken. Korjausehdotukset ovat tervetulleita.
 
 ## Kuvakaappaukset
 
@@ -80,7 +83,7 @@ php scripts/seed_demo.php /var/www/omeka-s        # valinnainen demo
 | `scripts/install_modules.php` | Asentaa, päivittää ja aktivoi lisäosat riippuvuusjärjestyksessä (esim. Common ennen muita). |
 | `scripts/i18n.py` | Suomennostyökalu: `todo` listaa puuttuvat julkiset merkkijonot, `build` kokoaa `.po`/`.mo`-tiedostot, `install` kopioi ne lisäosiin. |
 | `scripts/public_strings.py` | Erottelee lisäosan julkisen käyttöliittymän merkkijonot ylläpidon merkkijonoista. |
-| `scripts/seed_demo.php` | Luo kaksikielisen demoarkiston: sivustot, kokoelmat, 12 aineistoa, karttapisteet, haun ja sivut. `--reset` luo uudelleen. |
+| `scripts/seed_demo.php` | Luo kaksikielisen demoarkiston tiedoston [`demo/finna.json`](demo/finna.json) pohjalta: lataa 16 kuvaa Finnasta, luo sivustot, kokoelmat, aineistot, karttapisteet, haun ja sivut. `--reset` luo uudelleen. |
 | `scripts/screenshots.py` | Ottaa README-kuvakaappaukset headless Chromella. |
 
 ## Lisäosat
@@ -160,7 +163,18 @@ Kääntämättä jätetyt ovat tuotenimiä (esim. Googlebot) tai teknisiä tunni
 
 ## Lisenssi
 
-Kitin skriptit ja asetukset: [GPL-3.0-or-later](LICENSE). Omeka S ja lisäosat noudattavat omia lisenssejään (GPL-3.0 tai CeCILL 2.1). Kunkin lisäosan suomennos jaetaan saman lisenssin ehdoin kuin kyseinen lisäosa. Demoaineisto (`demo/`, generoidut kuvat): CC BY 4.0.
+Kitin skriptit ja asetukset: [GPL-3.0-or-later](LICENSE). Omeka S ja lisäosat noudattavat omia lisenssejään (GPL-3.0 tai CeCILL 2.1). Kunkin lisäosan suomennos jaetaan saman lisenssin ehdoin kuin kyseinen lisäosa.
+
+### Kiitokset ja kuvien oikeudet
+
+Demoarkiston valokuvat ovat seuraavien organisaatioiden kokoelmista, ja ne on haettu [Finnan](https://finna.fi) kautta:
+
+- Helsingin kaupunginmuseo (9 kuvaa, Public Domain Mark 1.0)
+- Turun kaupunginmuseo (4 kuvaa, Public Domain Mark 1.0)
+- Uudenkaupungin museo (2 kuvaa, Public Domain Mark 1.0)
+- Kymenlaakson museo (1 kuva, CC0 1.0)
+
+Jokaisessa aineistossa on linkki alkuperäiseen Finna-tietueeseen sekä kuvaajan ja museon nimi. Suomenkieliset nimekkeet ja kuvaukset ovat Finnasta. Englanninkieliset käännökset ja likimääräiset karttapisteet on lisätty demoa varten.
 
 Omeka on Corporation for Digital Scholarshipin tavaramerkki. Tämä projekti ei ole Omeka-tiimin virallinen julkaisu.
 
@@ -176,4 +190,4 @@ Omeka on Corporation for Digital Scholarshipin tavaramerkki. Tämä projekti ei 
 - Branding through CSS Editor (logo, colour, font) without modifying theme files, so theme updates stay safe.
 - Every module version is pinned in [`modules.json`](modules.json). `install_modules.php` installs modules in dependency order and restarts itself so that services of new modules (e.g. Common) are loaded before their dependants are installed.
 
-Quick start: `cp .env.example .env`, edit the secrets, `docker compose up -d --build`, then open <http://localhost:8080/s/en>. The demo content is fictional and generated. The Finnish translations are a draft pending language review.
+Quick start: `cp .env.example .env`, edit the secrets, `docker compose up -d --build`, then open <http://localhost:8080/s/en>. The demo holds 16 real photographs from Finnish museums, fetched from [Finna](https://finna.fi) at install time (Public Domain Mark 1.0 / CC0 1.0, credited on every record). The Finnish translations are a draft pending language review.

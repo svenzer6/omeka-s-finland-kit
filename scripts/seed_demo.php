@@ -7,12 +7,14 @@
  * Creates two public sites sharing the same content:
  *   /s/fi  Finnish (locale fi_FI)
  *   /s/en  English (locale en_US)
- * Values are language-tagged and each site filters values by its locale, so
- * one record serves both languages. Images are generated with GD (no
- * downloads) and ingested through the File Sideload module. All records are
- * fictional and carry identifiers starting with "KIT-".
+ * The content is 16 real archive photographs reused from Finna (finna.fi),
+ * all Public Domain Mark 1.0 or CC0 1.0, listed in demo/finna.json. Images
+ * are downloaded once into files/kit-demo-source and ingested through the
+ * File Sideload module. Values are language-tagged and each site filters
+ * values by its locale, so one record serves both languages.
  *
- * --reset removes the kit sites, item sets and items before seeding again.
+ * --reset removes the kit sites, item sets, items, search configs and assets
+ * before seeding again. Kit records carry identifiers starting with "KIT-".
  */
 $args = array_slice($argv, 1);
 $reset = in_array('--reset', $args, true);
@@ -27,13 +29,15 @@ if (!extension_loaded('gd')) {
 }
 
 $kitDir = dirname(__DIR__);
-$content = json_decode(file_get_contents("$kitDir/demo/content.json"), true);
+$content = json_decode(file_get_contents("$kitDir/demo/finna.json"), true);
 const BRAND = [78, 0, 142]; // #4E008E
 const LANGS = ['fi' => 'fi_FI', 'en' => 'en_US'];
 // Omeka compares value languages with the site locale as an IETF tag
 // (fi_FI -> fi-FI), so values must use the same tag to pass the filter.
 const LANG_TAGS = ['fi' => 'fi-FI', 'en' => 'en-US'];
 const SEARCH_SLUGS = ['fi' => 'haku', 'en' => 'search'];
+const FINNA_IMAGE = 'https://api.finna.fi/Cover/Show?source=Solr&index=0&size=large&id=';
+const FINNA_RECORD = 'https://finna.fi/Record/';
 
 // ------------------------------------------------------------------ fonts
 function find_font(array $candidates): string
@@ -48,228 +52,43 @@ function find_font(array $candidates): string
 }
 $font = find_font(['C:/Windows/Fonts/arial.ttf', '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', '/usr/share/fonts/dejavu/DejaVuSans.ttf', '/System/Library/Fonts/Supplemental/Arial.ttf']);
 $fontBold = find_font(['C:/Windows/Fonts/arialbd.ttf', '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', '/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf', '/System/Library/Fonts/Supplemental/Arial Bold.ttf']);
-$fontSerif = find_font(['C:/Windows/Fonts/georgia.ttf', '/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf', '/usr/share/fonts/dejavu/DejaVuSerif.ttf', '/System/Library/Fonts/Supplemental/Georgia.ttf', $font]);
 
 // ------------------------------------------------------------------ images
-function rgb($im, array $c, int $alpha = 0)
+function rgb($im, array $c)
 {
-    return imagecolorallocatealpha($im, $c[0], $c[1], $c[2], $alpha);
+    return imagecolorallocate($im, $c[0], $c[1], $c[2]);
 }
 
-function wrap_text(string $text, string $fontFile, float $size, int $maxWidth): array
+function http_get(string $url): ?string
 {
-    $lines = [];
-    $line = '';
-    foreach (explode(' ', $text) as $word) {
-        $try = $line === '' ? $word : "$line $word";
-        $box = imagettfbbox($size, 0, $fontFile, $try);
-        if ($box[2] - $box[0] > $maxWidth && $line !== '') {
-            $lines[] = $line;
-            $line = $word;
-        } else {
-            $line = $try;
+    if (function_exists('curl_init')) {
+        $ch = curl_init($url);
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true, CURLOPT_FOLLOWLOCATION => true, CURLOPT_TIMEOUT => 60,
+            CURLOPT_USERAGENT => 'omeka-s-finland-kit/0.1 (+https://github.com/svenzer6/omeka-s-finland-kit)',
+        ]);
+        // On Windows (e.g. XAMPP) the bundled CA file is often outdated or
+        // misses a local TLS-inspecting proxy: trust the system store.
+        if (PHP_OS_FAMILY === 'Windows' && defined('CURLSSLOPT_NATIVE_CA')) {
+            curl_setopt($ch, CURLOPT_SSL_OPTIONS, CURLSSLOPT_NATIVE_CA);
         }
+        $body = curl_exec($ch);
+        $ok = $body !== false && curl_getinfo($ch, CURLINFO_RESPONSE_CODE) === 200;
+        curl_close($ch);
+        return $ok ? $body : null;
     }
-    $lines[] = $line;
-    return $lines;
+    $ctx = stream_context_create(['http' => ['timeout' => 60, 'header' => "User-Agent: omeka-s-finland-kit/0.1\r\n"]]);
+    $body = @file_get_contents($url, false, $ctx);
+    return $body === false ? null : $body;
 }
 
-function add_grain($im, int $w, int $h, int $amount): void
+/** Grey card used only when Finna cannot be reached. */
+function placeholder(string $title, string $font): GdImage
 {
-    for ($i = 0; $i < $w * $h / 18; $i++) {
-        $v = mt_rand(0, 255);
-        imagesetpixel($im, mt_rand(0, $w - 1), mt_rand(0, $h - 1), imagecolorallocatealpha($im, $v, $v, $v, 127 - $amount));
-    }
-}
-
-function add_vignette($im, int $w, int $h): void
-{
-    for ($i = 0; $i < 60; $i++) {
-        imagerectangle($im, $i, $i, $w - 1 - $i, $h - 1 - $i, imagecolorallocatealpha($im, 20, 12, 4, 60 + $i));
-    }
-}
-
-/** Sepia photograph with a simple scene chosen by $variant. */
-function draw_photo(int $variant, string $caption, string $font): GdImage
-{
-    $w = 1200; $h = 900;
-    $im = imagecreatetruecolor($w, $h);
-    for ($y = 0; $y < $h; $y++) {
-        $t = $y / $h;
-        $c = $t < 0.55 ? [(int) (222 - 50 * $t), (int) (200 - 50 * $t), (int) (160 - 50 * $t)] : [(int) (150 - 60 * $t), (int) (122 - 50 * $t), (int) (88 - 40 * $t)];
-        imageline($im, 0, $y, $w, $y, rgb($im, $c));
-    }
-    $dark = rgb($im, [58, 42, 26], 20);
-    $mid = rgb($im, [96, 74, 50], 30);
-    switch ($variant % 4) {
-        case 0: // factory: hall, chimneys, gate
-            imagefilledrectangle($im, 120, 380, 1080, 640, $mid);
-            foreach ([260, 520, 860] as $x) {
-                imagefilledrectangle($im, $x, 150, $x + 50, 400, $dark);
-                imagefilledellipse($im, $x + 40, 130, 120, 60, rgb($im, [180, 165, 140], 70));
-            }
-            for ($x = 150; $x < 1060; $x += 70) {
-                imagefilledrectangle($im, $x, 430, $x + 40, 500, rgb($im, [210, 190, 150], 40));
-            }
-            imagefilledrectangle($im, 500, 520, 700, 640, $dark);
-            for ($i = 0; $i < 14; $i++) {
-                $px = 140 + $i * 68 + mt_rand(-10, 10);
-                imagefilledellipse($im, $px, 690, 22, 22, $dark);
-                imagefilledrectangle($im, $px - 10, 700, $px + 10, 760, $dark);
-            }
-            break;
-        case 1: // lake: trees, water, pavilion
-            for ($x = 0; $x < $w; $x += 46) {
-                $th = mt_rand(120, 220);
-                imagefilledpolygon($im, [$x, 520, $x + 23, 520 - $th, $x + 46, 520], $dark);
-            }
-            imagefilledrectangle($im, 0, 520, $w, $h, rgb($im, [160, 140, 110], 20));
-            for ($y = 540; $y < $h; $y += 14) {
-                imageline($im, mt_rand(0, 300), $y, mt_rand(700, $w), $y, rgb($im, [210, 195, 165], 60));
-            }
-            imagefilledpolygon($im, [780, 470, 900, 400, 1020, 470], $dark);
-            imagefilledrectangle($im, 800, 470, 1000, 520, $mid);
-            break;
-        case 2: // harbour: boat, mast, water
-            imagefilledrectangle($im, 0, 560, $w, $h, rgb($im, [140, 120, 92], 15));
-            imagefilledpolygon($im, [300, 560, 900, 560, 820, 650, 380, 650], $dark);
-            imagefilledrectangle($im, 590, 250, 606, 560, $dark);
-            imagefilledpolygon($im, [610, 270, 610, 520, 820, 520], rgb($im, [230, 215, 185], 30));
-            imagefilledrectangle($im, 0, 470, 250, 560, $mid);
-            for ($y = 670; $y < $h; $y += 16) {
-                imageline($im, mt_rand(0, 400), $y, mt_rand(600, $w), $y, rgb($im, [200, 185, 150], 70));
-            }
-            break;
-        default: // street: buildings, tram, snow
-            for ($x = 0; $x < $w; $x += 200) {
-                $bh = mt_rand(280, 420);
-                imagefilledrectangle($im, $x, 620 - $bh, $x + 190, 620, $mid);
-                for ($wy = 640 - $bh; $wy < 580; $wy += 60) {
-                    for ($wx = $x + 20; $wx < $x + 170; $wx += 50) {
-                        imagefilledrectangle($im, $wx, $wy, $wx + 25, $wy + 35, rgb($im, [225, 205, 160], 40));
-                    }
-                }
-            }
-            imagefilledrectangle($im, 330, 520, 870, 700, $dark);
-            for ($wx = 360; $wx < 840; $wx += 80) {
-                imagefilledrectangle($im, $wx, 545, $wx + 55, 600, rgb($im, [215, 195, 150], 30));
-            }
-            imageline($im, 600, 520, 600, 380, $dark);
-            imageline($im, 0, 380, $w, 380, $dark);
-            for ($i = 0; $i < 900; $i++) {
-                imagefilledellipse($im, mt_rand(0, $w), mt_rand(0, $h), 5, 5, rgb($im, [245, 240, 230], 40));
-            }
-    }
-    add_grain($im, $w, $h, 35);
-    add_vignette($im, $w, $h);
-    // White print border with caption.
-    $out = imagecreatetruecolor($w + 80, $h + 150);
-    imagefill($out, 0, 0, rgb($out, [246, 242, 233]));
-    imagecopy($out, $im, 40, 40, 0, 0, $w, $h);
-    imagettftext($out, 22, 0, 44, $h + 105, rgb($out, [70, 60, 50]), $font, $caption);
-    imagedestroy($im);
-    return $out;
-}
-
-/** Typed transcript page with a cassette in the corner. */
-function draw_transcript(string $title, string $year, string $font, string $fontSerif): GdImage
-{
-    $w = 1000; $h = 1300;
-    $im = imagecreatetruecolor($w, $h);
-    imagefill($im, 0, 0, rgb($im, [244, 238, 222]));
-    $ink = rgb($im, [40, 38, 36]);
-    imagettftext($im, 20, 0, 80, 120, $ink, $fontSerif, 'LITTEROINTI / TRANSCRIPT');
-    imagettftext($im, 30, 0, 80, 180, $ink, $fontSerif, $title);
-    imagettftext($im, 20, 0, 80, 225, rgb($im, [90, 85, 80]), $fontSerif, $year);
-    imageline($im, 80, 255, $w - 80, 255, $ink);
-    $y = 320;
-    while ($y < $h - 140) {
-        $speaker = mt_rand(0, 2) ? 'V:' : 'H:';
-        imagettftext($im, 20, 0, 80, $y, $ink, $fontSerif, $speaker);
-        $lines = mt_rand(1, 4);
-        for ($i = 0; $i < $lines && $y < $h - 140; $i++) {
-            $len = $i === $lines - 1 ? mt_rand(200, 700) : mt_rand(650, 780);
-            for ($x = 140; $x < 140 + $len; $x += mt_rand(40, 110)) {
-                $wl = mt_rand(25, 90);
-                imagefilledrectangle($im, $x, $y - 14, min($x + $wl, 140 + $len), $y - 4, rgb($im, [70, 66, 62], 40));
-            }
-            $y += 34;
-        }
-        $y += 20;
-    }
-    // Cassette.
-    imagefilledrectangle($im, 720, 70, 920, 200, rgb($im, BRAND));
-    imagefilledrectangle($im, 740, 90, 900, 140, rgb($im, [240, 232, 210]));
-    imagefilledellipse($im, 780, 170, 34, 34, rgb($im, [240, 232, 210]));
-    imagefilledellipse($im, 860, 170, 34, 34, rgb($im, [240, 232, 210]));
-    imagettftext($im, 14, 0, 80, $h - 70, rgb($im, [120, 110, 100]), $font, 'DEMO · Omeka S Finland Kit');
-    add_grain($im, $w, $h, 18);
-    return $im;
-}
-
-/** Aged handwritten document or letter. */
-function draw_document(string $title, string $year, string $font, string $fontSerif): GdImage
-{
-    $w = 1000; $h = 1300;
-    $im = imagecreatetruecolor($w, $h);
-    for ($y = 0; $y < $h; $y++) {
-        $t = abs($y - $h / 2) / ($h / 2);
-        imageline($im, 0, $y, $w, $y, rgb($im, [(int) (236 - 30 * $t), (int) (224 - 34 * $t), (int) (190 - 40 * $t)]));
-    }
-    $ink = rgb($im, [36, 40, 82]);
-    imagettftext($im, 30, 0, 90, 150, $ink, $fontSerif, $title);
-    imagettftext($im, 22, 0, $w - 200, 150, $ink, $fontSerif, $year);
-    imageellipse($im, $w - 170, 260, 150, 150, rgb($im, [150, 40, 40], 30));
-    imageellipse($im, $w - 170, 260, 130, 130, rgb($im, [150, 40, 40], 30));
-    for ($y = 300; $y < $h - 160; $y += 46) {
-        imageline($im, 90, $y + 8, $w - 90, $y + 8, rgb($im, [170, 160, 140], 80));
-        $x = 90;
-        $end = $w - 90 - mt_rand(0, 300);
-        while ($x < $end) {
-            $wl = mt_rand(30, 110);
-            $prev = null;
-            for ($px = $x; $px < min($x + $wl, $end); $px += 3) {
-                $py = $y + (int) (sin($px / 5) * 5 + mt_rand(-2, 2));
-                if ($prev) {
-                    imageline($im, $prev[0], $prev[1], $px, $py, $ink);
-                }
-                $prev = [$px, $py];
-            }
-            $x += $wl + mt_rand(14, 24);
-        }
-    }
-    imagettftext($im, 14, 0, 90, $h - 70, rgb($im, [110, 100, 90]), $font, 'DEMO · Omeka S Finland Kit');
-    add_grain($im, $w, $h, 22);
-    return $im;
-}
-
-/** Bold two-colour poster. */
-function draw_poster(int $variant, string $title, string $year, string $fontBold, string $font): GdImage
-{
-    $w = 900; $h = 1300;
-    $palettes = [[[232, 74, 39], [28, 32, 60], [245, 225, 180]], [[38, 110, 160], [250, 200, 60], [245, 240, 225]]];
-    [$bg, $fg, $paper] = $palettes[$variant % 2];
-    $im = imagecreatetruecolor($w, $h);
-    imagefill($im, 0, 0, rgb($im, $paper));
-    imagefilledrectangle($im, 40, 40, $w - 40, 860, rgb($im, $bg));
-    if ($variant % 2) {
-        for ($i = 0; $i < 7; $i++) {
-            imagefilledrectangle($im, 90 + $i * 100, 820 - $i * 90, 160 + $i * 100, 820, rgb($im, $fg));
-        }
-    } else {
-        imagefilledellipse($im, 450, 420, 560, 560, rgb($im, $fg));
-        imagefilledellipse($im, 450, 420, 320, 320, rgb($im, $bg));
-        imagefilledellipse($im, 450, 420, 120, 120, rgb($im, $paper));
-    }
-    $ink = rgb($im, [28, 28, 32]);
-    $y = 960;
-    foreach (wrap_text(mb_strtoupper($title, 'UTF-8'), $fontBold, 46, $w - 140) as $line) {
-        imagettftext($im, 46, 0, 70, $y, $ink, $fontBold, $line);
-        $y += 66;
-    }
-    imagettftext($im, 34, 0, 70, $y + 20, rgb($im, $bg), $fontBold, $year);
-    imagettftext($im, 14, 0, 70, $h - 50, rgb($im, [110, 100, 90]), $font, 'DEMO · Omeka S Finland Kit');
-    add_grain($im, $w, $h, 14);
+    $im = imagecreatetruecolor(1200, 900);
+    imagefill($im, 0, 0, rgb($im, [228, 224, 232]));
+    imagettftext($im, 34, 0, 60, 460, rgb($im, [70, 60, 80]), $font, $title);
+    imagettftext($im, 18, 0, 60, 520, rgb($im, [110, 100, 120]), $font, 'Image unavailable (Finna offline)');
     return $im;
 }
 
@@ -280,35 +99,61 @@ function draw_logo(string $fontBold, string $font): GdImage
     imagesavealpha($im, true);
     imagefill($im, 0, 0, imagecolorallocatealpha($im, 0, 0, 0, 127));
     $brand = rgb($im, BRAND);
+    $white = rgb($im, [255, 255, 255]);
     imagefilledrectangle($im, 10, 20, 130, 140, $brand);
-    imagefilledrectangle($im, 40, 50, 100, 62, rgb($im, [255, 255, 255]));
-    imagefilledrectangle($im, 40, 74, 100, 86, rgb($im, [255, 255, 255]));
-    imagefilledrectangle($im, 40, 98, 80, 110, rgb($im, [255, 255, 255]));
+    imagefilledrectangle($im, 40, 50, 100, 62, $white);
+    imagefilledrectangle($im, 40, 74, 100, 86, $white);
+    imagefilledrectangle($im, 40, 98, 80, 110, $white);
     imagettftext($im, 46, 0, 160, 95, $brand, $fontBold, 'Demoarkisto');
     imagettftext($im, 18, 0, 163, 132, rgb($im, [70, 70, 80]), $font, 'Omeka S Finland Kit');
     return $im;
 }
 
+/** Wide banner cropped from the centre of a photograph. */
+function draw_hero(string $source, int $w = 1800, int $h = 640): ?GdImage
+{
+    $src = @imagecreatefromstring((string) @file_get_contents($source));
+    if (!$src) {
+        return null;
+    }
+    $sw = imagesx($src); $sh = imagesy($src);
+    $scale = max($w / $sw, $h / $sh);
+    $cw = (int) ($w / $scale); $ch = (int) ($h / $scale);
+    $out = imagecreatetruecolor($w, $h);
+    imagecopyresampled($out, $src, 0, 0, (int) (($sw - $cw) / 2), (int) (($sh - $ch) * 0.45), $w, $h, $cw, $ch);
+    imagedestroy($src);
+    return $out;
+}
+
 $imageDir = "$omekaDir/files/kit-demo-source";
 @mkdir($imageDir, 0775, true);
-mt_srand(2026);
+$downloaded = 0;
+$imageFiles = [];
 foreach ($content['items'] as $i => $item) {
-    $style = $content['sets'][$item['set']]['style'];
-    $fiTitle = $item['fi'][0];
-    $caption = sprintf('DEMO · %s · %s, %s', $fiTitle, $item['place'], $item['date']);
-    switch ($style) {
-        case 'photo': $im = draw_photo($i, $caption, $font); break;
-        case 'interview': $im = draw_transcript($fiTitle, $item['date'], $font, $fontSerif); break;
-        case 'document': $im = draw_document($fiTitle, $item['date'], $font, $fontSerif); break;
-        default: $im = draw_poster($i, $fiTitle, $item['date'], $fontBold, $font);
+    // Downloads are cached; placeholders use another name so that the next
+    // run retries the download.
+    $name = sprintf('finna-%02d.jpg', $i + 1);
+    if (!is_file("$imageDir/$name")) {
+        $body = http_get(FINNA_IMAGE . rawurlencode($item['finna']));
+        if ($body && @imagecreatefromstring($body)) {
+            file_put_contents("$imageDir/$name", $body);
+            $downloaded++;
+        } else {
+            fwrite(STDERR, "warning: could not download {$item['finna']}, using a placeholder\n");
+            $name = sprintf('placeholder-%02d.jpg', $i + 1);
+            imagejpeg(placeholder($item['fi'][0], $font), "$imageDir/$name", 86);
+        }
     }
-    imagejpeg($im, sprintf('%s/kit-%02d.jpg', $imageDir, $i + 1), 86);
-    imagedestroy($im);
+    $imageFiles[$i] = $name;
 }
 $logo = draw_logo($fontBold, $font);
 imagepng($logo, "$imageDir/kit-logo.png");
-imagedestroy($logo);
-echo "images: " . count($content['items']) . " + logo\n";
+$heroIndex = array_search($content['hero'], array_column($content['items'], 'finna'), true) ?: 0;
+$hero = draw_hero("$imageDir/" . $imageFiles[$heroIndex]);
+if ($hero) {
+    imagejpeg($hero, "$imageDir/kit-hero.jpg", 84);
+}
+echo "images: $downloaded downloaded, " . count($content['items']) . " ready\n";
 
 // ------------------------------------------------------------------ omeka
 require "$omekaDir/bootstrap.php";
@@ -324,6 +169,7 @@ $services->get('Omeka\AuthenticationService')->getStorage()->write($admin);
 $api = $services->get('Omeka\ApiManager');
 $settings = $services->get('Omeka\Settings');
 $siteSettings = $services->get('Omeka\Settings\Site');
+$connection = $services->get('Omeka\Connection');
 
 $propIds = [];
 $prop = function (string $term) use ($api, &$propIds): int {
@@ -333,39 +179,41 @@ $classId = fn (string $term) => $api->search('resource_classes', ['term' => $ter
 $val = fn (string $term, string $value, ?string $lang = null) => array_filter([
     'type' => 'literal', 'property_id' => $prop($term), '@value' => $value, '@language' => $lang ? LANG_TAGS[$lang] : null,
 ]);
+$uri = fn (string $term, string $url, string $label) => [
+    'type' => 'uri', 'property_id' => $prop($term), '@id' => $url, 'o:label' => $label,
+];
+$both = fn (string $term, string $fi, string $en) => [$val($term, $fi, 'fi'), $val($term, $en, 'en')];
 $kitQuery = ['property' => [['property' => $prop('dcterms:identifier'), 'type' => 'sw', 'text' => 'KIT-']]];
 
 // Existing demo?
-$existing = $api->search('sites', ['slug' => 'fi'])->getContent();
-if ($existing && !$reset) {
+if ($api->search('sites', ['slug' => 'fi'])->getContent() && !$reset) {
     fwrite(STDERR, "The kit demo already exists (site /s/fi). Use --reset to recreate it.\n");
     exit(1);
 }
-$connection = $services->get('Omeka\Connection');
 if ($reset) {
     foreach (['fi', 'en'] as $slug) {
         foreach ($api->search('sites', ['slug' => $slug])->getContent() as $s) {
             $api->delete('sites', $s->id());
         }
     }
-    foreach (SEARCH_SLUGS as $slug) {
-        $connection->executeStatement('DELETE FROM search_config WHERE slug = ?', [$slug]);
-    }
-    foreach ($em->getRepository(Omeka\Entity\Asset::class)->findBy(['name' => 'demoarkisto-logo.png']) as $oldLogo) {
-        @unlink("$omekaDir/files/asset/" . $oldLogo->getStorageId() . '.' . $oldLogo->getExtension());
-        $em->remove($oldLogo);
-    }
-    $em->flush();
     foreach (['items', 'item_sets'] as $type) {
         $ids = $api->search($type, $kitQuery, ['returnScalar' => 'id'])->getContent();
         if ($ids) {
             $api->batchDelete($type, array_values($ids));
         }
     }
+    foreach (SEARCH_SLUGS as $slug) {
+        $connection->executeStatement('DELETE FROM search_config WHERE slug = ?', [$slug]);
+    }
+    foreach ($em->getRepository(Omeka\Entity\Asset::class)->findBy(['name' => ['demoarkisto-logo.png', 'demoarkisto-hero.jpg']]) as $old) {
+        @unlink("$omekaDir/files/asset/" . $old->getStorageId() . '.' . $old->getExtension());
+        $em->remove($old);
+    }
+    $em->flush();
     echo "reset done\n";
 }
 
-// File Sideload reads the generated images from this folder.
+// File Sideload reads the downloaded images from this folder.
 $settings->set('file_sideload_directory', realpath($imageDir));
 $settings->set('file_sideload_delete_file', 'no');
 $settings->set('installation_title', 'Omeka S Finland Kit');
@@ -376,19 +224,24 @@ $settings->set('oaipmhrepository_namespace_id', 'demoarkisto.example.org');
 $exceptionIps = array_filter(array_map('trim', explode(',', getenv('KIT_BOTCHALLENGE_EXCEPTION_IPS') ?: '127.0.0.1,::1')));
 $settings->set('botchallenge_exception_ips', array_values($exceptionIps));
 
-// Logo asset (stored like an uploaded asset).
-$storageId = bin2hex(random_bytes(16));
-@mkdir("$omekaDir/files/asset", 0775, true);
-copy("$imageDir/kit-logo.png", "$omekaDir/files/asset/$storageId.png");
-$asset = new Omeka\Entity\Asset();
-$asset->setOwner($admin);
-$asset->setName('demoarkisto-logo.png');
-$asset->setMediaType('image/png');
-$asset->setStorageId($storageId);
-$asset->setExtension('png');
-$asset->setAltText('Demoarkisto');
-$em->persist($asset);
-$em->flush();
+// Assets (stored like uploaded assets).
+$makeAsset = function (string $source, string $name, string $mediaType, string $ext, string $alt) use ($em, $admin, $omekaDir) {
+    $storageId = bin2hex(random_bytes(16));
+    @mkdir("$omekaDir/files/asset", 0775, true);
+    copy($source, "$omekaDir/files/asset/$storageId.$ext");
+    $asset = new Omeka\Entity\Asset();
+    $asset->setOwner($admin);
+    $asset->setName($name);
+    $asset->setMediaType($mediaType);
+    $asset->setStorageId($storageId);
+    $asset->setExtension($ext);
+    $asset->setAltText($alt);
+    $em->persist($asset);
+    $em->flush();
+    return $asset->getId();
+};
+$logoId = $makeAsset("$imageDir/kit-logo.png", 'demoarkisto-logo.png', 'image/png', 'png', 'Demoarkisto');
+$heroId = $hero ? $makeAsset("$imageDir/kit-hero.jpg", 'demoarkisto-hero.jpg', 'image/jpeg', 'jpg', $content['items'][$heroIndex]['fi'][0]) : null;
 
 // Sites.
 $sites = [];
@@ -408,8 +261,8 @@ echo "sites: " . implode(', ', array_map(fn ($s) => $s->slug(), $sites)) . "\n";
 $setIds = [];
 foreach ($content['sets'] as $key => $set) {
     $setIds[$key] = $api->create('item_sets', [
-        'dcterms:title' => [$val('dcterms:title', $set['fi'][0], 'fi'), $val('dcterms:title', $set['en'][0], 'en')],
-        'dcterms:description' => [$val('dcterms:description', $set['fi'][1], 'fi'), $val('dcterms:description', $set['en'][1], 'en')],
+        'dcterms:title' => $both('dcterms:title', $set['fi'][0], $set['en'][0]),
+        'dcterms:description' => $both('dcterms:description', $set['fi'][1], $set['en'][1]),
         'dcterms:identifier' => [$val('dcterms:identifier', 'KIT-SET-' . strtoupper($key))],
         'o:resource_class' => ['o:id' => $classId('dctype:Collection')],
         'o:is_public' => true,
@@ -418,48 +271,56 @@ foreach ($content['sets'] as $key => $set) {
 
 // Items with media and map points.
 $siteRefs = array_map(fn ($s) => ['o:id' => $s->id()], array_values($sites));
+$mapped = 0;
 foreach ($content['items'] as $i => $item) {
-    [$fiTitle, $fiDesc, $fiSubjects, $fiType] = $item['fi'];
-    [$enTitle, $enDesc, $enSubjects, $enType] = $item['en'];
+    [$fiTitle, $fiDesc, $fiSubjects] = $item['fi'];
+    [$enTitle, $enDesc, $enSubjects] = $item['en'];
+    [$rightsLabel, $rightsUrl] = $content['rights'][$item['rights']];
+    $orgEn = $content['institutions'][$item['org']] ?? $item['org'];
     $data = [
-        'dcterms:title' => [$val('dcterms:title', $fiTitle, 'fi'), $val('dcterms:title', $enTitle, 'en')],
-        'dcterms:description' => [
-            $val('dcterms:description', "$fiDesc (Kuvitteellinen demoaineisto.)", 'fi'),
-            $val('dcterms:description', "$enDesc (Fictional demo record.)", 'en'),
-        ],
-        'dcterms:creator' => [$val('dcterms:creator', $item['creator'])],
-        'dcterms:date' => [$val('dcterms:date', $item['date'])],
+        'dcterms:title' => $both('dcterms:title', $fiTitle, $enTitle),
+        'dcterms:description' => $both('dcterms:description', $fiDesc, $enDesc),
         'dcterms:subject' => array_merge(
             array_map(fn ($s) => $val('dcterms:subject', $s, 'fi'), $fiSubjects),
             array_map(fn ($s) => $val('dcterms:subject', $s, 'en'), $enSubjects)
         ),
-        'dcterms:type' => [$val('dcterms:type', $fiType, 'fi'), $val('dcterms:type', $enType, 'en')],
-        'dcterms:spatial' => [$val('dcterms:spatial', $item['place'])],
-        'dcterms:language' => [$val('dcterms:language', 'fin')],
-        'dcterms:rights' => [
-            $val('dcterms:rights', 'CC BY 4.0 – demoaineisto', 'fi'),
-            $val('dcterms:rights', 'CC BY 4.0 – demo content', 'en'),
-        ],
-        'dcterms:identifier' => [$val('dcterms:identifier', sprintf('KIT-%03d', $i + 1))],
-        'o:resource_class' => ['o:id' => $classId($item['class'])],
+        'dcterms:type' => $both('dcterms:type', 'Valokuva', 'Photograph'),
+        'dcterms:provenance' => $both('dcterms:provenance', $item['org'], $orgEn),
+        'dcterms:rights' => [$uri('dcterms:rights', $rightsUrl, $rightsLabel)],
+        'dcterms:source' => [$uri('dcterms:source', FINNA_RECORD . rawurlencode($item['finna']), 'Finna: ' . $item['finna'])],
+        'dcterms:identifier' => [$val('dcterms:identifier', sprintf('KIT-%03d', $i + 1)), $val('dcterms:identifier', $item['finna'])],
+        'o:resource_class' => ['o:id' => $classId('dctype:StillImage')],
         'o:item_set' => [['o:id' => $setIds[$item['set']]]],
         'o:site' => $siteRefs,
         'o:is_public' => true,
         'o:media' => [[
             'o:ingester' => 'sideload',
-            'ingest_filename' => sprintf('kit-%02d.jpg', $i + 1),
-            'dcterms:title' => [$val('dcterms:title', $fiTitle, 'fi'), $val('dcterms:title', $enTitle, 'en')],
+            'ingest_filename' => $imageFiles[$i],
+            'dcterms:title' => $both('dcterms:title', $fiTitle, $enTitle),
+            'dcterms:rights' => [$uri('dcterms:rights', $rightsUrl, $rightsLabel)],
         ]],
     ];
+    if ($item['creator'] !== '') {
+        $data['dcterms:creator'] = [$val('dcterms:creator', $item['creator'])];
+    }
+    if ($item['date'] !== '') {
+        $data['dcterms:date'] = [$val('dcterms:date', $item['date'])];
+    }
+    if ($item['place'] !== '') {
+        $data['dcterms:spatial'] = [$val('dcterms:spatial', $item['place'])];
+    }
     $created = $api->create('items', $data)->getContent();
-    $api->create('mapping_features', [
-        'o:item' => ['o:id' => $created->id()],
-        'o-module-mapping:geography-type' => 'point',
-        'o-module-mapping:geography-coordinates' => [$item['lng'], $item['lat']],
-        'o:label' => $item['place'],
-    ]);
+    if ($item['lat'] !== null) {
+        $api->create('mapping_features', [
+            'o:item' => ['o:id' => $created->id()],
+            'o-module-mapping:geography-type' => 'point',
+            'o-module-mapping:geography-coordinates' => [$item['lng'], $item['lat']],
+            'o:label' => $item['place'],
+        ]);
+        $mapped++;
+    }
 }
-echo "items: " . count($content['items']) . "\n";
+echo "items: " . count($content['items']) . " ($mapped on the map)\n";
 
 // One search config per language. Advanced Search stores form labels
 // translated at creation time, so each site gets a config built from the
@@ -491,24 +352,38 @@ if ($engineId && is_file($defaultConfigFile)) {
 // Pages, navigation and settings per site.
 $labels = [
     'fi' => ['home' => 'Etusivu', 'map' => 'Kartta', 'search' => 'Haku', 'about' => 'Tietoa', 'browse' => 'Aineistot',
-             'sets' => 'Kokoelmat', 'latest' => 'Uusimmat aineistot', 'all' => 'Selaa kaikkia aineistoja',
-             'other' => 'In English', 'mapTitle' => 'Aineistot kartalla', 'searchTitle' => 'Hae aineistoista'],
+             'sets' => 'Kokoelmat', 'latest' => 'Poimintoja kokoelmista', 'all' => 'Selaa kaikkia aineistoja',
+             'collections' => 'Kokoelmat', 'allSets' => 'Kaikki kokoelmat',
+             'other' => 'In English', 'searchTitle' => 'Hae aineistoista'],
     'en' => ['home' => 'Home', 'map' => 'Map', 'search' => 'Search', 'about' => 'About', 'browse' => 'Items',
-             'sets' => 'Collections', 'latest' => 'Latest items', 'all' => 'Browse all items',
-             'other' => 'Suomeksi', 'mapTitle' => 'Items on a map', 'searchTitle' => 'Search the archive'],
+             'sets' => 'Collections', 'latest' => 'From the collections', 'all' => 'Browse all items',
+             'collections' => 'Collections', 'allSets' => 'All collections',
+             'other' => 'Suomeksi', 'searchTitle' => 'Search the archive'],
+];
+$heroItem = $content['items'][$heroIndex];
+$heroCaption = [
+    'fi' => sprintf('%s %s. Kuva: %s / %s, %s.', $heroItem['fi'][0], $heroItem['date'], $heroItem['creator'], $heroItem['org'], $content['rights'][$heroItem['rights']][0]),
+    'en' => sprintf('%s %s. Photo: %s / %s, %s.', $heroItem['en'][0], $heroItem['date'], $heroItem['creator'], $content['institutions'][$heroItem['org']] ?? $heroItem['org'], $content['rights'][$heroItem['rights']][0]),
 ];
 $intro = [
-    'fi' => '<h2>Tervetuloa Demoarkistoon</h2><p>Tämä on <strong>kuvitteellinen</strong> kulttuuri- ja tutkimusarkisto, joka esittelee avoimen lähdekoodin <a href="https://omeka.org/s/">Omeka S</a> -julkaisujärjestelmää suomalaisiin tarpeisiin. Sivusto toimii suomeksi ja englanniksi, aineistot näkyvät kartalla, ja metatiedot ovat haravoitavissa OAI-PMH-rajapinnan kautta.</p>',
-    'en' => '<h2>Welcome to the Demo Archive</h2><p>This is a <strong>fictional</strong> cultural and research archive that showcases the open-source <a href="https://omeka.org/s/">Omeka S</a> publishing platform for Finnish needs. The site works in Finnish and English, items are shown on a map, and metadata can be harvested through an OAI-PMH endpoint.</p>',
+    'fi' => '<div><p>Omeka S Finland Kit · demo</p><h2>Suomalaista arkea ja juhlaa 1900-luvulta</h2><p>Demoarkisto esittelee avoimen lähdekoodin <a href="https://omeka.org/s/">Omeka S</a> -julkaisujärjestelmää suomalaisiin tarpeisiin. Aineistona on 16 vapaasti käytettävää valokuvaa suomalaisista museoista <a href="https://finna.fi">Finnan</a> kautta. Sivusto toimii suomeksi ja englanniksi, kuvat näkyvät kartalla, ja metatiedot ovat haravoitavissa OAI-PMH-rajapinnan kautta.</p></div>',
+    'en' => '<div><p>Omeka S Finland Kit · demo</p><h2>Everyday life and celebrations in 20th-century Finland</h2><p>The Demo Archive showcases the open-source <a href="https://omeka.org/s/">Omeka S</a> publishing platform for Finnish needs. It holds 16 freely reusable photographs from Finnish museums, found through <a href="https://finna.fi">Finna</a>. The site works in Finnish and English, photos are shown on a map, and metadata can be harvested through an OAI-PMH endpoint.</p></div>',
 ];
+$orgs = array_unique(array_column($content['items'], 'org'));
 $about = [
-    'fi' => '<p>Demoarkisto on osa <strong>Omeka S Finland Kit</strong> -projektia: avoimen lähdekoodin kokonaisuus, joka sisältää asennusskriptit, 32 lisäosan kokoonpanon, lisäosien suomennokset ja Docker-ympäristön.</p><ul><li>Kaikki aineistot ja kuvat ovat kuvitteellisia demoaineistoja.</li><li>Käyttöliittymä: suomi ja englanti.</li><li>Metatiedot: Dublin Core, kielitunnisteet fi/en.</li></ul>',
-    'en' => '<p>The Demo Archive is part of the <strong>Omeka S Finland Kit</strong> project: an open-source bundle with install scripts, a 32-module configuration, Finnish translations of modules and a Docker environment.</p><ul><li>All records and images are fictional demo content.</li><li>Interface: Finnish and English.</li><li>Metadata: Dublin Core, language-tagged fi/en.</li></ul>',
+    'fi' => '<p>Demoarkisto on osa avoimen lähdekoodin <strong>Omeka S Finland Kit</strong> -projektia, joka sisältää asennusskriptit, 33 lisäosan kokoonpanon, lisäosien suomennokset ja Docker-ympäristön.</p>'
+        . '<h3>Aineistot ja oikeudet</h3><p>Valokuvat ovat peräisin seuraavien organisaatioiden kokoelmista Finnan kautta. Ne on merkitty joko <a href="https://creativecommons.org/publicdomain/mark/1.0/">Public Domain Mark 1.0</a> - tai <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> -merkinnällä, joten niitä saa käyttää vapaasti. Jokaisessa aineistossa on linkki alkuperäiseen Finna-tietueeseen.</p><ul>'
+        . implode('', array_map(fn ($o) => '<li>' . htmlspecialchars($o) . '</li>', $orgs)) . '</ul>'
+        . '<p>Suomenkieliset nimekkeet ja kuvaukset ovat Finnasta, englanninkieliset käännökset ja karttapisteet (likimääräiset) on lisätty demoa varten.</p>',
+    'en' => '<p>The Demo Archive is part of the open-source <strong>Omeka S Finland Kit</strong> project, which includes install scripts, a 33-module configuration, Finnish translations of modules and a Docker environment.</p>'
+        . '<h3>Content and rights</h3><p>The photographs come from the collections of the following organisations through Finna. They are marked <a href="https://creativecommons.org/publicdomain/mark/1.0/">Public Domain Mark 1.0</a> or <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a> and can be reused freely. Every item links to its original Finna record.</p><ul>'
+        . implode('', array_map(fn ($o) => '<li>' . htmlspecialchars($content['institutions'][$o] ?? $o) . '</li>', $orgs)) . '</ul>'
+        . '<p>Finnish titles and descriptions come from Finna; English translations and approximate map points were added for the demo.</p>',
 ];
 $css = <<<'CSS'
 /* Omeka S Finland Kit – brand overrides for the Foundation theme */
-:root { --kit-brand: #4E008E; --kit-brand-dark: #3a006b; }
-body, button, input, select, textarea { font-family: "Open Sans", Arial, Helvetica, sans-serif; }
+:root { --kit-brand: #4E008E; --kit-brand-dark: #3a006b; --kit-ink: #1f1a24; }
+body, button, input, select, textarea { font-family: "Open Sans", Arial, Helvetica, sans-serif; color: var(--kit-ink); }
 a, a:visited { color: var(--kit-brand); }
 a:hover, a:focus { color: var(--kit-brand-dark); }
 header, .top-bar, .top-bar ul { background-color: #fff; }
@@ -523,6 +398,19 @@ header { border-bottom: 4px solid var(--kit-brand); }
 h1, h2, h3, .page-title { color: #2a0050; }
 footer { background: var(--kit-brand); color: #fff; padding: 1.5rem; }
 footer a { color: #fff; text-decoration: underline; }
+/* Home: full-width hero with an overlapping intro card */
+.block-asset .assets { margin: 0 -50vw; position: relative; left: 50%; right: 50%; width: 100vw; max-width: 100vw; margin-left: -50vw; margin-right: -50vw; }
+.block-asset .asset { margin: 0; }
+.block-asset .asset img { width: 100%; height: clamp(260px, 42vw, 560px); object-fit: cover; display: block; filter: contrast(1.05); }
+.block-asset .caption { text-align: right; font-size: .8rem; color: #6b6474; padding: .35rem 1rem 0; }
+/* The intro is the html block right after the hero (HTMLPurifier strips classes). */
+.block-asset + .block-html > div { position: relative; z-index: 2; background: #fff; max-width: 760px; margin: -150px 0 2.5rem; padding: 2rem 2.25rem; border-top: 6px solid var(--kit-brand); box-shadow: 0 18px 50px -28px rgba(40,0,80,.55); }
+.block-asset + .block-html h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); line-height: 1.15; margin: .2rem 0 .8rem; }
+.block-asset + .block-html > div > p:first-child { text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; font-weight: 700; color: var(--kit-brand); margin: 0; }
+@media (max-width: 640px) { .block-asset + .block-html > div { margin-top: -60px; padding: 1.25rem; } }
+/* Uniform thumbnails in browse grids */
+.resource-grid .resource img, .resource-list .resource img, .preview-block .resource img, .browse-preview .resource img, .item-set .thumbnail img {
+  width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 CSS;
 
 foreach ($sites as $lang => $site) {
@@ -532,13 +420,23 @@ foreach ($sites as $lang => $site) {
         'o:site' => ['o:id' => $site->id()], 'o:title' => $title, 'o:slug' => $slug, 'o:block' => $blocks,
     ])->getContent();
 
-    $home = $newPage($l['home'], $lang === 'fi' ? 'etusivu' : 'home', [
-        ['o:layout' => 'html', 'o:data' => ['html' => $intro[$lang]]],
-        ['o:layout' => 'browsePreview', 'o:data' => [
-            'resource_type' => 'items', 'query' => '', 'heading' => $l['latest'], 'limit' => 6,
-            'components' => ['resource-heading', 'resource-body', 'thumbnail'], 'link-text' => $l['all'],
-        ]],
-    ]);
+    $homeBlocks = [];
+    if ($heroId) {
+        // The core asset block stores its attachments as a plain list.
+        $homeBlocks[] = ['o:layout' => 'asset', 'o:data' => [[
+            'id' => (string) $heroId, 'page' => '', 'alt_link_title' => '', 'caption' => $heroCaption[$lang],
+        ]]];
+    }
+    $homeBlocks[] = ['o:layout' => 'html', 'o:data' => ['html' => $intro[$lang]]];
+    $homeBlocks[] = ['o:layout' => 'browsePreview', 'o:data' => [
+        'resource_type' => 'item_sets', 'query' => 'sort_by=id&sort_order=asc', 'heading' => $l['collections'], 'limit' => 4,
+        'components' => ['resource-heading', 'resource-body', 'thumbnail'], 'link-text' => $l['allSets'],
+    ]];
+    $homeBlocks[] = ['o:layout' => 'browsePreview', 'o:data' => [
+        'resource_type' => 'items', 'query' => 'sort_by=random', 'heading' => $l['latest'], 'limit' => 8,
+        'components' => ['resource-heading', 'thumbnail'], 'link-text' => $l['all'],
+    ]];
+    $home = $newPage($l['home'], $lang === 'fi' ? 'etusivu' : 'home', $homeBlocks);
     $map = $newPage($l['map'], $lang === 'fi' ? 'kartta' : 'map', [
         ['o:layout' => 'pageTitle', 'o:data' => []],
         ['o:layout' => 'mappingMapQuery', 'o:data' => ['query' => '']],
@@ -575,10 +473,10 @@ foreach ($sites as $lang => $site) {
     $siteSettings->set('theme_settings_foundation', [
         'stylesheet' => 'default',
         'nav_layout' => 'dropdown',
-        'logo' => $asset->getId(),
+        'logo' => $logoId,
         'footer' => $lang === 'fi'
-            ? '<p>Demoarkisto · Omeka S Finland Kit · Kaikki aineistot ovat kuvitteellisia.</p>'
-            : '<p>Demo Archive · Omeka S Finland Kit · All records are fictional.</p>',
+            ? '<p>Demoarkisto · Omeka S Finland Kit · Valokuvat: suomalaiset museot Finnan kautta (Public Domain Mark / CC0).</p>'
+            : '<p>Demo Archive · Omeka S Finland Kit · Photographs: Finnish museums via Finna (Public Domain Mark / CC0).</p>',
         'browse_layout' => 'grid',
         'show_layout' => 'stack',
         'media_display' => 'embed',

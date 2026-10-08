@@ -2,37 +2,39 @@
 <?xml-stylesheet type="text/xsl" href="/omeka-s/modules/OaiPmhRepository/asset/xsl/oai-pmh-repository.xsl?v=3.4.14"?>
 <?oai-pmh-repository-assets css="/omeka-s/modules/OaiPmhRepository/asset/vendor/bootstrap/css/bootstrap.min.css?v=3.4.14" js="/omeka-s/modules/OaiPmhRepository/asset/vendor/bootstrap/js/bootstrap.bundle.min.js?v=3.4.14"?>
 <OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
-  <responseDate>2026-10-08T09:51:03Z</responseDate>
-  <request verb="GetRecord" metadataPrefix="oai_dc" identifier="oai:demoarkisto.example.org:117">http://localhost/omeka-s/oai</request>
+  <responseDate>2026-10-08T10:21:06Z</responseDate>
+  <request verb="GetRecord" metadataPrefix="oai_dc" identifier="oai:demoarkisto.example.org:219">http://localhost/omeka-s/oai</request>
   <GetRecord>
     <record>
       <header>
-        <identifier>oai:demoarkisto.example.org:117</identifier>
-        <datestamp>2026-10-08T09:50:34Z</datestamp>
-        <setSpec>113</setSpec>
+        <identifier>oai:demoarkisto.example.org:219</identifier>
+        <datestamp>2026-10-08T10:19:58Z</datestamp>
+        <setSpec>213</setSpec>
       </header>
       <metadata>
         <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
-          <dc:title xml:lang="fi-FI">Tehtaan portti vuoronvaihdossa</dc:title>
-          <dc:title xml:lang="en-US">Factory gate at shift change</dc:title>
-          <dc:creator>Valokuvaamo Aalto</dc:creator>
-          <dc:subject xml:lang="fi-FI">teollisuus</dc:subject>
-          <dc:subject xml:lang="fi-FI">työ</dc:subject>
-          <dc:subject xml:lang="fi-FI">tehtaat</dc:subject>
-          <dc:subject xml:lang="en-US">industry</dc:subject>
-          <dc:subject xml:lang="en-US">work</dc:subject>
-          <dc:subject xml:lang="en-US">factories</dc:subject>
-          <dc:description xml:lang="fi-FI">Työntekijöitä kulkemassa tehtaan portista iltavuoron alkaessa. (Kuvitteellinen demoaineisto.)</dc:description>
-          <dc:description xml:lang="en-US">Workers passing through the factory gate as the evening shift begins. (Fictional demo record.)</dc:description>
-          <dc:date>1952</dc:date>
+          <dc:title xml:lang="fi-FI">Senaatintori</dc:title>
+          <dc:title xml:lang="en-US">Senate Square</dc:title>
+          <dc:creator>Rista, Simo</dc:creator>
+          <dc:subject xml:lang="fi-FI">kaupunkiympäristö</dc:subject>
+          <dc:subject xml:lang="fi-FI">torit</dc:subject>
+          <dc:subject xml:lang="fi-FI">mielenosoitukset</dc:subject>
+          <dc:subject xml:lang="fi-FI">rakennukset</dc:subject>
+          <dc:subject xml:lang="en-US">urban environment</dc:subject>
+          <dc:subject xml:lang="en-US">squares</dc:subject>
+          <dc:subject xml:lang="en-US">demonstrations</dc:subject>
+          <dc:subject xml:lang="en-US">buildings</dc:subject>
+          <dc:description xml:lang="fi-FI">Ihmisiä kokoontumassa Vietnamin sodan vastaisen mielenosoituskulkueen lähtöpaikalle Senaatintorille.</dc:description>
+          <dc:description xml:lang="en-US">People gathering in Senate Square, the starting point of a march against the Vietnam War.</dc:description>
+          <dc:date>1970</dc:date>
           <dc:type xml:lang="fi-FI">Valokuva</dc:type>
           <dc:type xml:lang="en-US">Photograph</dc:type>
           <dc:type>dctype:StillImage</dc:type>
-          <dc:identifier>KIT-001</dc:identifier>
-          <dc:language>fin</dc:language>
-          <dc:coverage>Tampere</dc:coverage>
-          <dc:rights xml:lang="fi-FI">CC BY 4.0 – demoaineisto</dc:rights>
-          <dc:rights xml:lang="en-US">CC BY 4.0 – demo content</dc:rights>
+          <dc:identifier>KIT-002</dc:identifier>
+          <dc:identifier>hkm.2B4668A7-4C34-417A-989B-39C327B0CEDF</dc:identifier>
+          <dc:source xsi:type="dcterms:URI" title="Finna: hkm.2B4668A7-4C34-417A-989B-39C327B0CEDF">https://finna.fi/Record/hkm.2B4668A7-4C34-417A-989B-39C327B0CEDF</dc:source>
+          <dc:coverage>Helsinki, Senaatintori</dc:coverage>
+          <dc:rights xsi:type="dcterms:URI" title="Public Domain Mark 1.0">https://creativecommons.org/publicdomain/mark/1.0/</dc:rights>
         </oai_dc:dc>
       </metadata>
     </record>
