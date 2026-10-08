@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+      - name: PHP syntax
+        run: for f in scripts/*.php docker/*.php; do php -l "$f"; done
+      - name: Python syntax
+        run: python3 -m py_compile scripts/*.py
+      - name: Translation catalogs parse and keep placeholders
+        run: |
+          python3 - <<'EOF'
+          import json, re, glob, sys
+          ph = lambda s: sorted(re.findall(r"%(?:\d+\$)?[sdfu%]|\{[a-z_]+\}", s))
+          bad = 0
+          for path in glob.glob("translations/*.fi_FI.json"):
+              for k, v in json.load(open(path, encoding="utf-8")).items():
+                  if ph(k) != ph(v):
+                      print(f"{path}: placeholder mismatch: {k!r}")
+                      bad += 1
+          sys.exit(1 if bad else 0)
+          EOF
+
+  docker:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create .env with throwaway secrets
+        run: |
+          cat > .env <<EOF
+          OMEKA_DB_PASSWORD=ci-db-$(openssl rand -hex 12)
+          MARIADB_ROOT_PASSWORD=ci-root-$(openssl rand -hex 12)
+          OMEKA_ADMIN_EMAIL=admin@example.com
+          OMEKA_ADMIN_PASSWORD=ci-admin-$(openssl rand -hex 12)
+          KIT_DEMO=1
+          EOF
+      - name: Build and start
+        run: docker compose up -d --build
+      - name: Wait for the demo site
+        run: |
+          for i in $(seq 1 90); do
+            if docker compose exec -T omeka php -r 'exit(strpos((string) @file_get_contents("http://localhost/s/fi"), "Demoarkisto") !== false ? 0 : 1);'; then
+              echo "site is up"; exit 0
+            fi
+            sleep 5
+          done
+          docker compose logs omeka | tail -100
+          exit 1
+      - name: Smoke test pages
+        run: |
+          for p in /s/fi /s/en /s/fi/page/haku /s/fi/page/kartta /s/fi/item /s/en/item "/oai?verb=Identify"; do
+            docker compose exec -T omeka php -r "exit(@file_get_contents('http://localhost$p') !== false ? 0 : 1);" \
+              && echo "ok  $p" || { echo "FAIL $p"; exit 1; }
+          done
+      - name: All modules active
+        run: |
+          . ./.env
+          n=$(docker compose exec -T db mariadb -uroot -p"$MARIADB_ROOT_PASSWORD" -N -e "SELECT COUNT(*) FROM omeka.module WHERE is_active = 1")
+          echo "active modules: $n"
+          [ "$n" -ge 33 ]
+      - name: Logs on failure
+        if: failure()
+        run: docker compose logs

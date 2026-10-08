@@ -1,0 +1,1323 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: fi_FI\n"
+"Project-Id-Version: AdvancedSearch (Omeka S Finland Kit)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "%s requires that the element has an assigned name; none discovered"
+msgstr "%s edellyttää, että elementillä on nimi; nimeä ei löytynyt"
+
+msgid "%s resource"
+msgstr "%s resurssi"
+
+msgid "%s resources"
+msgstr "%s resurssia"
+
+msgid "%s: from"
+msgstr "%s: alkaen"
+
+msgid "%s: to"
+msgstr "%s: asti"
+
+msgid "A query for search config uses the argument path, that was replaced by \"slug\". You should update your query. An exception will be thrown in a future version."
+msgstr "Hakuasetuksen kysely käyttää parametria path, joka on korvattu parametrilla \"slug\". Päivitä kysely. Tulevassa versiossa tämä aiheuttaa virheen."
+
+msgid "A user tried a query with {count} arguments. The config or theme should be checked to forbid them earlier. Query: {query}"
+msgstr "Käyttäjä yritti kyselyä, jossa oli {count} parametria. Asetukset tai teema on tarkistettava, jotta tällaiset estetään aiemmin. Kysely: {query}"
+
+msgid "Access"
+msgstr "Käyttöoikeus"
+
+msgid "Active facets"
+msgstr "Valitut rajaukset"
+
+msgid "Active search filters"
+msgstr "Käytössä olevat hakusuodattimet"
+
+msgid "Add a filter"
+msgstr "Lisää suodatin"
+
+msgid "Add joiner \"not\" to filters and simplify query types"
+msgstr "Lisää suodattimiin liitin \"ei\" ja yksinkertaista kyselytyyppejä"
+
+msgid "Add xml alto text to full text search"
+msgstr "Lisää XML ALTO -teksti kokotekstihakuun"
+
+msgid "Advanced Search (admin board)"
+msgstr "Tarkennettu haku (ylläpito)"
+
+msgid "Advanced Search (module)"
+msgstr "Tarkennettu haku (moduuli)"
+
+msgid "Advanced Search: Browse preview with resource navigation"
+msgstr "Tarkennettu haku: selausesikatselu resurssinavigoinnilla"
+
+msgid "AdvancedSearch cron: unable to launch reindexation: {message}"
+msgstr "AdvancedSearch cron: uudelleenindeksointia ei voitu käynnistää: {message}"
+
+msgid "Aliases and aggregated fields"
+msgstr "Aliakset ja yhdistetyt kentät"
+
+msgid "All indexes of the shared core are cleared, included the ones managed externally."
+msgstr "Kaikki jaetun ytimen indeksit tyhjennetään, myös ulkoisesti hallitut."
+
+msgid "All other item sets"
+msgstr "Kaikki muut kokoelmat"
+
+msgid "All properties"
+msgstr "Kaikki ominaisuudet"
+
+msgid "Allow to search text stored in xml alto files without including it in a property."
+msgstr "Mahdollistaa XML ALTO -tiedostoihin tallennetun tekstin haun ilman, että teksti tallennetaan ominaisuuteen."
+
+msgid "An absolute url, that takes precedence on the setting above."
+msgstr "Absoluuttinen osoite, jolla on etusija yllä olevaan asetukseen nähden."
+
+msgid "An error occurred."
+msgstr "Tapahtui virhe."
+
+msgid "An internal issue in database occurred."
+msgstr "Tietokannassa tapahtui sisäinen virhe."
+
+msgid "An internal issue occurred."
+msgstr "Tapahtui sisäinen virhe."
+
+msgid "An internal search engine already exists: an engine is a real backend and there is only one sql database."
+msgstr "Sisäinen hakukone on jo olemassa: hakukone on todellinen taustapalvelu, ja SQL-tietokantoja on vain yksi."
+
+msgid "An issue occurred for the suggester."
+msgstr "Ehdotustoiminnossa tapahtui virhe."
+
+msgid "An issue occurred."
+msgstr "Tapahtui virhe."
+
+msgid "Any"
+msgstr "Mikä tahansa"
+
+msgid "Apply facets"
+msgstr "Käytä rajauksia"
+
+msgid "Asc"
+msgstr "Nouseva"
+
+msgid "Auto-scroll to block"
+msgstr "Vieritä automaattisesti lohkoon"
+
+msgid "Autocompletion requires module Reference."
+msgstr "Automaattinen täydennys vaatii Reference-moduulin."
+
+msgid "Automatic mapping of empty values"
+msgstr "Tyhjien arvojen automaattinen vastaavuus"
+
+msgid "Available"
+msgstr "Saatavilla"
+
+msgid "Available pages"
+msgstr "Saatavilla olevat sivut"
+
+msgid "Available search pages"
+msgstr "Saatavilla olevat hakusivut"
+
+msgid "Batch #{number} of {resource_type}: {count} resources skipped (private, deleted, or filtered by module)."
+msgstr "Erä #{number} ({resource_type}): {count} resurssia ohitettiin (yksityinen, poistettu tai moduulin suodattama)."
+
+msgid "Between"
+msgstr "Välillä"
+
+msgid "Block Resource navigation: active contexts"
+msgstr "Resurssinavigointilohko: aktiiviset kontekstit"
+
+msgid "Block Resource navigation: fall back to an item set on direct access"
+msgstr "Resurssinavigointilohko: käytä kokoelmaa suoralla käynnillä"
+
+msgid "Block Resource navigation: max results"
+msgstr "Resurssinavigointilohko: tulosten enimmäismäärä"
+
+msgid "Block Resource navigation: parts to display"
+msgstr "Resurssinavigointilohko: näytettävät osat"
+
+msgid "Block Search (item set): Config"
+msgstr "Hakulohko (kokoelma): asetukset"
+
+msgid "Block Search (item set): Form template"
+msgstr "Hakulohko (kokoelma): lomakepohja"
+
+msgid "Block Search (item set): Scope of the search"
+msgstr "Hakulohko (kokoelma): haun laajuus"
+
+msgid "Block Search (item): Config"
+msgstr "Hakulohko (aineisto): asetukset"
+
+msgid "Block Search (item): Form template"
+msgstr "Hakulohko (aineisto): lomakepohja"
+
+msgid "Block Search (media): Config"
+msgstr "Hakulohko (media): asetukset"
+
+msgid "Block Search (media): Form template"
+msgstr "Hakulohko (media): lomakepohja"
+
+msgid "Breadcrumbs"
+msgstr "Murupolku"
+
+msgid "By default, the search page is added below the quick search of Omeka, so the side bar has two search fields. When replaced, only the search page remains."
+msgstr "Oletuksena hakusivu lisätään Omekan pikahaun alle, jolloin sivupalkissa on kaksi hakukenttää. Korvattaessa jäljelle jää vain hakusivu."
+
+msgid "Classes *"
+msgstr "Luokat *"
+
+msgid "Collections"
+msgstr "Kokoelmat"
+
+msgid "Context name (item set title, selection title, query)"
+msgstr "Kontekstin nimi (kokoelman nimi, valinnan nimi, kysely)"
+
+msgid "Count"
+msgstr "Määrä"
+
+msgid "Creation or modification date / time"
+msgstr "Luonti- tai muokkausaika"
+
+msgid "Curation"
+msgstr "Kuratointi"
+
+msgid "Data type"
+msgstr "Tietotyyppi"
+
+msgid "Date (most recent first)"
+msgstr "Aikamääre (uusin ensin)"
+
+msgid "Date / time"
+msgstr "Päivämäärä / aika"
+
+msgid "Date / time can be full like \"2018-01-23 12:34:56\", or partial like \"2018-12-25\" or \"2017-11\"."
+msgstr "Päivämäärä ja aika voi olla täydellinen, kuten \"2018-01-23 12:34:56\", tai osittainen, kuten \"2018-12-25\" tai \"2017-11\"."
+
+msgid "Date range"
+msgstr "Aikaväli"
+
+msgid "Date time"
+msgstr "Päivämäärä ja aika"
+
+msgid "Default search page"
+msgstr "Oletushakusivu"
+
+msgid "Default search page in admin side bar"
+msgstr "Oletushakusivu ylläpidon sivupalkissa"
+
+msgid "Desc"
+msgstr "Laskeva"
+
+msgid "Disabled"
+msgstr "Ei käytössä"
+
+msgid "Dispatched reindex of Solr suggester \"{name}\"."
+msgstr "Solr-ehdottimen \"{name}\" uudelleenindeksointi käynnistetty."
+
+msgid "Dispatched reindex of internal suggester \"{name}\"."
+msgstr "Sisäisen ehdottimen \"{name}\" uudelleenindeksointi käynnistetty."
+
+msgid "Display mode"
+msgstr "Näyttötapa"
+
+msgid "Display resources using this search query. Important: use the format of the query of the engine (standard api request or solr)."
+msgstr "Näytä resurssit tällä hakukyselyllä. Tärkeää: käytä hakukoneen kyselymuotoa (tavallinen API-pyyntö tai Solr)."
+
+msgid "Display results"
+msgstr "Näytä tulokset"
+
+msgid "Duplicates: variants"
+msgstr "Kaksoiskappaleet: muunnelmat"
+
+msgid "EXCEPT"
+msgstr "PAITSI"
+
+msgid "Enable automatic reindexation (daily cron)"
+msgstr "Ota käyttöön automaattinen uudelleenindeksointi (päivittäin)"
+
+msgid "Enabled"
+msgstr "Käytössä"
+
+msgid "End of indexing. Execution time: {duration} seconds. Max memory: {memory}. Failed indexed resources should be checked manually."
+msgstr "Indeksointi päättyi. Suoritusaika: {duration} sekuntia. Muistin enimmäiskäyttö: {memory}. Epäonnistuneet resurssit on tarkistettava käsin."
+
+msgid "Error loading batch #{number} of {resource_type}: {message}. Skipping."
+msgstr "Virhe ladattaessa erää #{number} ({resource_type}): {message}. Ohitetaan."
+
+msgid "Extended date time format"
+msgstr "Laajennettu päivämäärämuoto (EDTF)"
+
+msgid "Facets"
+msgstr "Rajaukset"
+
+msgid "Fallback"
+msgstr "Varavaihtoehto"
+
+msgid "Featured"
+msgstr "Nostettu"
+
+msgid "Featured (browse preview page block)"
+msgstr "Nostettu (selausesikatselun sivulohko)"
+
+msgid "Fields"
+msgstr "Kentät"
+
+msgid "Fields for standard advanced search form"
+msgstr "Tavallisen tarkennetun hakulomakkeen kentät"
+
+msgid "Fill a query and get results."
+msgstr "Kirjoita hakusana ja hae tuloksia."
+
+msgid "Filter values of %s"
+msgstr "Suodata kohteen %s arvoja"
+
+msgid "Filters"
+msgstr "Suodattimet"
+
+msgid "Filter…"
+msgstr "Suodata…"
+
+msgid "Final commit failed for {resource_type}: {message}"
+msgstr "Viimeinen tallennus epäonnistui ({resource_type}): {message}"
+
+msgid "Find"
+msgstr "Hae"
+
+msgid "Find resources…"
+msgstr "Hae resursseja…"
+
+msgid "First item set"
+msgstr "Ensimmäinen kokoelma"
+
+msgid "First page"
+msgstr "Ensimmäinen sivu"
+
+msgid "For facet \"{field}\", the thesaurus is not defined. Set it as option thesaurus = id."
+msgstr "Rajaukselle \"{field}\" ei ole määritetty asiasanastoa. Aseta se valinnalla thesaurus = id."
+
+msgid "Formatted as \"/url/full/path Label of the link\"."
+msgstr "Muodossa \"/url/koko/polku Linkin teksti\"."
+
+msgid "From"
+msgstr "Alkaen"
+
+msgid "Full text"
+msgstr "Kokoteksti"
+
+msgid "Geography"
+msgstr "Maantiede"
+
+msgid "Has a specific asset"
+msgstr "Sisältää tietyn tiedoston"
+
+msgid "Has a specific asset as thumbnail"
+msgstr "Käyttää tiettyä tiedostoa pienoiskuvana"
+
+msgid "Has asset"
+msgstr "Sisältää tiedoston"
+
+msgid "Has asset as thumbnail"
+msgstr "Käyttää tiedostoa pienoiskuvana"
+
+msgid "Has media (radio)"
+msgstr "Sisältää median (valintanapit)"
+
+msgid "Has media (select)"
+msgstr "Sisältää median (valikko)"
+
+msgid "Has no asset"
+msgstr "Ei tiedostoa"
+
+msgid "Has no original file"
+msgstr "Ei alkuperäistä tiedostoa"
+
+msgid "Has no thumbnails"
+msgstr "Ei pienoiskuvia"
+
+msgid "Has original"
+msgstr "Sisältää alkuperäisen"
+
+msgid "Has original file"
+msgstr "Sisältää alkuperäisen tiedoston"
+
+msgid "Has thumbnails"
+msgstr "Sisältää pienoiskuvat"
+
+msgid "Hidden filter query"
+msgstr "Piilotettu suodatinkysely"
+
+msgid "Hidden query filters per search page"
+msgstr "Piilotetut kyselysuodattimet hakusivuittain"
+
+msgid "Id"
+msgstr "Tunniste"
+
+msgid "If not set, display only the search form."
+msgstr "Jos ei asetettu, näytetään vain hakulomake."
+
+msgid "In a site"
+msgstr "Sivustolla"
+
+msgid "Indexes of the Solr core: %d"
+msgstr "Solr-ytimen indeksit: %d"
+
+msgid "Indexing of {resource_type} #{resource_id} failed: {message}"
+msgstr "Resurssin {resource_type} #{resource_id} indeksointi epäonnistui: {message}"
+
+msgid "Indexing {resource_type}: {indexed}/{total} ({percent}%). Memory: {memory} MB."
+msgstr "Indeksoidaan {resource_type}: {indexed}/{total} ({percent}%). Muisti: {memory} Mt."
+
+msgid "Internal [sql]"
+msgstr "Sisäinen [SQL]"
+
+msgid "Invalid navigation: browse link missing search page id"
+msgstr "Virheellinen navigointi: selauslinkistä puuttuu hakusivun tunniste"
+
+msgid "Is dynamic"
+msgstr "Dynaaminen"
+
+msgid "Is dynamic item set"
+msgstr "Dynaaminen kokoelma"
+
+msgid "Is private"
+msgstr "Yksityinen"
+
+msgid "Item %1$d of %2$d"
+msgstr "Aineisto %1$d / %2$d"
+
+msgid "Item sets *"
+msgstr "Kokoelmat *"
+
+msgid "Item sets tree"
+msgstr "Kokoelmapuu"
+
+msgid "Last indexed resource: {resource_type} #{resource_id}."
+msgstr "Viimeksi indeksoitu resurssi: {resource_type} #{resource_id}."
+
+msgid "Limit the search to a specific subset of the resources. This query is merged with the default block query and with the user one."
+msgstr "Rajaa haku tiettyyn resurssien osajoukkoon. Kysely yhdistetään lohkon oletuskyselyyn ja käyttäjän kyselyyn."
+
+msgid "Link to display"
+msgstr "Näytettävä linkki"
+
+msgid "Link to the advanced search below the search form"
+msgstr "Linkki tarkennettuun hakuun hakulomakkeen alla"
+
+msgid "Linked resource"
+msgstr "Linkitetty resurssi"
+
+msgid "List of property terms to display below each result, one by line."
+msgstr "Kunkin tuloksen alla näytettävät ominaisuustermit, yksi per rivi."
+
+msgid "Main index"
+msgstr "Pääindeksi"
+
+msgid "Media type (single)"
+msgstr "Mediatyyppi (yksi)"
+
+msgid "Media types"
+msgstr "Mediatyypit"
+
+msgid "Media types *"
+msgstr "Mediatyypit *"
+
+msgid "Metadata field"
+msgstr "Metatietokenttä"
+
+msgid "Method %1$s requires that the element is of type %2$s"
+msgstr "Menetelmä %1$s edellyttää, että elementin tyyppi on %2$s"
+
+msgid "Method %s requires that the element has an assigned name; none discovered"
+msgstr "Menetelmä %s edellyttää, että elementillä on nimi; nimeä ei löytynyt"
+
+msgid "Method %s requires that the value be an associative array"
+msgstr "Menetelmä %s edellyttää, että arvo on assosiatiivinen taulukko"
+
+msgid "Most recent"
+msgstr "Uusimmat ensin"
+
+msgid "Next page"
+msgstr "Seuraava sivu"
+
+msgid "No facets"
+msgstr "Ei rajauksia"
+
+msgid "No media"
+msgstr "Ei mediaa"
+
+msgid "No operation (noop)"
+msgstr "Ei toimintoa (noop)"
+
+msgid "No query."
+msgstr "Ei hakua."
+
+msgid "No redirect"
+msgstr "Ei uudelleenohjausta"
+
+msgid "No results"
+msgstr "Ei tuloksia"
+
+msgid "No search config \"{value}\" specified for this block or not available for site {site_slug}."
+msgstr "Tälle lohkolle ei ole määritetty hakuasetusta \"{value}\", tai se ei ole käytettävissä sivustolla {site_slug}."
+
+msgid "No search engine is defined to be indexed."
+msgstr "Indeksoitavaa hakukonetta ei ole määritetty."
+
+msgid "No search engine is defined to index the specified resource types."
+msgstr "Annettujen resurssityyppien indeksointiin ei ole määritetty hakukonetta."
+
+msgid "Not a search page for this site."
+msgstr "Tämä ei ole tämän sivuston hakusivu."
+
+msgid "Not implemented in this form adapter."
+msgstr "Ei toteutettu tässä lomakesovittimessa."
+
+msgid "Numeric"
+msgstr "Numeerinen"
+
+msgid "OAI-PMH harvests"
+msgstr "OAI-PMH-haravoinnit"
+
+msgid "Ok"
+msgstr "OK"
+
+msgid "Oldest"
+msgstr "Vanhimmat ensin"
+
+msgid "One filter per line, formatted as \"search_config_slug = query_args\" (e.g. \"recherche = item_set_id[]=151\"). Filters are merged with the search config \"Hidden query filter\" only on this site, so other sites sharing the same search page are unaffected."
+msgstr "Yksi suodatin per rivi muodossa \"search_config_slug = query_args\" (esim. \"haku = item_set_id[]=151\"). Suodattimet yhdistetään hakuasetuksen piilotettuun kyselysuodattimeen vain tällä sivustolla, joten samaa hakusivua käyttävät muut sivustot eivät muutu."
+
+msgid "One row by item set, and the row \"default\" for all the other ones. The redirection is \"browse\" (standard Omeka page), \"search\" (search page of the site), \"first\" (search page, but the item set is displayed on the first page only), or the slug of a site page or a url, relative or absolute."
+msgstr "Yksi rivi kokoelmaa kohden ja rivi \"default\" kaikille muille. Uudelleenohjaus on \"browse\" (Omekan tavallinen sivu), \"search\" (sivuston hakusivu), \"first\" (hakusivu, mutta kokoelma näytetään vain ensimmäisellä sivulla) tai sivuston sivun lyhytnimi tai osoite, suhteellinen tai absoluuttinen."
+
+msgid "Owner *"
+msgstr "Omistaja *"
+
+msgid "Page or url"
+msgstr "Sivu tai osoite"
+
+msgid "Pages of the site"
+msgstr "Sivuston sivut"
+
+msgid "Per page"
+msgstr "Sivua kohden"
+
+msgid "Permission denied for the current user to %s the %s resource."
+msgstr "Nykyisellä käyttäjällä ei ole oikeutta toimintoon %s resurssille %s."
+
+msgid "Position (n / total)"
+msgstr "Sijainti (n / yhteensä)"
+
+msgid "Post-reindex finalization failed: {message}"
+msgstr "Uudelleenindeksoinnin viimeistely epäonnistui: {message}"
+
+msgid "Presence of original file"
+msgstr "Alkuperäinen tiedosto olemassa"
+
+msgid "Presence of thumbnails"
+msgstr "Pienoiskuvat olemassa"
+
+msgid "Previous page"
+msgstr "Edellinen sivu"
+
+msgid "Process done with a new entity manager"
+msgstr "Käsittely tehty uudella entiteettien hallinnalla"
+
+msgid "Process done with the main entity manager"
+msgstr "Käsittely tehty pääentiteettien hallinnalla"
+
+msgid "Processing…"
+msgstr "Käsitellään…"
+
+msgid "Properties to display for each result"
+msgstr "Kunkin tuloksen näytettävät ominaisuudet"
+
+msgid "Properties with autocompletion on filter values (whitelist)"
+msgstr "Ominaisuudet, joiden suodatinarvoille tehdään automaattinen täydennys (sallittujen luettelo)"
+
+msgid "Properties without autocompletion on filter values (blacklist)"
+msgstr "Ominaisuudet, joiden suodatinarvoille ei tehdä automaattista täydennystä (estettyjen luettelo)"
+
+msgid "Query error: {message}\nQuery: {json_query}"
+msgstr "Kyselyvirhe: {message}\nKysely: {json_query}"
+
+msgid "Query error: {message}\nQuery:{query}"
+msgstr "Kyselyvirhe: {message}\nKysely:{query}"
+
+msgid "Query types for filters of the admin board"
+msgstr "Ylläpidon suodattimien kyselytyypit"
+
+msgid "Query types for filters of this site"
+msgstr "Tämän sivuston suodattimien kyselytyypit"
+
+msgid "Quick api search via external search engine"
+msgstr "Nopea API-haku ulkoisen hakukoneen kautta"
+
+msgid "Record only"
+msgstr "Vain tietue"
+
+msgid "Redirect page \"browse item sets\""
+msgstr "Ohjaa sivu \"selaa kokoelmia\""
+
+msgid "Redirect page \"browse item sets\" to an external url"
+msgstr "Ohjaa sivu \"selaa kokoelmia\" ulkoiseen osoitteeseen"
+
+msgid "Redirect page \"browse items\""
+msgstr "Ohjaa sivu \"selaa aineistoja\""
+
+msgid "Redirection"
+msgstr "Uudelleenohjaus"
+
+msgid "Redirection of the page of an item set"
+msgstr "Kokoelmasivun uudelleenohjaus"
+
+msgid "Refine search"
+msgstr "Tarkenna hakua"
+
+msgid "Reindex search engines"
+msgstr "Indeksoi hakukoneet uudelleen"
+
+msgid "Reindexing starts at resource #{resource_id}."
+msgstr "Uudelleenindeksointi alkaa resurssista #{resource_id}."
+
+msgid "Relevance (inversed)"
+msgstr "Osuvuus (käänteinen)"
+
+msgid "Remove date / time"
+msgstr "Poista päivämäärä / aika"
+
+msgid "Remove facet \"%1$s: %2$s\""
+msgstr "Poista rajaus \"%1$s: %2$s\""
+
+msgid "Remove filter \"%1$s: %2$s\""
+msgstr "Poista suodatin \"%1$s: %2$s\""
+
+msgid "Remove this filter"
+msgstr "Poista tämä suodatin"
+
+msgid "Replace the quick search of the admin side bar by this search page"
+msgstr "Korvaa ylläpidon sivupalkin pikahaku tällä hakusivulla"
+
+msgid "Replace the search form of the theme by this search page"
+msgstr "Korvaa teeman hakulomake tällä hakusivulla"
+
+msgid "Reset facets"
+msgstr "Tyhjennä rajaukset"
+
+msgid "Resource id"
+msgstr "Resurssin tunniste"
+
+msgid "Resource navigation"
+msgstr "Resurssinavigointi"
+
+msgid "Results by %d"
+msgstr "Tuloksia %d kerrallaan"
+
+msgid "Results by 10"
+msgstr "10 tulosta sivulla"
+
+msgid "Results by 100"
+msgstr "100 tulosta sivulla"
+
+msgid "Results by 25"
+msgstr "25 tulosta sivulla"
+
+msgid "Results by 50"
+msgstr "50 tulosta sivulla"
+
+msgid "Search by date / time"
+msgstr "Hae päivämäärän / ajan mukaan"
+
+msgid "Search by media type"
+msgstr "Hae mediatyypin mukaan"
+
+msgid "Search by presence of original file"
+msgstr "Hae alkuperäisen tiedoston olemassaolon mukaan"
+
+msgid "Search by presence of thumbnails"
+msgstr "Hae pienoiskuvien olemassaolon mukaan"
+
+msgid "Search by use of an asset as thumbnail"
+msgstr "Hae pienoiskuvana käytetyn tiedoston mukaan"
+
+msgid "Search config"
+msgstr "Hakuasetukset"
+
+msgid "Search config of the site"
+msgstr "Sivuston hakuasetukset"
+
+msgid "Search config page"
+msgstr "Hakuasetusten sivu"
+
+msgid "Search engine #{search_config} does not exist."
+msgstr "Hakukonetta #{search_config} ei ole olemassa."
+
+msgid "Search engine {name} (#{search_config}) is not available."
+msgstr "Hakukone {name} (#{search_config}) ei ole käytettävissä."
+
+msgid "Search form (module Advanced Search)"
+msgstr "Hakulomake (Advanced Search -moduuli)"
+
+msgid "Search in all resources"
+msgstr "Hae kaikista resursseista"
+
+msgid "Search in current item set"
+msgstr "Hae nykyisestä kokoelmasta"
+
+msgid "Search index #{search_engine_id} (\"{name}\"): Only {visibility} resources will be indexed."
+msgstr "Hakuindeksi #{search_engine_id} (\"{name}\"): vain {visibility}-resurssit indeksoidaan."
+
+msgid "Search index #{search_engine_id} (\"{name}\"): There are already {total} other jobs \"Index Search\" (#{list}) and the current one is not forced."
+msgstr "Hakuindeksi #{search_engine_id} (\"{name}\"): muita \"Index Search\" -töitä on jo {total} (#{list}), eikä nykyistä ole pakotettu."
+
+msgid "Search index #{search_engine_id} (\"{name}\"): end of indexing. {results}. Execution time: {duration} seconds. Failed indexed resources should be checked manually."
+msgstr "Hakuindeksi #{search_engine_id} (\"{name}\"): indeksointi päättyi. {results}. Suoritusaika: {duration} sekuntia. Epäonnistuneet resurssit on tarkistettava käsin."
+
+msgid "Search index #{search_engine_id} (\"{name}\"): start of indexing"
+msgstr "Hakuindeksi #{search_engine_id} (\"{name}\"): indeksointi alkaa"
+
+msgid "Search index #{search_engine_id} (\"{name}\"): the indexing was stopped. {results}. Execution time: {duration} seconds."
+msgstr "Hakuindeksi #{search_engine_id} (\"{name}\"): indeksointi keskeytettiin. {results}. Suoritusaika: {duration} sekuntia."
+
+msgid "Search index #{search_engine_id} (\"{name}\"): the list of resource ids contains invalid ids."
+msgstr "Hakuindeksi #{search_engine_id} (\"{name}\"): resurssitunnisteiden luettelossa on virheellisiä tunnisteita."
+
+msgid "Search index #{search_engine_id} (\"{name}\"): there is no resource type to index or the indexation is not needed."
+msgstr "Hakuindeksi #{search_engine_id} (\"{name}\"): indeksoitavia resurssityyppejä ei ole tai indeksointia ei tarvita."
+
+msgid "Search index is fully cleared."
+msgstr "Hakuindeksi on tyhjennetty kokonaan."
+
+msgid "Search manager"
+msgstr "Haun hallinta"
+
+msgid "Search pages (%d)"
+msgstr "Hakusivut (%d)"
+
+msgid "Search results"
+msgstr "Hakutulokset"
+
+msgid "Searches for resources with a specific asset as thumbnail."
+msgstr "Hakee resursseja, joiden pienoiskuvana on tietty tiedosto."
+
+msgid "See less"
+msgstr "Näytä vähemmän"
+
+msgid "See more"
+msgstr "Näytä lisää"
+
+msgid "Select a fallback…"
+msgstr "Valitse varavaihtoehto…"
+
+msgid "Select a search engine…"
+msgstr "Valitse hakukone…"
+
+msgid "Select access…"
+msgstr "Valitse käyttöoikeus…"
+
+msgid "Select below…"
+msgstr "Valitse alta…"
+
+msgid "Select collections…"
+msgstr "Valitse kokoelmat…"
+
+msgid "Select item sets…"
+msgstr "Valitse kokoelmat…"
+
+msgid "Select main data type…"
+msgstr "Valitse päätietotyyppi…"
+
+msgid "Select media types…"
+msgstr "Valitse mediatyypit…"
+
+msgid "Select metadata…"
+msgstr "Valitse metatiedot…"
+
+msgid "Select owners…"
+msgstr "Valitse omistajat…"
+
+msgid "Select properties…"
+msgstr "Valitse ominaisuudet…"
+
+msgid "Select the config for quick api search…"
+msgstr "Valitse nopean API-haun asetukset…"
+
+msgid "Select the default search engine for the site…"
+msgstr "Valitse sivuston oletushakukone…"
+
+msgid "Select the search engine for item sets…"
+msgstr "Valitse kokoelmien hakukone…"
+
+msgid "Select the search engine for items…"
+msgstr "Valitse aineistojen hakukone…"
+
+msgid "Select the search engine for medias…"
+msgstr "Valitse medioiden hakukone…"
+
+msgid "Select the search engine for the admin side bar…"
+msgstr "Valitse ylläpidon sivupalkin hakukone…"
+
+msgid "Selection"
+msgstr "Valinta"
+
+msgid "Selections"
+msgstr "Valinnat"
+
+msgid "Series in page blocks"
+msgstr "Sarjat sivulohkoissa"
+
+msgid "Site *"
+msgstr "Sivusto *"
+
+msgid "Skipped suggester \"{name}\": build on commit is disabled."
+msgstr "Ehdotin \"{name}\" ohitettiin: rakentaminen tallennettaessa ei ole käytössä."
+
+msgid "Slug of a page or url"
+msgstr "Sivun lyhytnimi tai osoite"
+
+msgid "Some indexes of the advanced filters are not present in the search engine."
+msgstr "Osa tarkennettujen suodattimien indekseistä puuttuu hakukoneesta."
+
+msgid "Suggester #{search_suggester_id} (\"{name}\"): Only search engine with the internal adapter (sql) can be indexed."
+msgstr "Ehdotin #{search_suggester_id} (\"{name}\"): vain sisäistä sovitinta (SQL) käyttävä hakukone voidaan indeksoida."
+
+msgid "Suggester #{search_suggester_id} (\"{name}\"): There are already {total} other jobs \"Index Suggestion\" and the current one is not forced."
+msgstr "Ehdotin #{search_suggester_id} (\"{name}\"): muita \"Index Suggestion\" -töitä on jo {total}, eikä nykyistä ole pakotettu."
+
+msgid "Suggester #{search_suggester_id} (\"{name}\"): end of indexing. {total} suggestions indexed. Execution time: {duration} seconds."
+msgstr "Ehdotin #{search_suggester_id} (\"{name}\"): indeksointi päättyi. {total} ehdotusta indeksoitu. Suoritusaika: {duration} sekuntia."
+
+msgid "Suggester #{search_suggester_id} (\"{name}\"): start of indexing (mode: {mode})."
+msgstr "Ehdotin #{search_suggester_id} (\"{name}\"): indeksointi alkaa (tila: {mode})."
+
+msgid "Suggester #{search_suggester_id} (\"{name}\"): there is no resource type to index."
+msgstr "Ehdotin #{search_suggester_id} (\"{name}\"): indeksoitavia resurssityyppejä ei ole."
+
+msgid "Suggesters (%d)"
+msgstr "Ehdottimet (%d)"
+
+msgid "Templates (specific option \"restricted\")"
+msgstr "Pohjat (erityisasetus \"restricted\")"
+
+msgid "Templates *"
+msgstr "Pohjat *"
+
+msgid "The \"{field}\" field is not available for returnScalar in resource type \"{type}\"."
+msgstr "Kenttä \"{field}\" ei ole käytettävissä returnScalar-toiminnolle resurssityypissä \"{type}\"."
+
+msgid "The admin board keeps all the types by default, unlike the sites, that display a simple list. The negative types are managed with the positive ones, and the duplicates are the combination of the four families and the selected variants."
+msgstr "Ylläpito säilyttää oletuksena kaikki tyypit, toisin kuin sivustot, jotka näyttävät yksinkertaisen luettelon. Kielteisiä tyyppejä hallitaan myönteisten kanssa, ja kaksoiskappaleet ovat neljän ryhmän ja valittujen muunnelmien yhdistelmiä."
+
+msgid "The check box marked with a \"*\" are improvements of the standard search fields. They should be replaced by equivalent arguments of the module Advanced Search to avoid side effects."
+msgstr "\"*\"-merkityt valintaruudut ovat parannuksia tavallisiin hakukenttiin. Ne kannattaa korvata Advanced Search -moduulin vastaavilla parametreilla sivuvaikutusten välttämiseksi."
+
+msgid "The default search config can be {link_1}edited{link_end}, {link_2}configured{link_end} and defined in the {link_3}main settings{link_end} for admin search and in each site settings for public search."
+msgstr "Oletushakuasetuksia voi {link_1}muokata{link_end} ja {link_2}määrittää{link_end}, ja ne asetetaan ylläpidon hakua varten {link_3}pääasetuksissa{link_end} ja julkista hakua varten kunkin sivuston asetuksissa."
+
+msgid "The dialog loads the form only at the first click, so it does not slow down the pages. A theme that displays its own panel in the header can keep \"no\" and fetch the url of the form itself."
+msgstr "Ikkuna lataa lomakkeen vasta ensimmäisellä napsautuksella, joten se ei hidasta sivuja. Teema, joka näyttää oman paneelinsa ylätunnisteessa, voi pitää arvon \"ei\" ja hakea lomakkeen osoitteen itse."
+
+msgid "The field for the facet \"{name}\" is not set."
+msgstr "Rajauksen \"{name}\" kenttää ei ole asetettu."
+
+msgid "The indexes of the advanced filters are not present in the search engine."
+msgstr "Tarkennettujen suodattimien indeksit puuttuvat hakukoneesta."
+
+msgid "The internal search engine \"{name}\" (sql) can be edited in the {link_url}search manager{link_end}."
+msgstr "Sisäistä hakukonetta \"{name}\" (SQL) voi muokata {link_url}haun hallinnassa{link_end}."
+
+msgid "The method apiSearch() allows to do a quick search in some cases. It requires a mapping done with the Omeka api and the selected index."
+msgstr "Menetelmällä apiSearch() voi joissakin tapauksissa tehdä nopean haun. Se edellyttää vastaavuutta Omekan API:n ja valitun indeksin välillä."
+
+msgid "The module %1$s requires PHP %2$s or later."
+msgstr "Moduuli %1$s vaatii PHP:n version %2$s tai uudemman."
+
+msgid "The module %1$s should be upgraded to version %2$s or later."
+msgstr "Moduuli %1$s on päivitettävä versioon %2$s tai uudempaan."
+
+msgid "The module Reference is required to use the facets with the default internal adapter, but not for the Solr adapter."
+msgstr "Reference-moduuli tarvitaan rajausten käyttöön sisäisen oletussovittimen kanssa, mutta ei Solr-sovittimen kanssa."
+
+msgid "The module {module} can be reenabled."
+msgstr "Moduulin {module} voi ottaa uudelleen käyttöön."
+
+msgid "The module {module} should be upgraded to version {version} or later."
+msgstr "Moduuli {module} on päivitettävä versioon {version} tai uudempaan."
+
+msgid "The owner of the job cannot view all resources, so the index would be partial. Run the indexation as a global admin."
+msgstr "Työn omistaja ei näe kaikkia resursseja, joten indeksi jäisi vajaaksi. Suorita indeksointi pääkäyttäjänä."
+
+msgid "The page that lists the item sets may be replaced by a search page or by any page of the site. Use the setting below for an external url."
+msgstr "Kokoelmaluettelon sivu voidaan korvata hakusivulla tai millä tahansa sivuston sivulla. Käytä alla olevaa asetusta ulkoiselle osoitteelle."
+
+msgid "The query \"{query}\" uses {count} properties or filters, that is more than the {total} supported currently. The query should be simplified."
+msgstr "Kysely \"{query}\" käyttää {count} ominaisuutta tai suodatinta, mikä on enemmän kuin tällä hetkellä tuettu {total}. Yksinkertaista kyselyä."
+
+msgid "The query returned no results"
+msgstr "Haku ei tuottanut tuloksia"
+
+msgid "The resource \"{resource}\" is not available through the rest api."
+msgstr "Resurssi \"{resource}\" ei ole käytettävissä REST-API:n kautta."
+
+msgid "The seach engine is not available."
+msgstr "Hakukone ei ole käytettävissä."
+
+msgid "The search config \"{search_slug}\" has no form associated."
+msgstr "Hakuasetuksella \"{search_slug}\" ei ole liitettyä lomaketta."
+
+msgid "The search config setting \"{old}\" was renamed \"{new}\". You should update your theme."
+msgstr "Hakuasetus \"{old}\" on nimetty uudelleen: \"{new}\". Päivitä teemasi."
+
+msgid "The search config {search_config} has a unavailable form adapter {form_adapter}."
+msgstr "Hakuasetuksen {search_config} lomakesovitin {form_adapter} ei ole käytettävissä."
+
+msgid "The search config {search_config} has no form adapter."
+msgstr "Hakuasetuksella {search_config} ei ole lomakesovitinta."
+
+msgid "The search engine {search_slug} is not available for admin. Check main settings or search config."
+msgstr "Hakukone {search_slug} ei ole käytettävissä ylläpidossa. Tarkista pääasetukset tai hakuasetukset."
+
+msgid "The search engine {search_slug} is not available in site {site_slug}. Check site settings or search config."
+msgstr "Hakukone {search_slug} ei ole käytettävissä sivustolla {site_slug}. Tarkista sivuston asetukset tai hakuasetukset."
+
+msgid "The search page \"{search_page}\" has no more suggester."
+msgstr "Hakusivulla \"{search_page}\" ei ole enää ehdotinta."
+
+msgid "The search page \"{search_page}\" has no search engine."
+msgstr "Hakusivulla \"{search_page}\" ei ole hakukonetta."
+
+msgid "The search page \"{search_page}\" has no suggester."
+msgstr "Hakusivulla \"{search_page}\" ei ole ehdotinta."
+
+msgid "The settings of the sites that use these pages are cleaned too."
+msgstr "Myös näitä sivuja käyttävien sivustojen asetukset tyhjennetään."
+
+msgid "The sites display a simple list by default, unlike the admin board, that keeps all the types. The negative types are managed with the positive ones, and the duplicates are the combination of the four families and the selected variants."
+msgstr "Sivustot näyttävät oletuksena yksinkertaisen luettelon, toisin kuin ylläpito, joka säilyttää kaikki tyypit. Kielteisiä tyyppejä hallitaan myönteisten kanssa, ja kaksoiskappaleet ovat neljän ryhmän ja valittujen muunnelmien yhdistelmiä."
+
+msgid "The slug \"{search_slug}\" is already taken."
+msgstr "Lyhytnimi \"{search_slug}\" on jo käytössä."
+
+msgid "The theme displays the standard search form of Omeka, that searches the full text. When replaced, the form of the search page is displayed instead, with its filters and its autosuggestion. A theme that renders its own form is not impacted."
+msgstr "Teema näyttää Omekan tavallisen hakulomakkeen, joka hakee kokotekstistä. Korvattaessa näytetään hakusivun lomake suodattimineen ja hakuehdotuksineen. Teema, joka näyttää oman lomakkeensa, ei muutu."
+
+msgid "The use of the view helper searchingFilters() is deprecated. Use $searchConfig->renderSearchFilters() instead."
+msgstr "Näkymäapurin searchingFilters() käyttö on vanhentunut. Käytä sen sijaan $searchConfig->renderSearchFilters()."
+
+msgid "The {link_url}internal suggester{link_end} (sql) will be available after indexation."
+msgstr "{link_url}Sisäinen ehdotin{link_end} (SQL) on käytettävissä indeksoinnin jälkeen."
+
+msgid "There are already {total} other jobs \"Index Search\". Slowdowns may occur on the site."
+msgstr "Muita \"Index Search\" -töitä on jo {total}. Sivusto voi hidastua."
+
+msgid "There are already {total} other jobs \"Index Suggestions\". Slowdowns may occur."
+msgstr "Muita \"Index Suggestions\" -töitä on jo {total}. Hidastumista voi esiintyä."
+
+msgid "These resources are deleted with the search engine and cannot be recovered:"
+msgstr "Nämä resurssit poistetaan hakukoneen mukana, eikä niitä voi palauttaa:"
+
+msgid "This action requires an ajax request."
+msgstr "Tämä toiminto vaatii AJAX-pyynnön."
+
+msgid "This item set has no items."
+msgstr "Tässä kokoelmassa ei ole aineistoja."
+
+msgid "This mode is currently not supported with the internal search engine."
+msgstr "Sisäinen hakukone ei tällä hetkellä tue tätä tilaa."
+
+msgid "Title (from z to a)"
+msgstr "Nimi (Ö–A)"
+
+msgid "To"
+msgstr "Asti"
+
+msgid "Try to map automatically the metadata and the properties that are not mapped yet with the fields of the index"
+msgstr "Yritä yhdistää vielä yhdistämättömät metatiedot ja ominaisuudet automaattisesti indeksin kenttiin"
+
+msgid "Type label (Search, Item set, Selection…)"
+msgstr "Tyypin nimi (Haku, Kokoelma, Valinta…)"
+
+msgid "Unable to delete the search index for resource #{resource_id} in search engine \"{name}\": {message}"
+msgstr "Resurssin #{resource_id} hakuindeksiä ei voitu poistaa hakukoneesta \"{name}\": {message}"
+
+msgid "Unable to delete the search index for the deleted resource #{resource_id} in search engine \"{name}\": see log."
+msgstr "Poistetun resurssin #{resource_id} hakuindeksiä ei voitu poistaa hakukoneesta \"{name}\": katso loki."
+
+msgid "Unable to launch indexing metadata: see log."
+msgstr "Metatietojen indeksointia ei voitu käynnistää: katso loki."
+
+msgid "Unable to launch indexing metadata: {message}"
+msgstr "Metatietojen indeksointia ei voitu käynnistää: {message}"
+
+msgid "Use an asset as thumbnail"
+msgstr "Käytä tiedostoa pienoiskuvana"
+
+msgid "User selection"
+msgstr "Käyttäjän valinta"
+
+msgid "Visibility (radio)"
+msgstr "Näkyvyys (valintanapit)"
+
+msgid "Visibility (select)"
+msgstr "Näkyvyys (valikko)"
+
+msgid "When enabled, negative query types (does not contain, is not…) are removed and replaced by the \"not\" joiner."
+msgstr "Kun käytössä, kielteiset kyselytyypit (ei sisällä, ei ole…) poistetaan ja korvataan liittimellä \"ei\"."
+
+msgid "When enabled, the page will scroll to this block after form submission. Useful when the block is not at the top of the page."
+msgstr "Kun käytössä, sivu vierittyy tähän lohkoon lomakkeen lähettämisen jälkeen. Hyödyllinen, kun lohko ei ole sivun yläosassa."
+
+msgid "When no browse context exists (no URL param, no session), show a navigation within an item set of the item. \"First\" picks the first item set; a property sorts the item sets by that property value and picks the first with a non-empty value."
+msgstr "Kun selauskontekstia ei ole (ei URL-parametria eikä istuntoa), näytä navigointi aineiston kokoelman sisällä. \"Ensimmäinen\" valitsee ensimmäisen kokoelman; ominaisuus lajittelee kokoelmat ominaisuuden arvon mukaan ja valitsee ensimmäisen, jolla on arvo."
+
+msgid "YYYY"
+msgstr "VVVV"
+
+msgid "Yes, in a dialog"
+msgstr "Kyllä, ikkunassa"
+
+msgid "Yes, to the search page"
+msgstr "Kyllä, hakusivulle"
+
+msgid "[AdvancedSearch] {count} facet values for field \"{field}\" were skipped because they have no label or are not in the current site (sample: {sample})."
+msgstr "[AdvancedSearch] Kentän \"{field}\" {count} rajausarvoa ohitettiin, koska niillä ei ole nimeä tai ne eivät kuulu nykyiseen sivustoon (esimerkki: {sample})."
+
+msgid "[Any field]"
+msgstr "[Mikä tahansa kenttä]"
+
+msgid "[Missing engine adapter \"%s\"]"
+msgstr "[Hakukoneen sovitin \"%s\" puuttuu]"
+
+msgid "[Undefined]"
+msgstr "[Määrittelemätön]"
+
+msgid "[any metadata]"
+msgstr "[mikä tahansa metatieto]"
+
+msgid "[any property]"
+msgstr "[mikä tahansa ominaisuus]"
+
+msgid "[none]"
+msgstr "[ei mitään]"
+
+msgid "after"
+msgstr "jälkeen"
+
+msgid "after or on"
+msgstr "samana päivänä tai jälkeen"
+
+msgid "and"
+msgstr "ja"
+
+msgid "ascendant"
+msgstr "nouseva"
+
+msgid "before"
+msgstr "ennen"
+
+msgid "before or on"
+msgstr "ennen tai samana päivänä"
+
+msgid "default = browse\n151 = search\n152 = events"
+msgstr "default = browse\n151 = search\n152 = tapahtumat"
+
+msgid "descendant"
+msgstr "laskeva"
+
+msgid "does not have a single value"
+msgstr "ei ole yhtä arvoa"
+
+msgid "does not have duplicate linked resources"
+msgstr "ei ole päällekkäisiä linkitettyjä resursseja"
+
+msgid "does not have duplicate linked resources and language"
+msgstr "ei ole päällekkäisiä linkitettyjä resursseja ja kieltä"
+
+msgid "does not have duplicate linked resources and type"
+msgstr "ei ole päällekkäisiä linkitettyjä resursseja ja tyyppiä"
+
+msgid "does not have duplicate linked resources, type and language"
+msgstr "ei ole päällekkäisiä linkitettyjä resursseja, tyyppiä ja kieltä"
+
+msgid "does not have duplicate simple values"
+msgstr "ei ole päällekkäisiä yksinkertaisia arvoja"
+
+msgid "does not have duplicate simple values and language"
+msgstr "ei ole päällekkäisiä yksinkertaisia arvoja ja kieltä"
+
+msgid "does not have duplicate simple values and type"
+msgstr "ei ole päällekkäisiä yksinkertaisia arvoja ja tyyppiä"
+
+msgid "does not have duplicate simple values, type and language"
+msgstr "ei ole päällekkäisiä yksinkertaisia arvoja, tyyppiä ja kieltä"
+
+msgid "does not have duplicate uris"
+msgstr "ei ole päällekkäisiä URI-osoitteita"
+
+msgid "does not have duplicate uris and language"
+msgstr "ei ole päällekkäisiä URI-osoitteita ja kieltä"
+
+msgid "does not have duplicate uris and type"
+msgstr "ei ole päällekkäisiä URI-osoitteita ja tyyppiä"
+
+msgid "does not have duplicate uris, type and language"
+msgstr "ei ole päällekkäisiä URI-osoitteita, tyyppiä ja kieltä"
+
+msgid "does not have duplicate values"
+msgstr "ei ole päällekkäisiä arvoja"
+
+msgid "does not have duplicate values and language"
+msgstr "ei ole päällekkäisiä arvoja ja kieltä"
+
+msgid "does not have duplicate values and type"
+msgstr "ei ole päällekkäisiä arvoja ja tyyppiä"
+
+msgid "does not have duplicate values, type and language"
+msgstr "ei ole päällekkäisiä arvoja, tyyppiä ja kieltä"
+
+msgid "does not have main type"
+msgstr "ei ole päätyyppiä"
+
+msgid "does not have multiple values"
+msgstr "ei ole useita arvoja"
+
+msgid "does not have type literal-like"
+msgstr "ei ole tekstityyppiä"
+
+msgid "does not have type resource-like"
+msgstr "ei ole resurssityyppiä"
+
+msgid "does not have type uri-like"
+msgstr "ei ole URI-tyyppiä"
+
+msgid "does not match"
+msgstr "ei vastaa"
+
+msgid "duplicates"
+msgstr "kaksoiskappaleet"
+
+msgid "during year"
+msgstr "vuoden aikana"
+
+msgid "from"
+msgstr "alkaen"
+
+msgid "from %1$s"
+msgstr "alkaen %1$s"
+
+msgid "from %s to %s"
+msgstr "%s–%s"
+
+msgid "greater than"
+msgstr "suurempi kuin"
+
+msgid "greater than or equal"
+msgstr "suurempi tai yhtä suuri kuin"
+
+msgid "grid"
+msgstr "ruudukko"
+
+msgid "has a single value"
+msgstr "on yksi arvo"
+
+msgid "has any date / time"
+msgstr "on mikä tahansa päivämäärä / aika"
+
+msgid "has duplicate linked resources"
+msgstr "on päällekkäisiä linkitettyjä resursseja"
+
+msgid "has duplicate linked resources and language"
+msgstr "on päällekkäisiä linkitettyjä resursseja ja kieli"
+
+msgid "has duplicate linked resources and type"
+msgstr "on päällekkäisiä linkitettyjä resursseja ja tyyppi"
+
+msgid "has duplicate linked resources, type and language"
+msgstr "on päällekkäisiä linkitettyjä resursseja, tyyppi ja kieli"
+
+msgid "has duplicate simple values"
+msgstr "on päällekkäisiä yksinkertaisia arvoja"
+
+msgid "has duplicate simple values and language"
+msgstr "on päällekkäisiä yksinkertaisia arvoja ja kieli"
+
+msgid "has duplicate simple values and type"
+msgstr "on päällekkäisiä yksinkertaisia arvoja ja tyyppi"
+
+msgid "has duplicate simple values, type and language"
+msgstr "on päällekkäisiä yksinkertaisia arvoja, tyyppi ja kieli"
+
+msgid "has duplicate uris"
+msgstr "on päällekkäisiä URI-osoitteita"
+
+msgid "has duplicate uris and language"
+msgstr "on päällekkäisiä URI-osoitteita ja kieli"
+
+msgid "has duplicate uris and type"
+msgstr "on päällekkäisiä URI-osoitteita ja tyyppi"
+
+msgid "has duplicate uris, type and language"
+msgstr "on päällekkäisiä URI-osoitteita, tyyppi ja kieli"
+
+msgid "has duplicate values"
+msgstr "on päällekkäisiä arvoja"
+
+msgid "has duplicate values and language"
+msgstr "on päällekkäisiä arvoja ja kieli"
+
+msgid "has duplicate values and type"
+msgstr "on päällekkäisiä arvoja ja tyyppi"
+
+msgid "has duplicate values, type and language"
+msgstr "on päällekkäisiä arvoja, tyyppi ja kieli"
+
+msgid "has main type"
+msgstr "on päätyyppi"
+
+msgid "has multiple values"
+msgstr "on useita arvoja"
+
+msgid "has no date / time"
+msgstr "ei ole päivämäärää / aikaa"
+
+msgid "has type literal-like"
+msgstr "on tekstityyppiä"
+
+msgid "has type resource-like"
+msgstr "on resurssityyppiä"
+
+msgid "has type uri-like"
+msgstr "on URI-tyyppiä"
+
+msgid "is"
+msgstr "on"
+
+msgid "is a linked resource"
+msgstr "on linkitetty resurssi"
+
+msgid "is in list"
+msgstr "on luettelossa"
+
+msgid "is linked with resource with ID"
+msgstr "on linkitetty resurssiin, jonka tunniste on"
+
+msgid "is linked with resource with ID (expert)"
+msgstr "on linkitetty resurssiin, jonka tunniste on (edistynyt)"
+
+msgid "is linked with resources matching query (expert)"
+msgstr "on linkitetty kyselyä vastaaviin resursseihin (edistynyt)"
+
+msgid "is not"
+msgstr "ei ole"
+
+msgid "is not a linked resource"
+msgstr "ei ole linkitetty resurssi"
+
+msgid "is not in list"
+msgstr "ei ole luettelossa"
+
+msgid "is not linked with resource with ID"
+msgstr "ei ole linkitetty resurssiin, jonka tunniste on"
+
+msgid "is not linked with resource with ID (expert)"
+msgstr "ei ole linkitetty resurssiin, jonka tunniste on (edistynyt)"
+
+msgid "is not linked with resources matching query (expert)"
+msgstr "ei ole linkitetty kyselyä vastaaviin resursseihin (edistynyt)"
+
+msgid "is not resource matching query"
+msgstr "ei ole kyselyä vastaava resurssi"
+
+msgid "is not similar to"
+msgstr "ei muistuta"
+
+msgid "is resource matching query"
+msgstr "on kyselyä vastaava resurssi"
+
+msgid "is similar to"
+msgstr "muistuttaa"
+
+msgid "linked resources"
+msgstr "linkitetyt resurssit"
+
+msgid "list"
+msgstr "luettelo"
+
+msgid "literal"
+msgstr "teksti"
+
+msgid "lower than"
+msgstr "pienempi kuin"
+
+msgid "lower than or equal"
+msgstr "pienempi tai yhtä suuri kuin"
+
+msgid "map"
+msgstr "kartta"
+
+msgid "matches"
+msgstr "vastaa"
+
+msgid "not"
+msgstr "ei"
+
+msgid "not during year"
+msgstr "ei vuoden aikana"
+
+msgid "not on"
+msgstr "ei päivänä"
+
+msgid "on"
+msgstr "päivänä"
+
+msgid "or"
+msgstr "tai"
+
+msgid "resource"
+msgstr "resurssi"
+
+msgid "simple values"
+msgstr "yksinkertaiset arvot"
+
+msgid "since %s"
+msgstr "%s alkaen"
+
+msgid "since year"
+msgstr "vuodesta alkaen"
+
+msgid "since year (excluded)"
+msgstr "vuoden jälkeen"
+
+msgid "to"
+msgstr "asti"
+
+msgid "to %1$s"
+msgstr "%1$s asti"
+
+msgid "until %s"
+msgstr "%s asti"
+
+msgid "until year"
+msgstr "vuoteen asti"
+
+msgid "until year (excluded)"
+msgstr "ennen vuotta"
+
+msgid "uris"
+msgstr "URI-osoitteet"
+
+msgid "values"
+msgstr "arvot"
+
+msgid "with language"
+msgstr "kielen kanssa"
+
+msgid "with type"
+msgstr "tyypin kanssa"
+
+msgid "with type and language"
+msgstr "tyypin ja kielen kanssa"
+
+msgid "{resource_type}: {count} indexed"
+msgstr "{resource_type}: {count} indeksoitu"

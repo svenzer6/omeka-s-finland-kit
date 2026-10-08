@@ -1,0 +1,780 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: fi_FI\n"
+"Project-Id-Version: ContactUs (Omeka S Finland Kit)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "%1$d %2$s (admin)"
+msgstr "%1$d %2$s (ylläpito)"
+
+msgid "%1$d %2$s (public)"
+msgstr "%1$d %2$s (julkinen)"
+
+msgid "%d resource"
+msgstr "%d resurssi"
+
+msgid "%d resources"
+msgstr "%d resurssia"
+
+msgid "(public)"
+msgstr "(julkinen)"
+
+msgid "A YAML mapping, one field by name: a scalar value is the label (e.g. \"phone: Phone\"), a null value keeps a default field in place (e.g. \"name:\"), an object accepts the keys label, type (text, textarea, email, tel, number, url, date, select, radio, checkbox, multicheckbox), required, values (the choices of a select/radio/multicheckbox), options (other Laminas element options like empty_option or info) and attributes (placeholder, class…). List a default field name (name, from, subject, message) to move or relabel it; unlisted default fields are added at the end. The elements may be adapted via the theme. If empty, the main settings will be used."
+msgstr "YAML-määritys, yksi kenttä nimen mukaan: skalaariarvo toimii kentän nimikkeenä (esim. \"phone: Phone\"), nolla-arvo säilyttää oletusarvon (esim. \"name:\"), ja objekti hyväksyy avaimet label, type (text, textarea, email, tel, number, url, date, select, radio, checkbox, multicheckbox), required, values (select-, radio- tai multicheckbox-valintojen vaihtoehdot), options (muut Laminas-elementtien asetukset, kuten empty_option tai info) ja attributes (placeholder, class…). Luettele oletuskentän nimi (name, from, subject, message), jotta se voidaan siirtää tai nimetä uudelleen; luetteloon kuulumattomat oletuskentät lisätään luettelon loppuun. Elementtejä voidaan mukauttaa teeman kautta. Jos kenttä jätetään tyhjäksi, käytetään pääasetuksia."
+
+msgid "A YAML mapping, one field by name: a scalar value is the label (e.g. \"phone: Phone\"), a null value keeps a default field in place (e.g. \"name:\"), an object accepts the keys label, type (text, textarea, email, tel, number, url, date, select, radio, checkbox, multicheckbox), required, values (the choices of a select/radio/multicheckbox), options (other Laminas element options like empty_option or info) and attributes (placeholder, class…). List a default field name (name, from, subject, message) to move or relabel it; unlisted default fields are added at the end. The elements may be adapted via the theme. If empty, the site settings or the main settings will be used."
+msgstr "YAML-määritys, yksi kenttä nimen mukaan: skalaariarvo toimii kentän nimikkeenä (esim. ”phone: Phone”), nolla-arvo säilyttää oletusarvon (esim. ”name:”), ja objekti hyväksyy avaimet label, type (text, textarea, email, tel, number, url, date, select, radio, checkbox, multicheckbox), required, values (select-/radio-/multicheckbox-valintojen vaihtoehdot), options (muut Laminas-elementtien asetukset, kuten empty_option tai info) ja attributes (placeholder, class…). Luettele oletuskentän nimi (name, from, subject, message), jos haluat siirtää tai nimetä sen uudelleen; luetteloon kuulumattomat oletuskentät lisätään luettelon loppuun. Elementtejä voidaan mukauttaa teeman kautta. Jos kenttä jätetään tyhjäksi, käytetään sivuston asetuksia tai pääasetuksia."
+
+msgid "A YAML mapping, one field by name: a scalar value is the label (e.g. \"phone: Phone\"), a null value keeps a default field in place (e.g. \"name:\"), an object accepts the keys label, type (text, textarea, email, tel, number, url, date, select, radio, checkbox, multicheckbox), required, values (the choices of a select/radio/multicheckbox), options (other Laminas element options like empty_option or info) and attributes (placeholder, class…). List a default field name (name, from, subject, message) to move or relabel it; unlisted default fields are added at the end. The elements may be adapted via the theme. This setting may be overridden by site or block settings."
+msgstr "YAML-määritys, yksi kenttä nimen mukaan: skalaariarvo toimii kentän nimikkeenä (esim. \"phone: Phone\"), nolla-arvo säilyttää oletuskentän paikallaan (esim. \"name:\"), ja objekti hyväksyy avaimet label, type (text, textarea, email, tel, number, url, date, select, radio, checkbox, multicheckbox), required, values (select-/radio-/multicheckbox-valintojen vaihtoehdot), options (muut Laminas-elementtien asetukset, kuten empty_option tai info) ja attributes (placeholder, class…). Luettele oletuskentän nimi (name, from, subject, message), jotta se voidaan siirtää tai nimetä uudelleen; luetteloon kuulumattomat oletuskentät lisätään luettelon loppuun. Elementtejä voidaan mukauttaa teeman kautta. Tämä asetus voidaan ohittaa sivuston tai lohkon asetuksilla."
+
+msgid "A checkbox for consent has been added to the user form. You may update the default label in site settings"
+msgstr "Käyttäjälomakkeeseen on lisätty suostumusvalintaruutu. Voit päivittää oletustekstin sivuston asetuksissa"
+
+msgid "A new block allows to display a form to subscribe to a newsletter."
+msgstr "Uudella lohkolla voi näyttää uutiskirjeen tilauslomakkeen."
+
+msgid "A new button allows to create a zip for any contact."
+msgstr "Uudella painikkeella voi luoda ZIP-tiedoston mille tahansa yhteydenotolle."
+
+msgid "A new field allows to set the sender email. The first email of the list of emails for notification is no more used as sender. Check it if needed."
+msgstr "Uudessa kentässä voi määrittää lähettäjän sähköpostiosoitteen. Ilmoitusosoitteiden luettelon ensimmäistä osoitetta ei enää käytetä lähettäjänä. Tarkista asetus tarvittaessa."
+
+msgid "A new option allows to use the user email to send message. It is not recommended because many emails providers reject them as spam. Use it only if you manage your own domain."
+msgstr "Uudella asetuksella viestin voi lähettää käyttäjän sähköpostiosoitteesta. Tätä ei suositella, koska monet sähköpostipalveluntarjoajat hylkäävät tällaiset viestit roskapostina. Käytä asetusta vain, jos hallinnoit omaa verkkotunnustasi."
+
+msgid "A new page allows the user or the visitor to see all the selected resources."
+msgstr "Uudella sivulla käyttäjä tai kävijä voi nähdä kaikki valitut resurssit."
+
+msgid "A new site option allows to hide the guest page for selection."
+msgstr "Uudella sivustoasetuksella valinnan vierassivun voi piilottaa."
+
+msgid "A user has contacted you.\n\nemail: {email}\nname: {name}\nip: {ip}\n\n{newsletter}\nsubject: {subject}\nmessage:\n\n{message}\n\n{fields}"
+msgstr "Käyttäjä on ottanut sinuun yhteyttä.\n\nsähköposti: {email}\nnimi: {name}\nip: {ip}\n\n{newsletter}\naihe: {subject}\nviesti:\n\n{message}\n\n{fields}"
+
+msgid "About resource %s (%s)."
+msgstr "Tietoja resurssista %s (%s)."
+
+msgid "Actions"
+msgstr "Toiminnot"
+
+msgid "Add a checkbox for a newsletter"
+msgstr "Lisää uutiskirjeen valintaruutu"
+
+msgid "Add to the selection for contact"
+msgstr "Lisää yhteydenoton valintaan"
+
+msgid "Address set as reply-to when an admin answers a message. If empty, the reply-to is the email of the connected admin. The sender (from) remains the unique installation address."
+msgstr "Osoite, joka asetetaan Reply-To-osoitteeksi, kun ylläpitäjä vastaa viestiin. Jos kenttä on tyhjä, Reply-To-osoitteena käytetään kirjautuneen ylläpitäjän sähköpostiosoitetta. Lähettäjänä (From) säilyy asennuksen yksilöllinen osoite."
+
+msgid "Advanced anti-spam protection"
+msgstr "Edistynyt roskapostintorjunta"
+
+msgid "All contact messages and files will be removed (folder \"{folder}\")."
+msgstr "Kaikki yhteydenottoviestit ja tiedostot poistetaan (kansio \"{folder}\")."
+
+msgid "Allow to attach a file"
+msgstr "Salli tiedoston liittäminen"
+
+msgid "Allows visitors to contact authors via an email."
+msgstr "Sallii kävijöiden ottaa yhteyttä tekijöihin sähköpostitse."
+
+msgid "An error occurred."
+msgstr "Tapahtui virhe."
+
+msgid "An internal error occurred."
+msgstr "Tapahtui sisäinen virhe."
+
+msgid "Append a form to allow visitors to contact us. Site settings are used when following fields are empty."
+msgstr "Lisää lomake, jolla kävijät voivat ottaa yhteyttä. Sivuston asetuksia käytetään, kun seuraavat kentät ovat tyhjiä."
+
+msgid "Append a form to allow visitors to subscribe to a newsletter."
+msgstr "Lisää lomake, jolla kävijät voivat tilata uutiskirjeen."
+
+msgid "Are you sure you would like to delete the selected messages?"
+msgstr "Haluatko varmasti poistaa valitut viestit?"
+
+msgid "Attach a file"
+msgstr "Liitä tiedosto"
+
+msgid "Attached file"
+msgstr "Liitetiedosto"
+
+msgid "Attached resources"
+msgstr "Liitetyt resurssit"
+
+msgid "Basket"
+msgstr "Kori"
+
+msgid "By default, the browser must compute a small SHA-256 hashcash challenge before the form can be submitted. This blocks bots that do not run JavaScript. Invisible for real users (about one second). Check to disable."
+msgstr "Oletusarvoisesti selaimen on laskettava pieni SHA-256 Hashcash -haaste ennen lomakkeen lähettämistä. Tämä estää botit, jotka eivät suorita JavaScriptiä. Toiminto on oikeille käyttäjille näkymätön (noin sekunti). Poista toiminto käytöstä valitsemalla tämä."
+
+msgid "Check mx records of the email domain"
+msgstr "Tarkista sähköpostiverkkotunnuksen MX-tietueet"
+
+msgid "Checkbox to unsubscribe"
+msgstr "Tilauksen perumisen valintaruutu"
+
+msgid "Complete the request"
+msgstr "Viimeistele pyyntö"
+
+msgid "Confirmation contact"
+msgstr "Yhteydenoton vahvistus"
+
+msgid "Confirmation message"
+msgstr "Vahvistusviesti"
+
+msgid "Confirmation message for subscription to newsletter"
+msgstr "Uutiskirjetilauksen vahvistusviesti"
+
+msgid "Contact Us"
+msgstr "Yhteydenotto"
+
+msgid "Contact Us: Basket"
+msgstr "Yhteydenotto: kori"
+
+msgid "Contact Us: Form"
+msgstr "Ota yhteyttä: lomake"
+
+msgid "Contact Us: Form as button"
+msgstr "Ota yhteyttä: lomake painikkeena"
+
+msgid "Contact Us: Selector"
+msgstr "Ota yhteyttä: valitsin"
+
+msgid "Contact administor for more information."
+msgstr "Pyydä lisätietoja ylläpitäjältä."
+
+msgid "Contact form fields"
+msgstr "Yhteydenottolomakkeen kentät"
+
+msgid "Contact message successfully deleted."
+msgstr "Yhteydenottoviesti poistettiin onnistuneesti."
+
+msgid "Contact messages"
+msgstr "Yhteydenottoviestit"
+
+msgid "Contact messages successfully deleted."
+msgstr "Yhteydenottoviestit poistettiin onnistuneesti."
+
+msgid "Contact us"
+msgstr "Yhteydenotto"
+
+msgid "Copy (cc)"
+msgstr "Kopio (cc)"
+
+msgid "Copy to me"
+msgstr "Kopio itselle"
+
+msgid "Date sent"
+msgstr "Lähetyspäivä"
+
+msgid "Default message when answering a contact"
+msgstr "Oletusviesti yhteydenottoon vastattaessa"
+
+msgid "Default subject when answering a contact"
+msgstr "Oletusaihe yhteydenottoon vastattaessa"
+
+msgid "Delete contact messages"
+msgstr "Poista yhteydenottoviestit"
+
+msgid "Delete of all contact messages is not supported currently."
+msgstr "Kaikkien yhteydenottoviestien poistamista ei tällä hetkellä tueta."
+
+msgid "Disable feature"
+msgstr "Ei käytössä"
+
+msgid "Disable the selection in guest view"
+msgstr "Poista valinta käytöstä vierasnäkymässä"
+
+msgid "Download files as zip"
+msgstr "Lataa tiedostot zip-tiedostona"
+
+msgid "Download the file as zip"
+msgstr "Lataa tiedosto zip-tiedostona"
+
+msgid "Download the files as zip"
+msgstr "Lataa tiedostot zip-tiedostona"
+
+msgid "Email of the sender (else no-reply user or administrator)"
+msgstr "Lähettäjän sähköpostiosoite (muussa tapauksessa no-reply-käyttäjä tai ylläpitäjä)"
+
+msgid "Emails to notify"
+msgstr "Ilmoitettavat sähköpostiosoitteet"
+
+msgid "Enable Google Recaptcha antispam for visitors"
+msgstr "Ota Google reCAPTCHA -roskapostintorjunta käyttöön kävijöille"
+
+msgid "Enable simple antispam for visitors"
+msgstr "Ota käyttöön yksinkertainen roskapostintorjunta kävijöille"
+
+msgid "Error loading or saving base64 file."
+msgstr "Base64-enkoodattua tiedostoa ladattaessa tai tallennettaessa tapahtui virhe."
+
+msgid "Existing fields for messages were clarified. You may need to check your config."
+msgstr "Viestien nykyisiä kenttiä selvennettiin. Asetukset on ehkä tarkistettava."
+
+msgid "Fill the form"
+msgstr "Täytä lomake"
+
+msgid "Filter contact messages"
+msgstr "Suodata yhteydenottoviestejä"
+
+msgid "For richer anti-spam protection (Proof-of-Work, rate-limiting, DNSBL, banned IP lists, structured logging), install the SpamGuard module."
+msgstr "Asenna SpamGuard-lisäosa kattavampaa roskapostintorjuntaa varten (Proof-of-Work, nopeusrajoitus, DNSBL, estettyjen IP-osoitteiden luettelot ja rakenteinen lokitus)."
+
+msgid "For richer anti-spam protection, install the module SpamGuard."
+msgstr "Jotta roskapostisuojaus olisi tehokkaampaa, asenna SpamGuard-moduuli."
+
+msgid "Has file"
+msgstr "Sisältää tiedoston"
+
+msgid "Has resource"
+msgstr "Sisältää resurssin"
+
+msgid "Hi {name},\n\n\n\nSincerely,\n\n{main_title}\n{main_url}\n\n--\n\nYour message:\nSubject: {subject}\n\n{message}"
+msgstr "Hei {name},\n\n\n\nYstävällisin terveisin,\n\n{main_title}\n{main_url}\n\n--\n\nViestisi:\nAihe: {subject}\n\n{message}"
+
+msgid "Hi {name},\n\nThanks to contact us!\n\nWe will answer you as soon as possible.\n\nSincerely,\n\n{main_title}\n{main_url}\n\n--\n\n{newsletter}\nYour message:\nSubject: {subject}\n\n{message}\n\n{fields}"
+msgstr "Hei {name},\n\nKiitos yhteydenotostasi!\n\nVastaamme mahdollisimman pian.\n\nYstävällisin terveisin,\n\n{main_title}\n{main_url}\n\n--\n\n{newsletter}\nViestisi:\nAihe: {subject}\n\n{message}\n\n{fields}"
+
+msgid "Hi {user_name},\n\nThe visitor {name} ({email} made the following request about a resource on {main_title}:\n\nThanks to reply directly to the email above and do not use \"reply\".\n\nSincerely,\n\n--\n\nFrom: {name} <{email}>\nSubject: {subject}\n\n{message}\n\n{fields}"
+msgstr "Hei {user_name},\n\nKävijä {name} ({email}) esitti seuraavan pyynnön, joka koskee resurssia sivustolla {main_title}:\n\nVastaa suoraan yllä olevaan sähköpostiosoitteeseen äläkä käytä \"Vastaa\"-toimintoa.\n\nYstävällisin terveisin,\n\n--\n\nLähettäjä: {name} <{email}>\nAihe: {subject}\n\n{message}\n\n{fields}"
+
+msgid "Hi,\n\nThank you for subscribing to our newsletter.\n\nSincerely,"
+msgstr "Hei,\n\nKiitos uutiskirjeemme tilaamisesta.\n\nYstävällisin terveisin,"
+
+msgid "Hidden copy (bcc)"
+msgstr "Piilokopio (bcc)"
+
+msgid "How many are one plus 1 (in number)?"
+msgstr "Kuinka paljon on yksi plus 1 (numerona)?"
+
+msgid "How many are one plus 2 (in number)?"
+msgstr "Kuinka paljon on yksi plus 2 (numerona)?"
+
+msgid "How many are one plus 3 (in number)?"
+msgstr "Kuinka paljon on yksi plus 3 (numerona)?"
+
+msgid "How many are three plus 1 (in number)?"
+msgstr "Kuinka paljon on kolme plus 1 (numerona)?"
+
+msgid "How many are three plus 2 (in number)?"
+msgstr "Kuinka paljon on kolme plus 2 (numerona)?"
+
+msgid "How many are three plus 3 (in number)?"
+msgstr "Kuinka paljon on kolme plus 3 (numerona)?"
+
+msgid "How many are two plus 1 (in number)?"
+msgstr "Kuinka paljon on kaksi plus 1 (numerona)?"
+
+msgid "How many are two plus 2 (in number)?"
+msgstr "Kuinka paljon on kaksi plus 2 (numerona)?"
+
+msgid "How many are two plus 3 (in number)?"
+msgstr "Kuinka paljon on kaksi plus 3 (numerona)?"
+
+msgid "How many are zero plus 1 (in number)?"
+msgstr "Kuinka paljon on nolla plus 1 (numerona)?"
+
+msgid "How many are zero plus 1 (in number)? = 1\nHow many are one plus 1 (in number)? = 2"
+msgstr "Kuinka paljon on nolla plus 1 (numerona)? = 1\nKuinka paljon on yksi plus 1 (numerona)? = 2"
+
+msgid "I allow the site owner to store my name and my email to answer to this message."
+msgstr "Annan sivuston omistajalle luvan tallentaa nimeni ja sähköpostiosoitteeni tähän viestiin vastaamista varten."
+
+msgid "IP"
+msgstr "IP"
+
+msgid "Include matching resource ids from module Selection in response"
+msgstr "Sisällytä Selection-lisäosan vastaavat resurssitunnukset vastaukseen"
+
+msgid "Include private resources and files in the zip"
+msgstr "Lisää yksityiset resurssit ja tiedostot zip-tiedostoon"
+
+msgid "Include resources in response"
+msgstr "Sisällytä resurssit vastaukseen"
+
+msgid "Infos"
+msgstr "Tiedot"
+
+msgid "Invalid fields: check the YAML syntax, the field names (ascii, no space), the types and, for select/radio/multicheckbox, the list of values."
+msgstr "Virheelliset kentät: tarkista YAML-syntaksi, kenttien nimet (ASCII-merkistöä, ei välilyöntejä), tyypit sekä select-, radio- ja multicheckbox-kenttien arvoluettelot."
+
+msgid "Is read: %s"
+msgstr "Luettu: %s"
+
+msgid "Is spam: %s"
+msgstr "Roskapostia: %s"
+
+msgid "It is not possible to select more than {total} resources."
+msgstr "Enempää kuin {total} resurssia ei voi valita."
+
+msgid "It is now possible to define specific fields for the contact us form via the main or site settings."
+msgstr "Yhteydenottolomakkeelle voi nyt määrittää omia kenttiä yleisissä tai sivuston asetuksissa."
+
+msgid "It is now possible to unsubscribe to a newsletter."
+msgstr "Uutiskirjeen tilauksen voi nyt perua."
+
+msgid "Item browse"
+msgstr "Kohteiden selaussivu"
+
+msgid "Item set show"
+msgstr "Kohdejoukon näyttösivu"
+
+msgid "Item show"
+msgstr "Kohteen näyttösivu"
+
+msgid "It’s now possible to add a contact form in item/browse and to send a list of resource ids (need a line in theme)."
+msgstr "Yhteydenottolomakkeen voi nyt lisätä item/browse-näkymään ja lähettää resurssitunnusten luettelon (vaatii rivin teemaan)."
+
+msgid "It’s now possible to add a contact form in item/show for themes supporting resource blocks."
+msgstr "Yhteydenottolomakkeen voi nyt lisätä item/show-näkymään teemoissa, jotka tukevat resurssilohkoja."
+
+msgid "It’s now possible to append specific fields to the form."
+msgstr "Lomakkeeseen voi nyt lisätä omia kenttiä."
+
+msgid "It’s now possible to contact authors of a resource via the view helper contactUs()."
+msgstr "Resurssien tekijöihin voi nyt ottaa yhteyttä contactUs()-näkymäavustimen kautta."
+
+msgid "It’s now possible to prepare a zip file of asked files to send to a visitor via a link. See {link}settings{link_end}."
+msgstr "Pyydetyistä tiedostoista voi nyt valmistella ZIP-tiedoston, joka lähetetään kävijälle linkkinä. Katso {link}asetukset{link_end}."
+
+msgid "It’s now possible to set a specific message when contacting author."
+msgstr "Tekijälle lähetettävään yhteydenottoon voi nyt määrittää oman viestin."
+
+msgid "Label for the consent checkbox"
+msgstr "Suostumusvalintaruudun teksti"
+
+msgid "Label for the link in guest account"
+msgstr "Vierastilin linkin teksti"
+
+msgid "Label for the newsletter"
+msgstr "Uutiskirjeen teksti"
+
+msgid "Label for the page Selection for contact"
+msgstr "Yhteydenoton valinta -sivun teksti"
+
+msgid "Label for the unsubscribe checkbox"
+msgstr "Tilauksen perumisen valintaruudun teksti"
+
+msgid "Large"
+msgstr "Suuri"
+
+msgid "Last modified"
+msgstr "Viimeksi muokattu"
+
+msgid "Links (URLs) are not allowed in messages. Please remove any link and resubmit."
+msgstr "Linkkejä (URL-osoitteita) ei sallita viesteissä. Poista kaikki linkit ja lähetä viesti uudelleen."
+
+msgid "List of antispam questions/answers"
+msgstr "Roskapostintorjunnan kysymysten ja vastausten luettelo"
+
+msgid "Maximum number of items to store in selection"
+msgstr "Valintaan tallennettavien kohteiden enimmäismäärä"
+
+msgid "Media show"
+msgstr "Median näyttösivu"
+
+msgid "Media type: %s"
+msgstr "Mediatyyppi: %s"
+
+msgid "Message"
+msgstr "Viesti"
+
+msgid "Message displayed on site after post"
+msgstr "Sivustolla lähettämisen jälkeen näytettävä viesti"
+
+msgid "Message displayed on site after post for newsletter"
+msgstr "Sivustolla uutiskirjetilauksen lähettämisen jälkeen näytettävä viesti"
+
+msgid "Message successfully sent to {email}."
+msgstr "Viesti lähetettiin onnistuneesti osoitteeseen {email}."
+
+msgid "Message to author"
+msgstr "Viesti tekijälle"
+
+msgid "Message to the author"
+msgstr "Viesti tekijälle"
+
+msgid "Message to us"
+msgstr "Viesti meille"
+
+msgid "Missing requirement. Unable to upgrade."
+msgstr "Vaatimus puuttuu. Päivitystä ei voida tehdä."
+
+msgid "Module ContactUs : SpamGuard is missing, so only simple anti-spam countermeasures are available."
+msgstr "ContactUs-lisäosa: SpamGuard puuttuu, joten käytettävissä ovat vain yksinkertaiset roskapostintorjuntatoimet."
+
+msgid "Multiple resources"
+msgstr "Useita resursseja"
+
+msgid "My selection for contact"
+msgstr "Oma yhteydenottovalintani"
+
+msgid "Name of the sender when email above is set"
+msgstr "Lähettäjän nimi, kun yllä oleva sähköpostiosoite on määritetty"
+
+msgid "New fields were added for messages."
+msgstr "Viesteihin lisättiin uusia kenttiä."
+
+msgid "New options were added to set message after posting mail."
+msgstr "Uusia asetuksia lisättiin viestin määrittämiseksi sähköpostin lähettämisen jälkeen."
+
+msgid "Newsletter"
+msgstr "Uutiskirje"
+
+msgid "No contact messages submitted."
+msgstr "Yhteydenottoviestejä ei ole lähetetty."
+
+msgid "No copy"
+msgstr "Ei kopiota"
+
+msgid "No email defined for this contact message."
+msgstr "Tälle yhteydenottoviestille ei ole määritetty sähköpostiosoitetta."
+
+msgid "No file to zip."
+msgstr "Zip-tiedostoa ei ole."
+
+msgid "No media"
+msgstr "Ei mediaa"
+
+msgid "No message found."
+msgstr "Viestiä ei löytynyt."
+
+msgid "No resource is selected."
+msgstr "Resurssia ei ole valittu."
+
+msgid "No resource selected."
+msgstr "Ei valittua resurssia."
+
+msgid "No resource set."
+msgstr "Resurssia ei ole määritetty."
+
+msgid "Not ajax."
+msgstr "Ei Ajax-pyyntö."
+
+msgid "Not an ajax request"
+msgstr "Pyyntö ei ole Ajax-pyyntö."
+
+msgid "Notification email subject for admin"
+msgstr "Ylläpitäjän ilmoitussähköpostin aihe"
+
+msgid "Notification message for admin"
+msgstr "Ylläpitäjän ilmoitusviesti"
+
+msgid "Old themes"
+msgstr "Vanhat teemat"
+
+msgid "Owner of the resource"
+msgstr "Resurssin omistaja"
+
+msgid "Placeholders: {name}, {email}, {subject}, {message}, {main_title}, {main_url}."
+msgstr "Paikkamerkit: {name}, {email}, {subject}, {message}, {main_title}, {main_url}."
+
+msgid "Possible placeholders: {main_title}, {main_url}, {site_title}, {site_url}, {email}, {name}, {object}, {subject}, {message}, {newsletter}, {ip}, {fields}, {each specific field}, {resource}, {resource_id}, {resource_title}, {resource_url}, {resource_url_admin}, {resource_link}, {property term}, {resources}, {resources_ids}, {resources_url}, {resources_url_admin}, {resources_links}, {resources::property term}."
+msgstr "Mahdolliset paikkamerkit: {main_title}, {main_url}, {site_title}, {site_url}, {email}, {name}, {object}, {subject}, {message}, {newsletter}, {ip}, {fields}, {each specific field}, {resource}, {resource_id}, {resource_title}, {resource_url}, {resource_url_admin}, {resource_link}, {property term}, {resources}, {resources_ids}, {resources_url}, {resources_url_admin}, {resources_links}, {resources::property term}."
+
+msgid "Possible placeholders: {main_title}, {main_url}, {site_title}, {site_url}, {email}, {name}, {object}, {subject}, {message}, {newsletter}, {ip}."
+msgstr "Mahdolliset paikkamerkit: {main_title}, {main_url}, {site_title}, {site_url}, {email}, {name}, {object}, {subject}, {message}, {newsletter}, {ip}."
+
+msgid "Possible placeholders: {main_title}, {main_url}, {site_title}, {site_url}, {email}, {object}, {subject}, {ip}."
+msgstr "Mahdolliset paikkamerkit: {main_title}, {main_url}, {site_title}, {site_url}, {email}, {object}, {subject}, {ip}."
+
+msgid "Possible placeholders: {name}, {email}."
+msgstr "Mahdolliset paikkamerkit: {name}, {email}."
+
+msgid "Property where email of the author is stored"
+msgstr "Kenttä, johon tekijän sähköpostiosoite on tallennettu"
+
+msgid "Quick filter"
+msgstr "Pikasuodatin"
+
+msgid "Re: {subject}"
+msgstr "VS: {subject}"
+
+msgid "Read"
+msgstr "Luettu"
+
+msgid "Reject messages containing URLs"
+msgstr "Hylkää URL-osoitteita sisältävät viestit"
+
+msgid "Remove Contact Us files"
+msgstr "Poista Yhteydenotto-lisäosan tiedostot"
+
+msgid "Removed the \"id\" system field from {count} contact form blocks."
+msgstr "”id”-järjestelmäkenttä on poistettu {count} yhteydenottolomakkeen lohkosta."
+
+msgid "Removed {count} orphan zip files (message deleted): {ids}."
+msgstr "Poistettiin {count} irrallista ZIP-tiedostoa (viesti poistettu): {ids}."
+
+msgid "Removed {count} stored zip files: zips are now streamed on demand, so no file is kept and existing links still work."
+msgstr "Poistettu {count} tallennettua zip-tiedostoa: zip-tiedostot ladataan nyt pyynnöstä, joten tiedostoja ei säilytetä, ja olemassa olevat linkit toimivat edelleen."
+
+msgid "Reply to the contact"
+msgstr "Vastaa yhteydenottajalle"
+
+msgid "Reply-to address when answering a contact"
+msgstr "Vastausosoite yhteydenottoon vastattaessa"
+
+msgid "Resource does not exist."
+msgstr "Resurssia ei ole olemassa."
+
+msgid "Resource has no file."
+msgstr "Resurssilla ei ole tiedostoa."
+
+msgid "Resource is invalid."
+msgstr "Resurssi ei kelpaa."
+
+msgid "See the block \"Contact us\" for a simple list. Separate questions and answer with a \"=\". Questions may be translated."
+msgstr "Katso yksinkertainen luettelo “Yhteydenotto” -lohkosta. Erota kysymys ja vastaus \"=\"-merkillä. Kysymykset voidaan kääntää."
+
+msgid "See the block \"Newsletter\" for a simple list. Separate questions and answer with a \"=\". Questions may be translated."
+msgstr "Katso yksinkertainen luettelo \"Uutiskirje\"-lohkosta. Erota kysymys ja vastaus \"=\"-merkillä. Kysymykset voidaan kääntää."
+
+msgid "Select a property…"
+msgstr "Valitse ominaisuus…"
+
+msgid "Select message"
+msgstr "Valitse viesti"
+
+msgid "Selection for contact"
+msgstr "Yhteydenoton valinta"
+
+msgid "Send a confirmation email"
+msgstr "Lähetä vahvistussähköposti"
+
+msgid "Send a message"
+msgstr "Lähetä viesti"
+
+msgid "Send email to author only, not admins (hidden)"
+msgstr "Lähetä sähköposti vain tekijälle, ei ylläpitäjille (piilotettu)"
+
+msgid "Send message"
+msgstr "Lähetä viesti"
+
+msgid "Sender"
+msgstr "Lähettäjä"
+
+msgid "Sender email"
+msgstr "Lähettäjän sähköpostiosoite"
+
+msgid "Sender name"
+msgstr "Lähettäjän nimi"
+
+msgid "Set not read"
+msgstr "Merkitse lukemattomaksi"
+
+msgid "Set not spam"
+msgstr "Poista roskapostimerkintä"
+
+msgid "Set read"
+msgstr "Merkitse luetuksi"
+
+msgid "Set spam"
+msgstr "Merkitse roskapostiksi"
+
+msgid "Skip the client-side proof-of-work"
+msgstr "Ohita asiakaspuolen Proof-of-Work-tarkistus"
+
+msgid "Some new anti-spam checks were added in main settings. Check them if needed."
+msgstr "Yleisiin asetuksiin lisättiin uusia roskapostintorjuntatarkistuksia. Tarkista ne tarvittaessa."
+
+msgid "Some themes may require resources to be included in response when selecting a resource. This option avoids an api request via js on public side, but slow response."
+msgstr "Joissakin teemoissa resurssit on ehkä sisällytettävä vastaukseen resurssia valittaessa. Tämä asetus välttää julkisella puolella JavaScriptillä tehtävän API-pyynnön, mutta hidastaa vastausta."
+
+msgid "Sorry, the message cannot be sent. Contact the administrator."
+msgstr "Valitettavasti viestiä ei voida lähettää. Ota yhteyttä ylläpitäjään."
+
+msgid "Sorry, the message is recorded, but we are not able to notify the admin at once. You may come back later if you don’t receive answer."
+msgstr "Valitettavasti viesti tallennettiin, mutta ylläpitäjälle ei voida ilmoittaa siitä heti. Voit palata myöhemmin, jos et saa vastausta."
+
+msgid "Sorry, we are not able to send the confirmation email."
+msgstr "Valitettavasti vahvistussähköpostia ei voida lähettää."
+
+msgid "Sorry, we are not able to send the email to the author."
+msgstr "Valitettavasti sähköpostia ei voida lähettää tekijälle."
+
+msgid "Spam"
+msgstr "Roskaposti"
+
+msgid "Square"
+msgstr "Neliöity"
+
+msgid "Subject of the confirmation email"
+msgstr "Vahvistussähköpostin aihe"
+
+msgid "Subject of the confirmation for subscription to newsletter"
+msgstr "Uutiskirjetilauksen vahvistuksen aihe"
+
+msgid "Subject of the email to author"
+msgstr "Tekijälle lähetettävän sähköpostin aihe"
+
+msgid "Subscribe newsletter"
+msgstr "Tilaa uutiskirje"
+
+msgid "Subscribe to the newsletter"
+msgstr "Tilaa uutiskirje"
+
+msgid "Subscription to newsletter of {main_title}"
+msgstr "Sivuston {main_title} uutiskirjetilaus"
+
+msgid "Thank you for subscribing to our newsletter, {name}."
+msgstr "Kiitos uutiskirjeemme tilaamisesta, {name}."
+
+msgid "Thank you for subscribing to our newsletter. Check the confirmation email sent to {email}."
+msgstr "Kiitos uutiskirjeemme tilaamisesta. Tarkista osoitteeseen {email} lähetetty vahvistussähköposti."
+
+msgid "Thank you for your message {name}. Check your confirmation mail. The author will receive it soon."
+msgstr "Kiitos viestistäsi, {name}. Tarkista vahvistussähköpostisi. Tekijä saa viestin pian."
+
+msgid "Thank you for your message, {name}. It will be sent to the author as soon as possible."
+msgstr "Kiitos viestistäsi, {name}. Se lähetetään tekijälle mahdollisimman pian."
+
+msgid "Thank you for your message, {name}. We will answer you as soon as possible."
+msgstr "Kiitos viestistäsi, {name}. Vastaamme mahdollisimman pian."
+
+msgid "Thank you for your message. Check your confirmation email sent to {email}. We will answer you soon."
+msgstr "Kiitos viestistäsi. Tarkista osoitteeseen {email} lähetetty vahvistussähköposti. Vastaamme pian."
+
+msgid "The body cannot be empty."
+msgstr "Viestin sisältö ei voi olla tyhjä."
+
+msgid "The contact message doesn’t exist."
+msgstr "Yhteydenottoviestiä ei ole olemassa."
+
+msgid "The directory \"{directory}\" is not writeable."
+msgstr "Hakemistoon \"{directory}\" ei voi kirjoittaa."
+
+msgid "The download link is authorized by a single-use token, so it is opened without checking the visitor rights. By default only publicly visible resources and media are included. Check to also include the private ones (private resources and private media of public resources)."
+msgstr "Latauslinkki toimi kertakäyttöisen tunnuksen avulla, joten se avautuu ilman, että kävijän käyttöoikeuksia tarkistetaan. Oletusarvoisesti mukana ovat vain julkisesti näkyvät resurssit ja mediatiedostot. Valitse tämä vaihtoehto, jos haluat sisällyttää myös yksityiset resurssit (yksityiset resurssit sekä julkisten resurssien yksityiset mediatiedostot)."
+
+msgid "The ip cannot be empty."
+msgstr "IP-osoite ei voi olla tyhjä."
+
+msgid "The list of recipients to notify, one by row."
+msgstr "Ilmoituksen vastaanottajat, yksi osoite riviä kohden."
+
+msgid "The module %1$s requires PHP %2$s or higher."
+msgstr "Lisäosa %1$s tulisi päivittää versioon %2$s tai uudempaan."
+
+msgid "The module %1$s should be upgraded to version %2$s or later."
+msgstr "Lisäosa %1$s tulisi päivittää versioon %2$s tai uudempaan."
+
+msgid "The no-reply email can be set via module EasyAdmin. The administrator email can set above."
+msgstr "No-reply-sähköpostiosoitteen voi määrittää EasyAdmin-lisäosalla. Ylläpitäjän sähköpostiosoitteen voi määrittää yllä."
+
+msgid "The number of selected items can be set in site settings. It is limited to 25 by default."
+msgstr "Valittujen kohteiden enimmäismäärän voi määrittää sivuston asetuksissa. Oletusraja on 25."
+
+msgid "The option \"heading\" was removed from blocks Contact Us and Newsletter and replaced by a block Heading (if module Block Plus is present) or Html. Remove it in the following files before upgrade and automatic conversion: {json}"
+msgstr "Asetus \"heading\" poistettiin Yhteydenotto- ja Uutiskirje-lohkoista ja korvattiin Otsikko-lohkolla (jos Block Plus -lisäosa on käytössä) tai HTML-lohkolla. Poista se seuraavista tiedostoista ennen päivitystä ja automaattista muunnosta: {json}"
+
+msgid "The option \"heading\" was removed from blocks Contact Us and Newsletter. New block \"Heading\" (if module Block Plus is present) or \"Html\" was prepended to all blocks that had a filled heading. You may check pages for styles: {json}"
+msgstr "Asetus \"heading\" poistettiin Yhteydenotto- ja Uutiskirje-lohkoista. Uusi Otsikko-lohko (jos Block Plus -lisäosa on käytössä) tai HTML-lohko lisättiin kaikkien niiden lohkojen alkuun, joissa oli täytetty otsikko. Voit tarkistaa sivujen tyylit: {json}"
+
+msgid "The setting \"template\" was moved to the new block layout settings available since Omeka S v4.1. You may check pages for styles: {json}"
+msgstr "Asetus \"template\" siirrettiin uusiin lohkoasettelun asetuksiin, jotka ovat käytettävissä Omeka S:n versiosta 4.1 alkaen. Voit tarkistaa sivujen tyylit: {json}"
+
+msgid "The unsubscription for {email} is confirmed."
+msgstr "Osoitteen {email} tilauksen peruminen on vahvistettu."
+
+msgid "The zip filenames were re-signed. Previously sent emails pointing to these zip files are now broken. Contact messages concerned: {ids}."
+msgstr "ZIP-tiedostojen nimet allekirjoitettiin uudelleen. Näihin ZIP-tiedostoihin viittaavat aiemmin lähetetyt sähköpostit eivät enää toimi. Asiaan liittyvät yhteydenottoviestit: {ids}."
+
+msgid "There are no messages."
+msgstr "Viestejä ei ole."
+
+msgid "There is a limit of %d resources by request"
+msgstr "Yhtä pyyntöä kohden voi valita enintään %d resurssia"
+
+msgid "There is an error."
+msgstr "Tapahtui virhe."
+
+msgid "There is an error: {errors}"
+msgstr "Tapahtui virhe: {errors}"
+
+msgid "This option is not recommended, unless you have a good smtp server. If not set, the user email will be set as reply-to."
+msgstr "Tätä asetusta ei suositella, ellei käytössä ole luotettavaa SMTP-palvelinta. Jos asetusta ei valita, käyttäjän sähköpostiosoite asetetaan Reply-To-osoitteeksi."
+
+msgid "This resource has no author to contact. Contact administor for more information."
+msgstr "Tällä resurssilla ei ole tekijää, johon voisi ottaa yhteyttä. Pyydä lisätietoja ylläpitäjältä."
+
+msgid "To author"
+msgstr "Tekijälle"
+
+msgid "To create antispam, each question must be separated from the answer by a \"=\"."
+msgstr "Roskapostintorjunnan luomiseksi jokainen kysymys on erotettava vastauksesta \"=\"-merkillä."
+
+msgid "Toggle read"
+msgstr "Vaihda luettu-tila"
+
+msgid "Toggle spam"
+msgstr "Vaihda roskapostitila"
+
+msgid "Two new options allow to append the contact form to resource pages. They are disabled by default, so check them if you need them."
+msgstr "Kahdella uudella asetuksella yhteydenottolomakkeen voi lisätä resurssisivuille. Ne ovat oletusarvoisesti poissa käytöstä, joten ota ne tarvittaessa käyttöön."
+
+msgid "Unknown key."
+msgstr "Tuntematon avain."
+
+msgid "Unsubscribe"
+msgstr "Peru tilaus"
+
+msgid "Unsubscribe newsletter"
+msgstr "Peru uutiskirjeen tilaus"
+
+msgid "Use the user email to send message to author (warning: many email providers reject them as spam)"
+msgstr "Lähetä viesti tekijälle käyttäjän sähköpostiosoitteesta (varoitus: monet sähköpostipalveluntarjoajat hylkäävät tällaiset viestit roskapostina)"
+
+msgid "WARNING:"
+msgstr "VAROITUS:"
+
+msgid "Warning: It is not possible to select more than {total} resources."
+msgstr "Varoitus: enempää kuin {total} resurssia ei voi valita."
+
+msgid "Warning: content from a guest user"
+msgstr "Varoitus: vieraskäyttäjän sisältöä"
+
+msgid "Warning: content from an anonymous user"
+msgstr "Varoitus: anonyymin käyttäjän sisältöä"
+
+msgid "Warning: there might be an issue with the option \"Send with user email\". So check it and try to send a message. Note that to send with user email is not recommended, unless you have a good smtp server."
+msgstr "Varoitus: \"Send with user email\" -asetuksessa saattaa olla ongelma. Tarkista asetus ja kokeile viestin lähettämistä. Huomaa, että käyttäjän sähköpostiosoitteesta lähettämistä ei suositella, ellei käytössä ole luotettavaa SMTP-palvelinta."
+
+msgid "When enabled, any message containing http://, https:// or www. is rejected with an explicit error and not stored."
+msgstr "Kun asetus on käytössä, kaikki http://-, https://- tai www -tekstin sisältävät viestit hylätään eikä niitä tallenneta."
+
+msgid "You must select a resource to contact the author."
+msgstr "Sinun on valittava resurssi, jotta voit ottaa yhteyttä tekijään."
+
+msgid "You must select at least one contact message to batch delete."
+msgstr "Valitse vähintään yksi yhteydenottoviesti eräpoistoa varten."
+
+msgid "Zip available: %s"
+msgstr "Saatavilla oleva zip-tiedosto: %s"
+
+msgid "Zipped files to send"
+msgstr "Lähetettävät ZIP-tiedostot"
+
+msgid "[ContactUs] Spam detected: reasons={reasons}; ip={ip}; email={email}"
+msgstr "[ContactUs] Roskapostia havaittu: syyt={reasons}; ip={ip}; sähköposti={email}"
+
+msgid "[Contact] {main_title}"
+msgstr "[Yhteystiedot] {main_title}"
+
+msgid "[No subject]"
+msgstr "[Ei aihetta]"
+
+msgid "contact@example.org\ninfo@example2.org"
+msgstr "contact@example.org\ninfo@example2.org"
+
+msgid "message #%d"
+msgstr "viesti nro %d"
+
+msgid "newsletter: {answer}"
+msgstr "uutiskirje: {answer}"
+
+msgid "phone: Phone"
+msgstr "phone = Puhelin"

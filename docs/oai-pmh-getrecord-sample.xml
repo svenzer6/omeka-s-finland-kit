@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="/omeka-s/modules/OaiPmhRepository/asset/xsl/oai-pmh-repository.xsl?v=3.4.14"?>
+<?oai-pmh-repository-assets css="/omeka-s/modules/OaiPmhRepository/asset/vendor/bootstrap/css/bootstrap.min.css?v=3.4.14" js="/omeka-s/modules/OaiPmhRepository/asset/vendor/bootstrap/js/bootstrap.bundle.min.js?v=3.4.14"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+  <responseDate>2026-10-08T09:51:03Z</responseDate>
+  <request verb="GetRecord" metadataPrefix="oai_dc" identifier="oai:demoarkisto.example.org:117">http://localhost/omeka-s/oai</request>
+  <GetRecord>
+    <record>
+      <header>
+        <identifier>oai:demoarkisto.example.org:117</identifier>
+        <datestamp>2026-10-08T09:50:34Z</datestamp>
+        <setSpec>113</setSpec>
+      </header>
+      <metadata>
+        <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:title xml:lang="fi-FI">Tehtaan portti vuoronvaihdossa</dc:title>
+          <dc:title xml:lang="en-US">Factory gate at shift change</dc:title>
+          <dc:creator>Valokuvaamo Aalto</dc:creator>
+          <dc:subject xml:lang="fi-FI">teollisuus</dc:subject>
+          <dc:subject xml:lang="fi-FI">työ</dc:subject>
+          <dc:subject xml:lang="fi-FI">tehtaat</dc:subject>
+          <dc:subject xml:lang="en-US">industry</dc:subject>
+          <dc:subject xml:lang="en-US">work</dc:subject>
+          <dc:subject xml:lang="en-US">factories</dc:subject>
+          <dc:description xml:lang="fi-FI">Työntekijöitä kulkemassa tehtaan portista iltavuoron alkaessa. (Kuvitteellinen demoaineisto.)</dc:description>
+          <dc:description xml:lang="en-US">Workers passing through the factory gate as the evening shift begins. (Fictional demo record.)</dc:description>
+          <dc:date>1952</dc:date>
+          <dc:type xml:lang="fi-FI">Valokuva</dc:type>
+          <dc:type xml:lang="en-US">Photograph</dc:type>
+          <dc:type>dctype:StillImage</dc:type>
+          <dc:identifier>KIT-001</dc:identifier>
+          <dc:language>fin</dc:language>
+          <dc:coverage>Tampere</dc:coverage>
+          <dc:rights xml:lang="fi-FI">CC BY 4.0 – demoaineisto</dc:rights>
+          <dc:rights xml:lang="en-US">CC BY 4.0 – demo content</dc:rights>
+        </oai_dc:dc>
+      </metadata>
+    </record>
+  </GetRecord>
+</OAI-PMH>

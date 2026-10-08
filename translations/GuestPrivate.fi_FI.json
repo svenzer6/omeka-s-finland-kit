@@ -1,0 +1,18 @@
+{
+ "Apply the theme to the default login page": "Käytä sivuston teemaa oletuskirjautumissivulla",
+ "Guest": "Vierailija",
+ "Guest private": "Yksityinen vierailija",
+ "Guest private site": "Yksityisen sivuston vierailija",
+ "Local api only": "Vain paikallinen API",
+ "No restriction": "Ei rajoitusta",
+ "Public api and local api": "Julkinen ja paikallinen API",
+ "Public api only": "Vain julkinen API",
+ "Redirect default top route to login when there is no public site": "Ohjaa etusivu kirjautumiseen, kun julkista sivustoa ei ole",
+ "Restrict api to authenticated users": "Rajaa API vain kirjautuneille käyttäjille",
+ "Search config": "Hakuasetukset",
+ "Search manager": "Haun hallinta",
+ "The setting \"default site\" refers to an inexisting site.": "Asetus \"oletussivusto\" viittaa sivustoon, jota ei ole olemassa.",
+ "This setting is useful when all sites are private, but resources are public. The api remains available with credentials and the local api remains available when logged.": "Tämä asetus on hyödyllinen, kun kaikki sivustot ovat yksityisiä mutta resurssit julkisia. API on käytettävissä tunnuksilla, ja paikallinen API on käytettävissä kirjautuneena.",
+ "Unauthorized (401)": "Ei käyttöoikeutta (401)",
+ "You do not have permission to access this resource.": "Sinulla ei ole oikeutta tähän resurssiin."
+}

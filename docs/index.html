@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Omeka S Finland Kit</title>
+<meta name="description" content="Kaksikielinen (fi/en) Omeka S -kokoonpano kulttuuri- ja tutkimusarkistoille: 33 lisäosaa, suomennokset, kartat, haku, OAI-PMH ja Docker.">
+<meta property="og:title" content="Omeka S Finland Kit">
+<meta property="og:description" content="Kaksikielinen Omeka S -kokoonpano: 33 lisäosaa, suomennokset, kartat, haku, OAI-PMH ja Docker.">
+<meta property="og:image" content="screenshots/01-etusivu-fi.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%234E008E'/%3E%3Crect x='8' y='9' width='16' height='3' fill='white'/%3E%3Crect x='8' y='15' width='16' height='3' fill='white'/%3E%3Crect x='8' y='21' width='10' height='3' fill='white'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --brand: #4E008E; --brand-dark: #34005f; --brand-soft: #f3ecfa;
+    --ink: #1d1a22; --muted: #5c5666; --line: #e4dfea; --bg: #fcfbfd; --card: #ffffff;
+    --code-bg: #1d1a22; --code-ink: #f1ecf7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --brand: #b98cf0; --brand-dark: #d8bff7; --brand-soft: #241a30;
+      --ink: #eeeaf3; --muted: #b3abbe; --line: #352d40; --bg: #141118; --card: #1c1822;
+      --code-bg: #0c0a0f; --code-ink: #eeeaf3;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 17px/1.6 "Open Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif; }
+  a { color: var(--brand); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  header.top { border-bottom: 4px solid var(--brand); background: var(--card); }
+  header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; flex-wrap: wrap; }
+  .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 20px; color: var(--ink); text-decoration: none; }
+  .mark { width: 38px; height: 38px; background: #4E008E; display: grid; align-content: center; gap: 4px; padding: 0 9px; }
+  .mark i { display: block; height: 4px; background: #fff; }
+  .mark i:last-child { width: 60%; }
+  nav a { margin-left: 18px; text-decoration: none; font-weight: 600; }
+  .hero { padding: 64px 0 40px; }
+  .hero h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.1; margin: 0 0 16px; letter-spacing: -0.02em; }
+  .hero p.lead { font-size: 20px; color: var(--muted); max-width: 760px; margin: 0 0 28px; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 12px 20px; font-weight: 700; text-decoration: none; border: 2px solid var(--brand); }
+  .btn.primary { background: #4E008E; border-color: #4E008E; color: #fff; }
+  .btn.ghost { color: var(--brand); }
+  .shot { margin-top: 40px; border: 1px solid var(--line); box-shadow: 0 20px 60px -30px rgba(40, 0, 80, .45); background: var(--card); }
+  .shot img { display: block; width: 100%; height: auto; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin: 48px 0; }
+  .stats div { background: var(--card); padding: 22px; }
+  .stats b { display: block; font-size: 34px; color: var(--brand); line-height: 1.1; }
+  .stats span { color: var(--muted); font-size: 15px; }
+  h2 { font-size: 30px; margin: 64px 0 20px; letter-spacing: -0.01em; }
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .feature { background: var(--card); border: 1px solid var(--line); padding: 22px; }
+  .feature h3 { margin: 0 0 6px; font-size: 18px; }
+  .feature p { margin: 0; color: var(--muted); font-size: 15.5px; }
+  .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  figure { margin: 0; background: var(--card); border: 1px solid var(--line); }
+  figure img { display: block; width: 100%; height: 300px; object-fit: cover; object-position: top; }
+  figcaption { padding: 10px 14px; font-size: 15px; color: var(--muted); border-top: 1px solid var(--line); }
+  pre { background: var(--code-bg); color: var(--code-ink); padding: 20px; overflow-x: auto; font-size: 14.5px; line-height: 1.55; }
+  code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
+  .note { background: var(--brand-soft); border-left: 4px solid var(--brand); padding: 14px 18px; margin: 24px 0; font-size: 15.5px; }
+  footer { margin-top: 80px; padding: 28px 0; background: #4E008E; color: #fff; font-size: 15px; }
+  footer a { color: #fff; }
+  @media (max-width: 860px) {
+    .features { grid-template-columns: 1fr 1fr; }
+    .stats { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .features, .gallery { grid-template-columns: 1fr; }
+    nav a { margin: 0 14px 0 0; }
+    .hero { padding-top: 40px; }
+    figure img { height: 220px; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>Omeka S Finland Kit</a>
+    <nav>
+      <a href="#ominaisuudet">Ominaisuudet</a>
+      <a href="#kuvat">Kuvat</a>
+      <a href="#aloitus">Aloitus</a>
+      <a href="https://github.com/svenzer6/omeka-s-finland-kit">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Kaksikielinen Omeka S kulttuuri- ja tutkimusarkistoille</h1>
+    <p class="lead">Avoimen lähdekoodin kokoonpano, jossa on Omeka S 4.2, 33 lukittua lisäosaa, lisäosien suomennokset, kartat, tarkennettu haku, OAI-PMH-rajapinta ja Docker-ympäristö. <span lang="en">A bilingual Finnish/English Omeka S distribution.</span></p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/svenzer6/omeka-s-finland-kit">Lähdekoodi GitHubissa</a>
+      <a class="btn ghost" href="#aloitus">Asenna yhdellä komennolla</a>
+    </div>
+    <div class="shot"><img src="screenshots/01-etusivu-fi.png" alt="Demoarkiston suomenkielinen etusivu" width="1440" height="1300"></div>
+  </section>
+
+  <div class="stats" role="list">
+    <div role="listitem"><b>33</b><span>lisäosaa lukituilla versioilla</span></div>
+    <div role="listitem"><b>~1 300</b><span>suomennettua merkkijonoa</span></div>
+    <div role="listitem"><b>2</b><span>kieltä: suomi ja englanti</span></div>
+    <div role="listitem"><b>1</b><span>komento: <code>docker compose up</code></span></div>
+  </div>
+
+  <h2 id="ominaisuudet">Ominaisuudet</h2>
+  <div class="features">
+    <div class="feature"><h3>Kaksi kieltä, yksi aineisto</h3><p>Sivustot <code>/s/fi</code> ja <code>/s/en</code> näyttävät samat aineistot. Arvot on merkitty kielitunnisteilla ja suodatetaan sivuston kielen mukaan.</p></div>
+    <div class="feature"><h3>Suomennetut lisäosat</h3><p>Julkisen käyttöliittymän tekstit 11 lisäosaan: haku, vierailijatilit, yhteydenotto, kartat, viitteet ja hierarkiat.</p></div>
+    <div class="feature"><h3>Kartat</h3><p>Aineistot karttapisteinä Mapping-lisäosalla, klusterointi ja taustakartan valinta.</p></div>
+    <div class="feature"><h3>Tarkennettu haku</h3><p>Rajaukset, aikaväli, suodattimet ja lajittelu. Kummallekin kielelle oma hakuasetus.</p></div>
+    <div class="feature"><h3>OAI-PMH</h3><p>Haravointirajapinta, jossa arvot välitetään <code>xml:lang</code>-tunnisteilla. Finnan qdc-formaatti on tiekartalla.</p></div>
+    <div class="feature"><h3>Päivitysturvallinen ulkoasu</h3><p>Logo, brändiväri ja fontti CSS Editorilla. Teematiedostoihin ei kosketa, joten päivitykset eivät riko mukautuksia.</p></div>
+  </div>
+
+  <h2 id="kuvat">Kuvakaappaukset</h2>
+  <div class="gallery">
+    <figure><img src="screenshots/04-aineisto-fi.png" alt="Aineistosivu metatietoineen" loading="lazy"><figcaption>Aineistosivu: Dublin Core -metatiedot suomeksi</figcaption></figure>
+    <figure><img src="screenshots/05-kartta-fi.png" alt="Aineistot kartalla" loading="lazy"><figcaption>Aineistot kartalla eri puolilla Suomea</figcaption></figure>
+    <figure><img src="screenshots/06-haku-fi.png" alt="Tarkennettu haku" loading="lazy"><figcaption>Tarkennettu haku rajauksineen</figcaption></figure>
+    <figure><img src="screenshots/02-home-en.png" alt="English home page" loading="lazy"><figcaption><span lang="en">The same archive in English</span></figcaption></figure>
+    <figure><img src="screenshots/07-kokoelmat-fi.png" alt="Kokoelmat" loading="lazy"><figcaption>Kokoelmat</figcaption></figure>
+    <figure><img src="screenshots/08-mobile-fi.png" alt="Mobiilinäkymä" loading="lazy"><figcaption>Mobiilinäkymä</figcaption></figure>
+  </div>
+  <p class="note">Demoarkiston aineistot ja kuvat ovat kuvitteellisia ja skriptin generoimia. Suomennokset ovat luonnos, ja niiden kielentarkastus on kesken.</p>
+
+  <h2 id="aloitus">Pika-aloitus</h2>
+<pre><code>git clone https://github.com/svenzer6/omeka-s-finland-kit.git
+cd omeka-s-finland-kit
+cp .env.example .env        # vaihda CHANGE-ME-arvot
+docker compose up -d --build
+# avaa http://localhost:8080/s/fi</code></pre>
+  <p>Ilman Dockeria: katso <a href="https://github.com/svenzer6/omeka-s-finland-kit#asennus-ilman-dockeria">asennusohje</a>. Kaikki lisäosat ja versiot: <a href="https://github.com/svenzer6/omeka-s-finland-kit/blob/main/modules.json">modules.json</a>.</p>
+</main>
+
+<footer>
+  <div class="wrap">Omeka S Finland Kit · GPL-3.0 · Omeka on Corporation for Digital Scholarshipin tavaramerkki; tämä projekti ei ole Omeka-tiimin virallinen julkaisu.</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,933 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: fi_FI\n"
+"Project-Id-Version: BlockPlus (Omeka S Finland Kit)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "\"{name}\" is already used as page model and was renamed \"{name_2}\"."
+msgstr "\"{name}\" on jo käytössä sivumallina, joten se nimettiin uudelleen: \"{name_2}\"."
+
+msgid "%1$s and %2$s"
+msgstr "%1$s ja %2$s"
+
+msgid "%1$s%2$s\n-\n%3$s"
+msgstr "%1$s%2$s\n-\n%3$s"
+
+msgid "%1$s, %2$s, and %3$s"
+msgstr "%1$s, %2$s ja %3$s"
+
+msgid "%s et al."
+msgstr "%s ym."
+
+msgid "1.1 (home timeline)"
+msgstr "1.1 (kotiaikajana)"
+
+msgid "A Twitter account is required to fetch messages."
+msgstr "Viestien hakeminen edellyttää Twitter-tiliä."
+
+msgid "A group of blocks with a heading, a media and a field for html."
+msgstr "Lohkoryhmä, jossa on otsikko, media ja HTML-kenttä."
+
+msgid "A list of resources as json queries by resource name should be defined for block D3 Graph in page {page_url}."
+msgstr "D3 Graph -lohkolle sivulla {page_url} on määritettävä resurssiluettelo JSON-kyselyinä resurssin nimen mukaan."
+
+msgid "A mirror page cannot be inside itself."
+msgstr "Peilisivu ei voi olla itsensä sisällä."
+
+msgid "A mirror page cannot use a page that uses it recursively as a block."
+msgstr "Peilisivu ei voi käyttää sivua, joka käyttää sitä rekursiivisesti lohkona."
+
+msgid "A page model for an exhibit page, with blocks page title, html, heading and media."
+msgstr "Näyttelysivun sivumalli, jossa on lohkot sivun otsikko, HTML, väliotsikko ja media."
+
+msgid "A page model for an exhibit summary, with blocks page title, html, heading, and list of pages."
+msgstr "Näyttelyn yhteenvedon sivumalli, jossa on lohkot sivun otsikko, HTML, väliotsikko ja sivuluettelo."
+
+msgid "A page model for generic needs, with blocks page title and html."
+msgstr "Yleiskäyttöinen sivumalli, jossa on lohkot sivun otsikko ja HTML."
+
+msgid "A page model with blocks browse preview with a template for gallery, html, heading, and asset."
+msgstr "Sivumalli, jossa on lohkot selausesikatselu galleriapohjalla, HTML, väliotsikko ja tiedosto."
+
+msgid "A page should be selected to create a mirror page."
+msgstr "Peilisivun luominen edellyttää sivun valitsemista."
+
+msgid "A simple block allows to display data via one of the templates set in the block layout settings."
+msgstr "Yksinkertainen lohko näyttää tietoja jonkin lohkoasettelun asetuksissa määritetyn pohjan avulla."
+
+msgid "Accessed on %1$s"
+msgstr "Viitattu %1$s"
+
+msgid "According to Twitter, you may require to create an app inside dev account. In some cases, api 1.1 doesn’t require it."
+msgstr "Twitterin mukaan sinun on ehkä luotava sovellus kehittäjätilille. Joissakin tapauksissa API 1.1 ei sitä vaadi."
+
+msgid "Account"
+msgstr "Tili"
+
+msgid "All item sets"
+msgstr "Kaikki kokoelmat"
+
+msgid "All years"
+msgstr "Kaikki vuodet"
+
+msgid "Allow site editor to create page models and groups of blocks"
+msgstr "Salli sivuston muokkaajan luoda sivumalleja ja lohkoryhmiä"
+
+msgid "Associative array of key / value pairs (separated with \"=\")"
+msgstr "Avain–arvo-parien taulukko (erottimena \"=\")"
+
+msgid "Authorization token (bearer)"
+msgstr "Valtuutustunniste (bearer)"
+
+msgid "Auto-scroll to block"
+msgstr "Vieritä automaattisesti lohkoon"
+
+msgid "Automatic"
+msgstr "Automaattinen"
+
+msgid "Block Plus"
+msgstr "Block Plus"
+
+msgid "Block Plus: Accordion (h3)"
+msgstr "Block Plus: Haitari (h3)"
+
+msgid "Block Plus: Anchor for headings"
+msgstr "Block Plus: Ankkurit otsikoille"
+
+msgid "Block Plus: Arborescence"
+msgstr "Block Plus: Puurakenne"
+
+msgid "Block Plus: Asset (deprecated)"
+msgstr "Block Plus: Tiedosto (vanhentunut)"
+
+msgid "Block Plus: Asset with class and url"
+msgstr "Block Plus: Tiedosto luokalla ja osoitteella"
+
+msgid "Block Plus: Bootstrap Hero"
+msgstr "Block Plus: Bootstrap-nostokuva"
+
+msgid "Block Plus: Browse preview (deprecated)"
+msgstr "Block Plus: Selausesikatselu (vanhentunut)"
+
+msgid "Block Plus: Card (template config)"
+msgstr "Block Plus: Kortti (pohjan asetukset)"
+
+msgid "Block Plus: Carousel"
+msgstr "Block Plus: Karuselli"
+
+msgid "Block Plus: Class to id"
+msgstr "Block Plus: Luokka tunnisteeksi"
+
+msgid "Block Plus: Details/summary (end)"
+msgstr "Block Plus: Lisätiedot/yhteenveto (loppu)"
+
+msgid "Block Plus: Details/summary (start)"
+msgstr "Block Plus: Lisätiedot/yhteenveto (alku)"
+
+msgid "Block Plus: Dialog (class for name)"
+msgstr "Block Plus: Valintaikkuna (luokka nimelle)"
+
+msgid "Block Plus: Exhibit"
+msgstr "Block Plus: Näyttely"
+
+msgid "Block Plus: Exhibit page"
+msgstr "Block Plus: Näyttelysivu"
+
+msgid "Block Plus: Filter by year"
+msgstr "Block Plus: Suodata vuoden mukaan"
+
+msgid "Block Plus: Gallery (medium)"
+msgstr "Block Plus: Galleria (keskikoko)"
+
+msgid "Block Plus: Gallery (medium, link to item)"
+msgstr "Block Plus: Galleria (keskikoko, linkki aineistoon)"
+
+msgid "Block Plus: Gallery (square)"
+msgstr "Block Plus: Galleria (neliö)"
+
+msgid "Block Plus: Glossary"
+msgstr "Block Plus: Sanasto"
+
+msgid "Block Plus: Heading link"
+msgstr "Block Plus: Otsikkolinkki"
+
+msgid "Block Plus: Home page"
+msgstr "Block Plus: Etusivu"
+
+msgid "Block Plus: Html"
+msgstr "Block Plus: HTML"
+
+msgid "Block Plus: Include html from group"
+msgstr "Block Plus: Sisällytä HTML ryhmästä"
+
+msgid "Block Plus: Item showcase (deprecated)"
+msgstr "Block Plus: Aineistonosto (vanhentunut)"
+
+msgid "Block Plus: Item with metadata (deprecated)"
+msgstr "Block Plus: Aineisto metatietoineen (vanhentunut)"
+
+msgid "Block Plus: Left Right"
+msgstr "Block Plus: Vasen–oikea"
+
+msgid "Block Plus: List of pages (deprecated)"
+msgstr "Block Plus: Sivuluettelo (vanhentunut)"
+
+msgid "Block Plus: List of sites (deprecated)"
+msgstr "Block Plus: Sivustoluettelo (vanhentunut)"
+
+msgid "Block Plus: Page date time"
+msgstr "Block Plus: Sivun päivämäärä ja aika"
+
+msgid "Block Plus: Page header"
+msgstr "Block Plus: Sivun ylätunniste"
+
+msgid "Block Plus: Partners"
+msgstr "Block Plus: Kumppanit"
+
+msgid "Block Plus: Resource text (deprecated)"
+msgstr "Block Plus: Resurssin teksti (vanhentunut)"
+
+msgid "Block Plus: Simple page"
+msgstr "Block Plus: Yksinkertainen sivu"
+
+msgid "Block Plus: Skip"
+msgstr "Block Plus: Ohitus"
+
+msgid "Block Plus: Subjects"
+msgstr "Block Plus: Aiheet"
+
+msgid "Block Plus: Table of contents (deprecated)"
+msgstr "Block Plus: Sisällysluettelo (vanhentunut)"
+
+msgid "Block Plus: Timeline list"
+msgstr "Block Plus: Aikajanaluettelo"
+
+msgid "Block plus"
+msgstr "Block Plus"
+
+msgid "Block plus resources"
+msgstr "Block Plus -resurssit"
+
+msgid "Blocks groups"
+msgstr "Lohkoryhmät"
+
+msgid "Blocks only"
+msgstr "Vain lohkot"
+
+msgid "Buttons"
+msgstr "Painikkeet"
+
+msgid "Buttons Previous / Next"
+msgstr "Painikkeet Edellinen / Seuraava"
+
+msgid "Cannot index and/or render a table of contents block in a mirror page for now: %s."
+msgstr "Sisällysluettelolohkoa ei toistaiseksi voi indeksoida tai näyttää peilisivulla: %s."
+
+msgid "Cannot render this mirror page for now: {exception}."
+msgstr "Peilisivua ei toistaiseksi voi näyttää: {exception}."
+
+msgid "Check to display all buttons as a single one"
+msgstr "Valitse näyttääksesi kaikki painikkeet yhtenä"
+
+msgid "Choose any page from any site."
+msgstr "Valitse mikä tahansa sivu mistä tahansa sivustosta."
+
+msgid "Citation"
+msgstr "Viittaus"
+
+msgid "Collapse the list of groups of blocks"
+msgstr "Pienennä lohkoryhmien luettelo"
+
+msgid "Comma-separated list of keywords"
+msgstr "Pilkuilla eroteltu avainsanaluettelo"
+
+msgid "Confirm download"
+msgstr "Vahvista lataus"
+
+msgid "Cover image"
+msgstr "Kansikuva"
+
+msgid "Create page model"
+msgstr "Luo sivumalli"
+
+msgid "Created on %s"
+msgstr "Luotu %s"
+
+msgid "Created on %s, updated on %s"
+msgstr "Luotu %s, päivitetty %s"
+
+msgid "Credits"
+msgstr "Tekijät"
+
+msgid "Current site"
+msgstr "Nykyinen sivusto"
+
+msgid "D3 Graph"
+msgstr "D3-kaavio"
+
+msgid "Default items order in each item set"
+msgstr "Aineistojen oletusjärjestys kussakin kokoelmassa"
+
+msgid "Default page models are mainly used as examples or for upgrade from Omeka Classic: home_page, exhibit, exhibit_page, simple_page and resource_text."
+msgstr "Oletussivumalleja käytetään lähinnä esimerkkeinä tai päivitettäessä Omeka Classicista: home_page, exhibit, exhibit_page, simple_page ja resource_text."
+
+msgid "Dialog content"
+msgstr "Valintaikkunan sisältö"
+
+msgid "Display info"
+msgstr "Näytä tiedot"
+
+msgid "Display retweets"
+msgstr "Näytä uudelleentwiittaukset"
+
+msgid "Display sort links for the list of results."
+msgstr "Näytä tulosluettelon lajittelulinkit."
+
+msgid "Document (maximizable)"
+msgstr "Dokumentti (suurennettava)"
+
+msgid "Download"
+msgstr "Lataa"
+
+msgid "Download file"
+msgstr "Lataa tiedosto"
+
+msgid "Error decoding OEmbed JSON"
+msgstr "Virhe OEmbed-JSONin purkamisessa"
+
+msgid "Error for block Twitter: No response."
+msgstr "Twitter-lohkon virhe: ei vastausta."
+
+msgid "Error for block Twitter: {error}. Check token or use api v1."
+msgstr "Twitter-lohkon virhe: {error}. Tarkista tunniste tai käytä API v1:tä."
+
+msgid "Error for block Twitter: {error}. Check token."
+msgstr "Twitter-lohkon virhe: {error}. Tarkista tunniste."
+
+msgid "Error reading %s: %s (%s)"
+msgstr "Virhe luettaessa kohdetta %s: %s (%s)"
+
+msgid "Exclude sites"
+msgstr "Jätä sivustot pois"
+
+msgid "Exhibit"
+msgstr "Näyttely"
+
+msgid "Exhibit page"
+msgstr "Näyttelysivu"
+
+msgid "Expand to display the list of groups of blocks"
+msgstr "Laajenna näyttääksesi lohkoryhmien luettelon"
+
+msgid "External content"
+msgstr "Ulkoinen sisältö"
+
+msgid "Featured"
+msgstr "Nostettu"
+
+msgid "Filter by item sets:"
+msgstr "Suodata kokoelmien mukaan:"
+
+msgid "Filter by year:"
+msgstr "Suodata vuoden mukaan:"
+
+msgid "First"
+msgstr "Ensimmäinen"
+
+msgid "Format \"Ini\""
+msgstr "Muoto \"Ini\""
+
+msgid "Formatted as \"/url/full/path Label of the link\"."
+msgstr "Muodossa \"/url/koko/polku Linkin teksti\"."
+
+msgid "Full page"
+msgstr "Koko sivu"
+
+msgid "Generally, it is \"dcterms:hasPart\"."
+msgstr "Yleensä \"dcterms:hasPart\"."
+
+msgid "Heading for \"See also\" block"
+msgstr "\"Katso myös\" -lohkon otsikko"
+
+msgid "Heading for \"Similar content\" block"
+msgstr "\"Samankaltaista sisältöä\" -lohkon otsikko"
+
+msgid "Home page"
+msgstr "Etusivu"
+
+msgid "Html article (end)"
+msgstr "HTML article (loppu)"
+
+msgid "Html article (start)"
+msgstr "HTML article (alku)"
+
+msgid "Html aside (end)"
+msgstr "HTML aside (loppu)"
+
+msgid "Html aside (start)"
+msgstr "HTML aside (alku)"
+
+msgid "Html div (end)"
+msgstr "HTML div (loppu)"
+
+msgid "Html div (start)"
+msgstr "HTML div (alku)"
+
+msgid "Html div for tools (end)"
+msgstr "HTML div työkaluille (loppu)"
+
+msgid "Html div for tools (start)"
+msgstr "HTML div työkaluille (alku)"
+
+msgid "Html div more (end)"
+msgstr "HTML div lisää (loppu)"
+
+msgid "Html div more (start)"
+msgstr "HTML div lisää (alku)"
+
+msgid "Html edition config and toolbar for pages"
+msgstr "Sivujen HTML-muokkauksen asetukset ja työkalupalkki"
+
+msgid "Html edition mode for pages"
+msgstr "Sivujen HTML-muokkaustila"
+
+msgid "Html section (end)"
+msgstr "HTML section (loppu)"
+
+msgid "Html section (start)"
+msgstr "HTML section (alku)"
+
+msgid "If a label is set, the model will be stored when the current page will be saved."
+msgstr "Jos nimi on annettu, malli tallennetaan, kun nykyinen sivu tallennetaan."
+
+msgid "If a page of a private site is selected, it will be hidden on the public side."
+msgstr "Jos valitaan yksityisen sivuston sivu, se piilotetaan julkiselta puolelta."
+
+msgid "If set, all the pages will be displayed, else only the ones from the current page."
+msgstr "Jos asetettu, kaikki sivut näytetään, muuten vain nykyisen sivun alasivut."
+
+msgid "If set, the alternative labels of this resource template will be used to display the sort headings."
+msgstr "Jos asetettu, tämän resurssipohjan vaihtoehtoisia nimiä käytetään lajitteluotsikoissa."
+
+msgid "Inline (default)"
+msgstr "Rivinsisäinen (oletus)"
+
+msgid "Insert Footnotes"
+msgstr "Lisää alaviitteet"
+
+msgid "Invalid \"%s\" specified"
+msgstr "Virheellinen \"%s\" annettu"
+
+msgid "Invalid OEmbed URL"
+msgstr "Virheellinen OEmbed-osoite"
+
+msgid "Is new"
+msgstr "Uusi"
+
+msgid "Item set showcase"
+msgstr "Kokoelmanosto"
+
+msgid "Items of item set: %s"
+msgstr "Kokoelman aineistot: %s"
+
+msgid "Items without item set"
+msgstr "Aineistot ilman kokoelmaa"
+
+msgid "Json"
+msgstr "JSON"
+
+msgid "Know more"
+msgstr "Lue lisää"
+
+msgid "Last"
+msgstr "Viimeinen"
+
+msgid "Level"
+msgstr "Taso"
+
+msgid "Level expanded"
+msgstr "Laajennettu taso"
+
+msgid "Link to display"
+msgstr "Näytettävä linkki"
+
+msgid "Link url"
+msgstr "Linkin osoite"
+
+msgid "Linked resources by item set"
+msgstr "Linkitetyt resurssit kokoelmittain"
+
+msgid "Links"
+msgstr "Linkit"
+
+msgid "List all page models and blocks groups formatted as ini with a section for each group."
+msgstr "Listaa kaikki sivumallit ja lohkoryhmät ini-muodossa, jokainen ryhmä omana osionaan."
+
+msgid "List from root"
+msgstr "Listaa juuresta"
+
+msgid "List of arrays with two values, the key and the value (separated with \"=\")"
+msgstr "Luettelo kahden arvon taulukoista: avain ja arvo (erottimena \"=\")"
+
+msgid "Main filter"
+msgstr "Pääsuodatin"
+
+msgid "Main settings"
+msgstr "Pääasetukset"
+
+msgid "Main site"
+msgstr "Pääsivusto"
+
+msgid "Map by search"
+msgstr "Kartta haun mukaan"
+
+msgid "Media part of item"
+msgstr "Aineiston media"
+
+msgid "Messages"
+msgstr "Viestit"
+
+msgid "Mirror page"
+msgstr "Peilisivu"
+
+msgid "Mirror page block #{block_id} in site {site_slug} and page {page_slug} should be updated: it refers to a removed page."
+msgstr "Peilisivulohko #{block_id} sivustolla {site_slug} ja sivulla {page_slug} on päivitettävä: se viittaa poistettuun sivuun."
+
+msgid "More information"
+msgstr "Lisätietoja"
+
+msgid "Next resource"
+msgstr "Seuraava resurssi"
+
+msgid "No Item"
+msgstr "Ei aineistoa"
+
+msgid "No Media"
+msgstr "Ei mediaa"
+
+msgid "No OEmbed links were found at the given URI"
+msgstr "Annetusta osoitteesta ei löytynyt OEmbed-linkkejä"
+
+msgid "No Twitter authorization token is set, so the default one is used."
+msgstr "Twitterin valtuutustunnistetta ei ole asetettu, joten käytetään oletusta."
+
+msgid "No file defined. Set the param in the block: \"file = filename.tsv\" (use a file inside /asset/data/) or \"file = https://example.com/file.tsv\"."
+msgstr "Tiedostoa ei ole määritetty. Aseta lohkoon parametri \"file = tiedosto.tsv\" (käytä kansiossa /asset/data/ olevaa tiedostoa) tai \"file = https://example.com/file.tsv\"."
+
+msgid "No item"
+msgstr "Ei aineistoa"
+
+msgid "No message."
+msgstr "Ei viestejä."
+
+msgid "No next"
+msgstr "Ei seuraavaa"
+
+msgid "No next resource"
+msgstr "Ei seuraavaa resurssia"
+
+msgid "No previous"
+msgstr "Ei edellistä"
+
+msgid "No previous resource"
+msgstr "Ei edellistä resurssia"
+
+msgid "No related resources."
+msgstr "Ei liittyviä resursseja."
+
+msgid "No similar resources."
+msgstr "Ei samankaltaisia resursseja."
+
+msgid "Number of messages"
+msgstr "Viestien määrä"
+
+msgid "Number of related resources to display in block See also"
+msgstr "Katso myös -lohkossa näytettävien liittyvien resurssien määrä"
+
+msgid "Number of similar resources to display in block Similar content"
+msgstr "Samankaltaista sisältöä -lohkossa näytettävien resurssien määrä"
+
+msgid "OEmbed URL"
+msgstr "OEmbed-osoite"
+
+msgid "OEmbed URL unavailable"
+msgstr "OEmbed-osoite ei ole käytettävissä"
+
+msgid "OEmbed link URL"
+msgstr "OEmbed-linkin osoite"
+
+msgid "OEmbed link URL unavailable"
+msgstr "OEmbed-linkin osoite ei ole käytettävissä"
+
+msgid "Open Instagram"
+msgstr "Avaa Instagram"
+
+msgid "Page metadata"
+msgstr "Sivun metatiedot"
+
+msgid "Page metadata (deprecated)"
+msgstr "Sivun metatiedot (vanhentunut)"
+
+msgid "Page models"
+msgstr "Sivumallit"
+
+msgid "Page models and blocks groups"
+msgstr "Sivumallit ja lohkoryhmät"
+
+msgid "Page models and groups of blocks"
+msgstr "Sivumallit ja lohkoryhmät"
+
+msgid "Params"
+msgstr "Parametrit"
+
+msgid "Params type"
+msgstr "Parametrien tyyppi"
+
+msgid "Please wait for previous group of blocks to be prepared before adding a new one."
+msgstr "Odota, että edellinen lohkoryhmä on valmis, ennen kuin lisäät uuden."
+
+msgid "Previous resource"
+msgstr "Edellinen resurssi"
+
+msgid "Print"
+msgstr "Tulosta"
+
+msgid "Private sites are marked with a \"*\". If a private page is selected, it will be hidden on the public site. The current page and recursive pages are forbidden."
+msgstr "Yksityiset sivustot on merkitty \"*\"-merkillä. Jos valitaan yksityinen sivu, se piilotetaan julkiselta sivustolta. Nykyinen sivu ja rekursiiviset sivut eivät ole sallittuja."
+
+msgid "Properties to display for each result"
+msgstr "Kunkin tuloksen näytettävät ominaisuudet"
+
+msgid "Properties to match for related resources in block See also"
+msgstr "Katso myös -lohkon liittyvien resurssien vertailuominaisuudet"
+
+msgid "Properties to match for similar resources in block Similar content"
+msgstr "Samankaltaista sisältöä -lohkon vertailuominaisuudet"
+
+msgid "Property for structure"
+msgstr "Rakenteen ominaisuus"
+
+msgid "Property to set primary item set"
+msgstr "Ensisijaisen kokoelman ominaisuus"
+
+msgid "Query to limit and sort the list of item sets for the previous/next buttons"
+msgstr "Kysely, joka rajaa ja lajittelee edellinen/seuraava-painikkeiden kokoelmaluettelon"
+
+msgid "Query to limit and sort the list of items for the previous/next buttons"
+msgstr "Kysely, joka rajaa ja lajittelee edellinen/seuraava-painikkeiden aineistoluettelon"
+
+msgid "Query to limit related resources in block See also"
+msgstr "Kysely, joka rajaa Katso myös -lohkon liittyvät resurssit"
+
+msgid "Query to limit similar resources in block Similar content"
+msgstr "Kysely, joka rajaa Samankaltaista sisältöä -lohkon resurssit"
+
+msgid "Raw string"
+msgstr "Raakateksti"
+
+msgid "Redirect the current page to this url"
+msgstr "Ohjaa nykyinen sivu tähän osoitteeseen"
+
+msgid "Redirect to %s"
+msgstr "Ohjataan osoitteeseen %s"
+
+msgid "Redirect to url"
+msgstr "Ohjaa osoitteeseen"
+
+msgid "Resource classes"
+msgstr "Resurssiluokat"
+
+msgid "Resource template for sort headings"
+msgstr "Lajitteluotsikoiden resurssipohja"
+
+msgid "Resource with text"
+msgstr "Resurssi ja teksti"
+
+msgid "Root resource id"
+msgstr "Juuriresurssin tunniste"
+
+msgid "Save as page model or blocks groups"
+msgstr "Tallenna sivumalliksi tai lohkoryhmäksi"
+
+msgid "Search config of the site"
+msgstr "Sivuston hakuasetukset"
+
+msgid "Search config page (module Advanced Search)"
+msgstr "Hakuasetusten sivu (Advanced Search -moduuli)"
+
+msgid "Search form"
+msgstr "Hakulomake"
+
+msgid "Search form and results"
+msgstr "Hakulomake ja tulokset"
+
+msgid "Search on map"
+msgstr "Hae kartalta"
+
+msgid "Search pool query"
+msgstr "Hakujoukon kysely"
+
+msgid "Search related resources in all sites"
+msgstr "Hae liittyviä resursseja kaikilta sivustoilta"
+
+msgid "Search similar resources in all sites (Similar content)"
+msgstr "Hae samankaltaisia resursseja kaikilta sivustoilta (Samankaltaista sisältöä)"
+
+msgid "See also"
+msgstr "Katso myös"
+
+msgid "SeeAlso block: Error searching for related resources: {message}"
+msgstr "Katso myös -lohko: virhe liittyviä resursseja haettaessa: {message}"
+
+msgid "Select a page model…"
+msgstr "Valitse sivumalli…"
+
+msgid "Select a property…"
+msgstr "Valitse ominaisuus…"
+
+msgid "Select a search engine…"
+msgstr "Valitse hakukone…"
+
+msgid "Select properties…"
+msgstr "Valitse ominaisuudet…"
+
+msgid "Select resource template…"
+msgstr "Valitse resurssipohja…"
+
+msgid "Set 0 to start closed, a big number to display all levels."
+msgstr "Anna 0 aloittaaksesi suljettuna tai suuri luku näyttääksesi kaikki tasot."
+
+msgid "Set order for item set, one by row, format \"id,id,id property order\". Use \"0\" for the default."
+msgstr "Aseta kokoelman järjestys, yksi per rivi, muodossa \"id,id,id ominaisuus järjestys\". Käytä \"0\" oletukselle."
+
+msgid "Settings for the resource block Buttons"
+msgstr "Resurssilohkon Painikkeet asetukset"
+
+msgid "Share"
+msgstr "Jaa"
+
+msgid "Share by email"
+msgstr "Jaa sähköpostilla"
+
+msgid "Share by mail"
+msgstr "Jaa sähköpostilla"
+
+msgid "Share on Facebook"
+msgstr "Jaa Facebookissa"
+
+msgid "Share on Instagram"
+msgstr "Jaa Instagramissa"
+
+msgid "Share on LinkedIn"
+msgstr "Jaa LinkedInissä"
+
+msgid "Share on Pinterest"
+msgstr "Jaa Pinterestissä"
+
+msgid "Share on Twitter"
+msgstr "Jaa Twitterissä"
+
+msgid "Share on Twitter (now X)"
+msgstr "Jaa Twitterissä (nyt X)"
+
+msgid "Show attachment title (when heading is included above)"
+msgstr "Näytä liitteen otsikko (kun otsikko on mukana yllä)"
+
+msgid "Show pagination to browse all resources on the same page."
+msgstr "Näytä sivutus kaikkien resurssien selaamiseksi samalla sivulla."
+
+msgid "Showcase"
+msgstr "Nosto"
+
+msgid "Similar content"
+msgstr "Samankaltaista sisältöä"
+
+msgid "SimilarContent block: Error searching for similar resources: {message}"
+msgstr "Samankaltaista sisältöä -lohko: virhe samankaltaisia resursseja haettaessa: {message}"
+
+msgid "Simple Block"
+msgstr "Yksinkertainen lohko"
+
+msgid "Simple block for theme"
+msgstr "Yksinkertainen lohko teemalle"
+
+msgid "Simple block to customize in theme"
+msgstr "Teemassa mukautettava yksinkertainen lohko"
+
+msgid "Simple page"
+msgstr "Yksinkertainen sivu"
+
+msgid "Since Omeka S 4.1, the metadata \"type\" is replaced by the page template name (key \"template\"). Check your theme."
+msgstr "Omeka S 4.1:stä alkaen metatieto \"type\" on korvattu sivupohjan nimellä (avain \"template\"). Tarkista teemasi."
+
+msgid "Single button"
+msgstr "Yksi painike"
+
+msgid "Site settings"
+msgstr "Sivuston asetukset"
+
+msgid "Skip page models defined internally by the module Block Plus"
+msgstr "Ohita Block Plus -moduulin sisäisesti määrittämät sivumallit"
+
+msgid "Sort headings"
+msgstr "Lajitteluotsikot"
+
+msgid "Tags"
+msgstr "Tunnisteet"
+
+msgid "Text displayed as heading above related resources. Leave empty for no heading."
+msgstr "Liittyvien resurssien yläpuolella näytettävä otsikko. Jätä tyhjäksi, jos otsikkoa ei tarvita."
+
+msgid "Text displayed as heading above similar resources. Leave empty for no heading."
+msgstr "Samankaltaisten resurssien yläpuolella näytettävä otsikko. Jätä tyhjäksi, jos otsikkoa ei tarvita."
+
+msgid "The Twitter account \"%s\" is available and have messages."
+msgstr "Twitter-tili \"%s\" on käytettävissä, ja siinä on viestejä."
+
+msgid "The Twitter account \"%s\" is available, but has no message currently, or the rate limit has been reached."
+msgstr "Twitter-tili \"%s\" on käytettävissä, mutta siinä ei ole tällä hetkellä viestejä tai pyyntöraja on täynnä."
+
+msgid "The Twitter account \"%s\" is not available."
+msgstr "Twitter-tili \"%s\" ei ole käytettävissä."
+
+msgid "The blocks group \"{label}\" ({name}) was saved in main settings."
+msgstr "Lohkoryhmä \"{label}\" ({name}) tallennettiin pääasetuksiin."
+
+msgid "The blocks group \"{label}\" ({name}) was saved in site settings."
+msgstr "Lohkoryhmä \"{label}\" ({name}) tallennettiin sivuston asetuksiin."
+
+msgid "The blocks group \"{label}\" ({name}) was saved in theme settings."
+msgstr "Lohkoryhmä \"{label}\" ({name}) tallennettiin teeman asetuksiin."
+
+msgid "The blocks group cannot be stored in the theme settings: the theme does not support it. See {link}readme{link_end}."
+msgstr "Lohkoryhmää ei voi tallentaa teeman asetuksiin, koska teema ei tue sitä. Katso {link}readme{link_end}."
+
+msgid "The current page and recursive pages are forbidden."
+msgstr "Nykyinen sivu ja rekursiiviset sivut eivät ole sallittuja."
+
+msgid "The javascript library should be installed. See module’s installation documentation."
+msgstr "JavaScript-kirjasto on asennettava. Katso moduulin asennusohjeet."
+
+msgid "The module %1$s should be upgraded to version %2$s or later."
+msgstr "Moduuli %1$s on päivitettävä versioon %2$s tai uudempaan."
+
+msgid "The page model \"{label}\" ({name}) was saved in main settings."
+msgstr "Sivumalli \"{label}\" ({name}) tallennettiin pääasetuksiin."
+
+msgid "The page model \"{label}\" ({name}) was saved in site settings."
+msgstr "Sivumalli \"{label}\" ({name}) tallennettiin sivuston asetuksiin."
+
+msgid "The page model \"{label}\" ({name}) was saved in theme settings."
+msgstr "Sivumalli \"{label}\" ({name}) tallennettiin teeman asetuksiin."
+
+msgid "The page model \"{page_model}\" does not exist."
+msgstr "Sivumallia \"{page_model}\" ei ole olemassa."
+
+msgid "The page models can’t contain a value with a double quote (\")"
+msgstr "Sivumalleissa ei voi olla arvoa, jossa on lainausmerkki (\")"
+
+msgid "The params are passed directly to the block layout."
+msgstr "Parametrit välitetään suoraan lohkoasettelulle."
+
+msgid "The params can be fetched as raw text, key/value pairs, or json depending on theme."
+msgstr "Parametrit voidaan hakea raakatekstinä, avain–arvo-pareina tai JSONina teemasta riippuen."
+
+msgid "The params can be fetched as raw text, key/value pairs, or json."
+msgstr "Parametrit voidaan hakea raakatekstinä, avain–arvo-pareina tai JSONina."
+
+msgid "The root of the structure. Can be an item, an item set or any other resource type."
+msgstr "Rakenteen juuri. Voi olla aineisto, kokoelma tai mikä tahansa muu resurssityyppi."
+
+msgid "The search config \"{search_slug}\" has no form associated."
+msgstr "Hakuasetuksella \"{search_slug}\" ei ole liitettyä lomaketta."
+
+msgid "The standard \"oEmbed\" normalizes the integration of external resources. Main third parties are supported. Set the url to be used for the iframe."
+msgstr "oEmbed-standardi yhtenäistää ulkoisten resurssien upottamisen. Tärkeimmät palvelut ovat tuettuja. Anna iframe-kehyksessä käytettävä osoite."
+
+msgid "The template \"asset-deprecated-plus\" should be replaced by \"asset-class-url\" in page {url}."
+msgstr "Pohja \"asset-deprecated-plus\" on korvattava pohjalla \"asset-class-url\" sivulla {url}."
+
+msgid "The template \"asset-left-right\" should be replaced by new page block features in page {url}."
+msgstr "Pohja \"asset-left-right\" on korvattava uusilla sivulohkon ominaisuuksilla sivulla {url}."
+
+msgid "The token may be restricted to v2 or no app may be defined: try api v1.1."
+msgstr "Tunniste voi olla rajattu v2:een tai sovellusta ei ole määritetty: kokeile API v1.1:tä."
+
+msgid "The twitter block for page \"{page_slug}\" in site \"{site_slug}\" has no account set."
+msgstr "Sivuston \"{site_slug}\" sivun \"{page_slug}\" Twitter-lohkolle ei ole asetettu tiliä."
+
+msgid "Theme settings"
+msgstr "Teeman asetukset"
+
+msgid "Theme settings (unsupported)"
+msgstr "Teeman asetukset (ei tuettu)"
+
+msgid "This block displays the messages to the visitor or user, for example for modules Bulk Export, Contact Us, Contribute, and Guest."
+msgstr "Tämä lohko näyttää viestit kävijälle tai käyttäjälle, esimerkiksi Bulk Export-, Contact Us-, Contribute- ja Guest-moduuleille."
+
+msgid "This block doesn’t display anything, but stores various metadata for themes. It will be removed soon and replaced by the main page metadata above."
+msgstr "Tämä lohko ei näytä mitään, vaan tallentaa teemoille erilaisia metatietoja. Se poistetaan pian ja korvataan yllä olevilla sivun päämetatiedoilla."
+
+msgid "This group does not contain any block."
+msgstr "Tässä ryhmässä ei ole lohkoja."
+
+msgid "Thumbnail type"
+msgstr "Pienoiskuvan tyyppi"
+
+msgid "Translated sites"
+msgstr "Käännetyt sivustot"
+
+msgid "Tree structure of resources"
+msgstr "Resurssien puurakenne"
+
+msgid "Twitter"
+msgstr "Twitter"
+
+msgid "Twitter api version"
+msgstr "Twitter-API:n versio"
+
+msgid "Unavailable resource"
+msgstr "Resurssi ei ole saatavilla"
+
+msgid "Url (deprecated)"
+msgstr "Osoite (vanhentunut)"
+
+msgid "Url (oEmbed or iframe)"
+msgstr "Osoite (oEmbed tai iframe)"
+
+msgid "Use a standard query. Arguments from module Advanced Search are supported if present and needed."
+msgstr "Käytä tavallista kyselyä. Advanced Search -moduulin parametrit ovat tuettuja, jos moduuli on asennettu."
+
+msgid "Used only when query above is empty."
+msgstr "Käytetään vain, kun yllä oleva kysely on tyhjä."
+
+msgid "Used to restrict resources to search, for example on an item set."
+msgstr "Rajaa haettavat resurssit, esimerkiksi tiettyyn kokoelmaan."
+
+msgid "When an item is included in multiple item sets, the main one may be determined by this property."
+msgstr "Kun aineisto kuuluu useaan kokoelmaan, pääkokoelma voidaan määrittää tällä ominaisuudella."
+
+msgid "When enabled, the page will scroll to this block after form submission. Useful when the block is not at the top of the page."
+msgstr "Kun käytössä, sivu vierittyy tähän lohkoon lomakkeen lähettämisen jälkeen. Hyödyllinen, kun lohko ei ole sivun yläosassa."
+
+msgid "When set, this query defines the pool of resources. When empty, properties below are used to find related resources."
+msgstr "Kun asetettu, tämä kysely määrittää resurssijoukon. Kun tyhjä, liittyvät resurssit etsitään alla olevien ominaisuuksien avulla."
+
+msgid "When set, this query defines the pool of resources. When empty, properties below are used to find similar resources."
+msgstr "Kun asetettu, tämä kysely määrittää resurssijoukon. Kun tyhjä, samankaltaiset resurssit etsitään alla olevien ominaisuuksien avulla."
+
+msgid "You may need to set a token, not necessarily the account one. It may be an anonymous one."
+msgstr "Saatat tarvita tunnisteen, joka ei välttämättä ole tilin oma. Se voi olla myös anonyymi."
+
+msgid "[Block Plus] Showcase is badly formatted. Save the following page manually: {site_slug}/{page_slug}."
+msgstr "[Block Plus] Nosto on virheellisesti muotoiltu. Tallenna seuraava sivu käsin: {site_slug}/{page_slug}."
+
+msgid "[No date]"
+msgstr "[Ei päivämäärää]"
+
+msgid "online"
+msgstr "verkossa"
+
+msgid "put online %1$s"
+msgstr "julkaistu verkossa %1$s"

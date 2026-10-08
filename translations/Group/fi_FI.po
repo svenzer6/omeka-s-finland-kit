@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: fi_FI\n"
+"Project-Id-Version: Group (Omeka S Finland Kit)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "\"{identifier}\" is not a valid group."
+msgstr "\"{identifier}\" ei ole kelvollinen ryhmä."
+
+msgid "A group must have a name."
+msgstr "Ryhmällä on oltava nimi."
+
+msgid "A name cannot be a reserved word."
+msgstr "Nimi ei voi olla varattu sana."
+
+msgid "A name can’t contain only numbers."
+msgstr "Nimi ei voi sisältää pelkkiä numeroita."
+
+msgid "Add groups"
+msgstr "Lisää ryhmiä"
+
+msgid "Groups"
+msgstr "Ryhmät"
+
+msgid "Has groups"
+msgstr "Kuuluu ryhmiin"
+
+msgid "Multiple groups may be comma-separated."
+msgstr "Useita ryhmiä voi erottaa pilkuilla."
+
+msgid "Recursive item sets: no"
+msgstr "Kokoelmat rekursiivisesti: ei"
+
+msgid "Recursive item sets: yes"
+msgstr "Kokoelmat rekursiivisesti: kyllä"
+
+msgid "Recursive items: no"
+msgstr "Aineistot rekursiivisesti: ei"
+
+msgid "Recursive items: yes"
+msgstr "Aineistot rekursiivisesti: kyllä"
+
+msgid "Remove groups"
+msgstr "Poista ryhmiä"
+
+msgid "Request too long to process."
+msgstr "Pyyntö on liian pitkä käsiteltäväksi."
+
+msgid "Search by group"
+msgstr "Hae ryhmän mukaan"
+
+msgid "Select groups…"
+msgstr "Valitse ryhmät…"
+
+msgid "The groups for medias can be set only at items level."
+msgstr "Medioiden ryhmät voidaan asettaa vain aineiston tasolla."
+
+msgid "The groups for resources can be set only by item sets."
+msgstr "Resurssien ryhmät voidaan asettaa vain kokoelmien kautta."
+
+msgid "The module %1$s should be upgraded to version %2$s or later."
+msgstr "Moduuli %1$s on päivitettävä versioon %2$s tai uudempaan."
+
+msgid "The name \"{group_name}\" contains forbidden characters."
+msgstr "Nimi \"{group_name}\" sisältää kiellettyjä merkkejä."
+
+msgid "The name \"{group_name}\" is already taken."
+msgstr "Nimi \"{group_name}\" on jo käytössä."
+
+msgid "The settings should be set in the file \"config/local.config.php\" of Omeka. See the file module.config.php of the module and readme."
+msgstr "Asetukset määritetään Omekan tiedostossa \"config/local.config.php\". Katso moduulin tiedosto module.config.php ja readme."
+
+msgid "true"
+msgstr "tosi"

@@ -1,0 +1,237 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: fi_FI\n"
+"Project-Id-Version: Reference (Omeka S Finland Kit)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "%s (%d)"
+msgstr "%s (%d)"
+
+msgid "(%d resource)"
+msgstr "(%d resurssi)"
+
+msgid "(%d resources)"
+msgstr "(%d resurssia)"
+
+msgid "Access"
+msgstr "Käyttöoikeus"
+
+msgid "Add first letter as headings between references"
+msgstr "Lisää alkukirjain väliotsikoksi viitteiden väliin"
+
+msgid "Add skiplinks above and below list"
+msgstr "Lisää ohituslinkit luettelon ylä- ja alapuolelle"
+
+msgid "Add the thumbnail of the first resource"
+msgstr "Lisää ensimmäisen resurssin pienoiskuva"
+
+msgid "Add the total of resources for each reference"
+msgstr "Lisää resurssien määrä jokaiselle viitteelle"
+
+msgid "Allow to list related resources. For example, in a library where there are items of types \"Authors\" and \"Documents\", and if the creator of the documents are linked resources, then select \"Creator\" to see the list of documents by author. This option is skipped when option \"max by reference\" is used."
+msgstr "Mahdollistaa liittyvien resurssien luetteloinnin. Esimerkiksi kirjastossa, jossa on aineistotyypit \"Tekijät\" ja \"Dokumentit\" ja dokumenttien tekijät ovat linkitettyjä resursseja, valitse \"Tekijä\" nähdäksesi dokumentit tekijöittäin. Asetus ohitetaan, kun \"enintään viitettä kohden\" on käytössä."
+
+msgid "Alphabetic"
+msgstr "Aakkosellinen"
+
+msgid "And %d more."
+msgstr "Ja %d muuta."
+
+msgid "Append \"reference\" as argument to query urls for themes"
+msgstr "Lisää teemoja varten hakuosoitteisiin parametri \"reference\""
+
+msgid "Browse %s"
+msgstr "Selaa: %s"
+
+msgid "Browse items by \"%s\" (%d headings)"
+msgstr "Selaa aineistoja: \"%s\" (%d otsikkoa)"
+
+msgid "Check this box if the tree is managed as branch (the path is saved with \" :: \" between each branch)."
+msgstr "Valitse, jos puuta hallitaan haaroina (polku tallennetaan haarojen välissä merkinnällä \" :: \")."
+
+msgid "Choose one or more properties or one or more resource classes."
+msgstr "Valitse yksi tai useampi ominaisuus tai resurssiluokka."
+
+msgid "Contains"
+msgstr "Sisältää"
+
+msgid "Custom url for single records"
+msgstr "Mukautettu osoite yksittäisille tietueille"
+
+msgid "Digital objects"
+msgstr "Digitaaliset objektit"
+
+msgid "Direct link for single records"
+msgstr "Suora linkki yksittäisiin tietueisiin"
+
+msgid "Display [deprecated: use page block]"
+msgstr "Näyttö [vanhentunut: käytä sivulohkoa]"
+
+msgid "Europe\n- France\n-- Paris\n- United Kingdom\n-- England\n--- London\nAsia\n- Japan\n"
+msgstr "Eurooppa\n- Suomi\n-- Pirkanmaa\n--- Tampere\n- Ruotsi\n-- Tukholma\nAasia\n- Japani\n"
+
+msgid "Expand the tree"
+msgstr "Laajenna puu"
+
+msgid "Filter by language"
+msgstr "Suodata kielen mukaan"
+
+msgid "For example, display the items by subject. Let 0 to display a simple list. Maximum is 1024."
+msgstr "Esimerkiksi aineistojen näyttäminen aiheittain. Jätä arvoksi 0, niin näytetään pelkkä luettelo. Enimmäisarvo on 1024."
+
+msgid "Format is: one reference by line, preceded by zero, one or more \"-\" to indicate the hierarchy level.\nSeparate the \"-\" and the reference with a space. Empty lines are not considered.\nNote: sql does case insensitive searches, so all references should be case-insensitively unique."
+msgstr "Muoto: yksi viite per rivi, jota edeltää nolla, yksi tai useampi \"-\"-merkki hierarkiatason osoittamiseksi.\nErota \"-\"-merkit ja viite välilyönnillä. Tyhjiä rivejä ei huomioida.\nHuom: SQL-haut eivät erottele kirjainkokoa, joten viitteiden on oltava yksilöllisiä kirjainkoosta riippumatta."
+
+msgid "Headings"
+msgstr "Otsikot"
+
+msgid "Individual total"
+msgstr "Yksittäinen määrä"
+
+msgid "Is Exactly"
+msgstr "On täsmälleen"
+
+msgid "Limit the results to the specified languages. Use \"|\" to separate multiple languages. Use \"||\" for values without language."
+msgstr "Rajaa tulokset annettuihin kieliin. Erota useat kielet merkillä \"|\". Käytä \"||\" arvoille, joilla ei ole kieltä."
+
+msgid "Link to browse or search engine"
+msgstr "Linkki selaukseen tai hakukoneeseen"
+
+msgid "Link to single records"
+msgstr "Linkki yksittäisiin tietueisiin"
+
+msgid "List"
+msgstr "Luettelo"
+
+msgid "Main types"
+msgstr "Päätyypit"
+
+msgid "Managed as branch"
+msgstr "Hallitaan haaroina"
+
+msgid "Maximum resources to display by reference"
+msgstr "Näytettävien resurssien enimmäismäärä viitettä kohden"
+
+msgid "May be set with modules such Clean Url or Ark. May slow the display when there are many single references."
+msgstr "Voidaan asettaa esimerkiksi Clean Url- tai Ark-moduulilla. Voi hidastaa näyttöä, jos yksittäisiä viitteitä on paljon."
+
+msgid "Method Not Allowed"
+msgstr "Menetelmä ei ole sallittu"
+
+msgid "No references available."
+msgstr "Viitteitä ei ole saatavilla."
+
+msgid "One page by initial"
+msgstr "Yksi sivu alkukirjainta kohden"
+
+msgid "Owners"
+msgstr "Omistajat"
+
+msgid "Reference"
+msgstr "Viite"
+
+msgid "Reference (index)"
+msgstr "Viite (hakemisto)"
+
+msgid "Reference grid"
+msgstr "Viiteruudukko"
+
+msgid "Reference pages for selected classes and properties [deprecated: use page block]"
+msgstr "Viitesivut valituille luokille ja ominaisuuksille [vanhentunut: käytä sivulohkoa]"
+
+msgid "Reference tree"
+msgstr "Viitepuu"
+
+msgid "Resource classes"
+msgstr "Resurssiluokat"
+
+msgid "Resources to link [deprecated: use page block]"
+msgstr "Linkitettävät resurssit [vanhentunut: käytä sivulohkoa]"
+
+msgid "Restrict references to a particular subset of resources, for example a site."
+msgstr "Rajaa viitteet tiettyyn resurssien osajoukkoon, esimerkiksi sivustoon."
+
+msgid "Search config of the site"
+msgstr "Sivuston hakuasetukset"
+
+msgid "Search pool query"
+msgstr "Hakujoukon kysely"
+
+msgid "See all…"
+msgstr "Näytä kaikki…"
+
+msgid "See resources"
+msgstr "Näytä resurssit"
+
+msgid "Select a property…"
+msgstr "Valitse ominaisuus…"
+
+msgid "Select properties…"
+msgstr "Valitse ominaisuudet…"
+
+msgid "Select resource classes…"
+msgstr "Valitse resurssiluokat…"
+
+msgid "Skip links"
+msgstr "Ohituslinkit"
+
+msgid "Static tree of references"
+msgstr "Viitteiden staattinen puu"
+
+msgid "Subject values"
+msgstr "Aiheen arvot"
+
+msgid "The module %1$s should be upgraded to version %2$s or later."
+msgstr "Moduuli %1$s on päivitettävä versioon %2$s tai uudempaan."
+
+msgid "The order for facets is \"by a list of values\", but no values are defined."
+msgstr "Fasettien järjestykseksi on asetettu \"arvoluettelon mukaan\", mutta arvoja ei ole määritetty."
+
+msgid "The php extension \"intl\" is recommended to fix issues with diacritic letters."
+msgstr "PHP-laajennusta \"intl\" suositellaan tarkkeellisten kirjainten ongelmien korjaamiseksi."
+
+msgid "The type of query defines how elements are regrouped (see the advanced search)."
+msgstr "Kyselyn tyyppi määrittää, miten elementit ryhmitellään (katso tarkennettu haku)."
+
+msgid "There is no references for \"%s\"."
+msgstr "Kohteelle \"%s\" ei ole viitteitä."
+
+msgid "There is no references."
+msgstr "Viitteitä ei ole."
+
+msgid "This option is recommended for big lists."
+msgstr "Tätä asetusta suositellaan suurille luetteloille."
+
+msgid "This option is useful when the module Advanced Search is used."
+msgstr "Tämä asetus on hyödyllinen, kun Advanced Search -moduuli on käytössä."
+
+msgid "This output format is deprecated. Set a string key to metadata to use the new format or append option \"single_reference_format\" to remove this warning."
+msgstr "Tämä tulostusmuoto on vanhentunut. Käytä uutta muotoa asettamalla metatiedolle merkkijonoavain tai poista varoitus lisäämällä asetus \"single_reference_format\"."
+
+msgid "Title of the page [deprecated: use page block]"
+msgstr "Sivun otsikko [vanhentunut: käytä sivulohkoa]"
+
+msgid "To create references, there must be one or more properties or resource classes."
+msgstr "Viitteiden luomiseen tarvitaan vähintään yksi ominaisuus tai resurssiluokka."
+
+msgid "To get references, the empty string as option for languages is deprecated in favor of null or the string \"null\"."
+msgstr "Viitteitä haettaessa tyhjä merkkijono kielivalintana on vanhentunut; käytä arvoa null tai merkkijonoa \"null\"."
+
+msgid "To get references, to pass the option \"data\" as main key is deprecated in favor of \"data_type\"."
+msgstr "Viitteitä haettaessa asetuksen \"data\" antaminen pääavaimena on vanhentunut; käytä avainta \"data_type\"."
+
+msgid "To get references, to pass the option \"datatypes\" in filters is deprecated in favor of \"data_types\"."
+msgstr "Viitteitä haettaessa asetuksen \"datatypes\" antaminen suodattimissa on vanhentunut; käytä avainta \"data_types\"."
+
+msgid "To get references, to pass the option \"values\" as main key is deprecated. it should be set as a sub-key of filters."
+msgstr "Viitteitä haettaessa asetuksen \"values\" antaminen pääavaimena on vanhentunut; se tulee antaa suodattimien aliavaimena."
+
+msgid "Total"
+msgstr "Yhteensä"
+
+msgid "When a reference has only one item, link to it directly instead of to the items/browse page."
+msgstr "Kun viitteellä on vain yksi aineisto, linkitä suoraan siihen selaussivun sijaan."
+
+msgid "With the layout template \"Reference Index\", the pages for the selected terms should be created manually with the terms as slug, with the \":\" replaced by a \"-\"."
+msgstr "Asettelupohjaa \"Reference Index\" käytettäessä valittujen termien sivut on luotava käsin niin, että termi on sivun lyhytnimi ja \":\" on korvattu merkillä \"-\"."

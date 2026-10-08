@@ -1,0 +1,582 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: fi_FI\n"
+"Project-Id-Version: Mapping (Omeka S Finland Kit)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "\n                <p>Enter the values, separated by new lines. The format of each value depends on the query type:</p>\n                <ul>\n                    <li>\"Is exactly\": enter a value that is an exact match to the property value.</li>\n                    <li>\"Contains\": enter a value that matches any part of the property value.</li>\n                    <li>\"Is resource with ID\": enter the resource ID (item, item set, media).</li>\n                </ul>"
+msgstr "\n                <p>Anna arvot, kukin omalle rivilleen. Kunkin arvon muoto riippuu kyselytyypistä:</p>\n                <ul>\n                    <li>\"On täsmälleen\": anna arvo, joka vastaa ominaisuuden arvoa täsmälleen.</li>\n                    <li>\"Sisältää\": anna arvo, joka vastaa mitä tahansa ominaisuuden arvon osaa.</li>\n                    <li>\"On resurssi, jolla on ID\": anna resurssin ID (aineisto, aineistojoukko, media).</li>\n                </ul>"
+
+msgid " No Image"
+msgstr " Ei kuvaa"
+
+msgid "%s contains"
+msgstr "%s sisältää"
+
+msgid "%s has any value"
+msgstr "%s sisältää minkä tahansa arvon"
+
+msgid "%s is"
+msgstr "%s on"
+
+msgid "%s is exactly"
+msgstr "%s on täsmälleen"
+
+msgid "A mapping zone must have an item."
+msgstr "Kartta-alueella on oltava aineisto."
+
+msgid "Add feature presence to advanced search"
+msgstr "Lisää karttakohteiden esiintyminen tarkennettuun hakuun"
+
+msgid "Add geographic location to advanced search"
+msgstr "Lisää maantieteellinen sijainti tarkennettuun hakuun"
+
+msgid "Add, edit, and delete overlays below. You may check which overlay you want open by default."
+msgstr "Lisää, muokkaa ja poista peittotasoja alla. Voit valita, minkä peittotason haluat avata oletusarvoisesti."
+
+msgid "Address"
+msgstr "Osoite"
+
+msgid "Assign media to marker?"
+msgstr "Liitetäänkö media karttamerkintään?"
+
+msgid "Assigned media"
+msgstr "Liitetty media"
+
+msgid "Attach items using this query. No query means all items."
+msgstr "Liitä aineistot tällä kyselyllä. Jos kyselyä ei anneta, käytetään kaikkia aineistoja."
+
+msgid "Base URL"
+msgstr "WMS-palvelun URL"
+
+msgid "Basemap provider"
+msgstr "Pohjakartan tarjoaja"
+
+msgid "CARTO (requires an API key)"
+msgstr "CARTO (vaatii API-avaimen)"
+
+msgid "Cancel"
+msgstr "Peruuta"
+
+msgid "Carto API key"
+msgstr "Carto-API-avain"
+
+msgid "Check this if you want to show all events on the map that exist in the same time period as the current event (default view only)."
+msgstr "Valitse tämä, jos haluat näyttää kartalla kaikki tapahtumat, jotka ovat olemassa samalla ajanjaksolla kuin nykyinen tapahtuma (vain oletusnäkymä)."
+
+msgid "Class"
+msgstr "Luokka"
+
+msgid "Close Me"
+msgstr "Sulje"
+
+msgid "Colon [:]"
+msgstr "Kaksoispiste [:]"
+
+msgid "Comma [,]"
+msgstr "Pilkku [,]"
+
+msgid "Comment property key"
+msgstr "Kommenttiominaisuuden avain"
+
+msgid "Contrast"
+msgstr "Kontrasti"
+
+msgid "Copy coordinates to markers"
+msgstr "Kopioi koordinaatit karttamerkintöihin"
+
+msgid "Copy from one item property containing both latitude and longitude"
+msgstr "Kopioi yhdestä aineiston ominaisuudesta, joka sisältää sekä leveys- että pituuskoordinaatin"
+
+msgid "Copy from one media property containing both latitude and longitude"
+msgstr "Kopioi yhdestä median ominaisuudesta, joka sisältää sekä leveys- että pituuskoordinaatin"
+
+msgid "Copy from two item properties, one latitude and the other longitude"
+msgstr "Kopioi kahdesta aineiston ominaisuudesta, joista toinen on leveyskoordinaatti ja toinen pituuskoordinaatti"
+
+msgid "Copy from two media properties, one latitude and the other longitude"
+msgstr "Kopioi kahdesta median ominaisuudesta, joista toinen on leveyskoordinaatti ja toinen pituuskoordinaatti"
+
+msgid "Dark"
+msgstr "Tumma"
+
+msgid "Default"
+msgstr "Oletus"
+
+msgid "Default Bounds (sw_lng,sw_lat,ne_lng,ne_lat)"
+msgstr "Oletusrajat (sw_lng,sw_lat,ne_lng,ne_lat)"
+
+msgid "Default View"
+msgstr "Oletusnäkymä"
+
+msgid "Default bounds"
+msgstr "Oletusrajaus"
+
+msgid "Default view"
+msgstr "Oletusnäkymä"
+
+msgid "Delete features"
+msgstr "Poista kohteet"
+
+msgid "Delimiter"
+msgstr "Erotin"
+
+msgid "Disable clustering of map features"
+msgstr "Poista karttakohteiden ryhmittely käytöstä"
+
+msgid "Disabled"
+msgstr "Ei käytössä"
+
+msgid "Disabled until map click"
+msgstr "Ei käytössä ennen kartan napsautusta"
+
+msgid "Do you want to show all the available GeoJSON properties in the popup?"
+msgstr "Haluatko näyttää kaikki käytettävissä olevat GeoJSON-ominaisuudet ponnahdusikkunassa?"
+
+msgid "Edit item map features"
+msgstr "Muokkaa aineiston karttakohteita"
+
+msgid "Enter a marker label"
+msgstr "Anna karttamerkinnän selite"
+
+msgid "Enter the GeoJSON property key to use for the popup comment, if desired."
+msgstr "Anna GeoJSON-ominaisuuden avain, jota käytetään ponnahdusikkunan kommenttina, jos haluat."
+
+msgid "Enter the GeoJSON property key to use for the popup label, if desired."
+msgstr "Anna GeoJSON-ominaisuuden avain, jota käytetään ponnahdusikkunan selitteenä, jos haluat."
+
+msgid "Event marker, zoom 0"
+msgstr "Tapahtumamerkintä, zoom 0"
+
+msgid "Event marker, zoom 10"
+msgstr "Tapahtumamerkintä, zoom 10"
+
+msgid "Event marker, zoom 12"
+msgstr "Tapahtumamerkintä, zoom 12"
+
+msgid "Event marker, zoom 14"
+msgstr "Tapahtumamerkintä, zoom 14"
+
+msgid "Event marker, zoom 16"
+msgstr "Tapahtumamerkintä, zoom 16"
+
+msgid "Event marker, zoom 18"
+msgstr "Tapahtumamerkintä, zoom 18"
+
+msgid "Event marker, zoom 2"
+msgstr "Tapahtumamerkintä, zoom 2"
+
+msgid "Event marker, zoom 4"
+msgstr "Tapahtumamerkintä, zoom 4"
+
+msgid "Event marker, zoom 6"
+msgstr "Tapahtumamerkintä, zoom 6"
+
+msgid "Event marker, zoom 8"
+msgstr "Tapahtumamerkintä, zoom 8"
+
+msgid "Exclusive"
+msgstr "Poissulkeva"
+
+msgid "Expand"
+msgstr "Laajenna"
+
+msgid "Feature image"
+msgstr "Kohteen kuva"
+
+msgid "Feature label"
+msgstr "Kohteen selite"
+
+msgid "Feature type"
+msgstr "Kohteen tyyppi"
+
+msgid "Filter by item set"
+msgstr "Suodata kokoelman mukaan"
+
+msgid "Filter by resource class"
+msgstr "Suodata resurssiluokan mukaan"
+
+msgid "Fly to"
+msgstr "Lennä kohteeseen"
+
+msgid "Full width, above story slider and map"
+msgstr "Täysi leveys, tarinaliukusäätimen ja kartan yläpuolella"
+
+msgid "Full width, below story slider and map"
+msgstr "Täysi leveys, tarinaliukusäätimen ja kartan alla"
+
+msgid "GeoJSON"
+msgstr "GeoJSON"
+
+msgid "Geographic location"
+msgstr "Maantieteellinen sijainti"
+
+msgid "Groups"
+msgstr "Ryhmät"
+
+msgid "Has map features"
+msgstr "Sisältää karttakohteita"
+
+msgid "Has no map features"
+msgstr "Ei sisällä karttakohteita"
+
+msgid "IIIF Georeference Annotation"
+msgstr "IIIF-georeferenssiannotaatio"
+
+msgid "In item set"
+msgstr "Kokoelmassa"
+
+msgid "Inclusive"
+msgstr "Sisällyttävä"
+
+msgid "Item"
+msgstr "Aineisto"
+
+msgid "Item set"
+msgstr "Kokoelma"
+
+msgid "Item sets"
+msgstr "Kokoelmat"
+
+msgid "Kilometers"
+msgstr "Kilometri"
+
+msgid "Label"
+msgstr "Nimike"
+
+msgid "Label property key"
+msgstr "Seliteominaisuuden avain"
+
+msgid "Label source"
+msgstr "Selitteen lähde"
+
+msgid "Latitude"
+msgstr "Leveyskoordinaatti (lat)"
+
+msgid "Latitude Longitude"
+msgstr "Leveyskoordinaatti Pituuskoordinaatti"
+
+msgid "Latitude/Longitude"
+msgstr "Leveys- ja pituusaste"
+
+msgid "Layer"
+msgstr "Taso"
+
+msgid "Layers"
+msgstr "Tasot"
+
+msgid "Longitude"
+msgstr "Pituuskoordinaatti (lon)"
+
+msgid "Longitude Latitude"
+msgstr "Pituuskoordinaatti Leveyskoordinaatti"
+
+msgid "Map"
+msgstr "Kartta"
+
+msgid "Map bounds must contain four numbers separated by commas"
+msgstr "Kartan rajojen on sisällettävä neljä lukua pilkuilla erotettuina"
+
+msgid "Map browse"
+msgstr "Selaa karttaa"
+
+msgid "Map by attachments"
+msgstr "Kartta liitteiden perusteella"
+
+msgid "Map by groups"
+msgstr "Kartta ryhmien perusteella"
+
+msgid "Map by query"
+msgstr "Kartta kyselyn perusteella"
+
+msgid "Map feature presence"
+msgstr "Karttakohteiden esiintyminen"
+
+msgid "Map features are markers, polygons, polylines, and rectangles. Note that large features may not cluster."
+msgstr "Karttakohteita ovat merkinnät, monikulmiot, murtoviivat ja suorakulmiot. Huomaa, että suuria kohteita ei välttämättä ryhmitellä."
+
+msgid "Mapbox (requires an access token)"
+msgstr "Mapbox (vaatii käyttötunnisteen)"
+
+msgid "Mapbox access token"
+msgstr "Mapbox-käyttötunniste"
+
+msgid "Mapping"
+msgstr "Kartta"
+
+msgid "Maximum zoom level"
+msgstr "Enimmäiszoomaustaso"
+
+msgid "Media image"
+msgstr "Median kuva"
+
+msgid "Miles"
+msgstr "Maili"
+
+msgid "Minimum zoom level"
+msgstr "Vähimmäiszoomaustaso"
+
+msgid "Order"
+msgstr "Järjestys"
+
+msgid "Overlay"
+msgstr "Peittotaso"
+
+msgid "Overlay mode"
+msgstr "Peittotasotila"
+
+msgid "Overlays"
+msgstr "Peittotasot"
+
+msgid "Point"
+msgstr "Piste"
+
+msgid "Polygon"
+msgstr "Monikulmio"
+
+msgid "Primary media"
+msgstr "Ensisijainen media"
+
+msgid "Properties"
+msgstr "Ominaisuudet"
+
+msgid "Properties (has any value)"
+msgstr "Ominaisuudet (sisältää minkä tahansa arvon)"
+
+msgid "Property"
+msgstr "Ominaisuus"
+
+msgid "Property values (contains)"
+msgstr "Ominaisuuden arvot (sisältää)"
+
+msgid "Property values (is exactly)"
+msgstr "Ominaisuuden arvot (on täsmälleen)"
+
+msgid "Property values (is resource with ID)"
+msgstr "Ominaisuuden arvot (on resurssi, jolla on ID)"
+
+msgid "Query"
+msgstr "Haku"
+
+msgid "Radius"
+msgstr "Säde"
+
+msgid "Resource classes"
+msgstr "Resurssiluokat"
+
+msgid "Return to groups"
+msgstr "Palaa ryhmiin"
+
+msgid "Save overlay"
+msgstr "Tallenna peittotaso"
+
+msgid "Scroll wheel zoom"
+msgstr "Hiiren rullan zoomaus"
+
+msgid "Search Map"
+msgstr "Hae"
+
+msgid "Search by geographic location"
+msgstr "Hae maantieteellisen sijainnin perusteella"
+
+msgid "Search by map feature presence"
+msgstr "Hae karttakohteiden esiintymisen perusteella"
+
+msgid "Select a group"
+msgstr "Valitse ryhmä"
+
+msgid "Select a type…"
+msgstr "Valitse tyyppi…"
+
+msgid "Select below"
+msgstr "Valitse alta"
+
+msgid "Select feature image"
+msgstr "Valitse kohteen kuva"
+
+msgid "Select item set"
+msgstr "Valitse kokoelma"
+
+msgid "Select item sets"
+msgstr "Valitse kokoelmat"
+
+msgid "Select label property"
+msgstr "Valitse seliteominaisuus"
+
+msgid "Select latitude property"
+msgstr "Valitse leveyskoordinaatin ominaisuus"
+
+msgid "Select longitude property"
+msgstr "Valitse pituuskoordinaatin ominaisuus"
+
+msgid "Select map feature presence…"
+msgstr "Valitse karttakohteiden esiintyminen…"
+
+msgid "Select overlay type"
+msgstr "Valitse peittotason tyyppi"
+
+msgid "Select properties"
+msgstr "Valitse ominaisuudet"
+
+msgid "Select property"
+msgstr "Valitse ominaisuus"
+
+msgid "Select property…"
+msgstr "Valitse ominaisuus…"
+
+msgid "Select resource class"
+msgstr "Valitse resurssiluokka"
+
+msgid "Select resource classes"
+msgstr "Valitse resurssiluokat"
+
+msgid "Select the TimelineJS theme."
+msgstr "Valitse TimelineJS-teema."
+
+msgid "Select the basemap provider. Leave empty to use the global setting (%s). These providers are offered AS-IS. There is no guarantee of service or speed. Basemaps needing a key or token use credentials set in global settings, and show OpenStreetMap until those are set. To help visitors with low vision, consider Esri.NatGeoWorldMap or OpenTopoMap, which have higher contrast between map features."
+msgstr "Valitse taustakartan tarjoaja. Jätä tyhjäksi käyttääksesi yleistä asetusta (%s). Tarjoajat ovat käytettävissä sellaisenaan, eikä palvelun saatavuutta tai nopeutta taata. Avainta tai tunnistetta vaativat taustakartat käyttävät yleisissä asetuksissa annettuja tunnuksia ja näyttävät OpenStreetMapin, kunnes tunnukset on annettu. Heikkonäköisiä kävijöitä varten harkitse Esri.NatGeoWorldMapia tai OpenTopoMapia, joissa karttakohteiden kontrasti on suurempi."
+
+msgid "Select the basemap provider. The default is OpenStreetMap.Mapnik. These providers are offered AS-IS. There is no guarantee of service or speed. Basemaps needing a key or token use credentials set in global settings, and show OpenStreetMap until those are set. To help visitors with low vision, consider Esri.NatGeoWorldMap or OpenTopoMap, which have higher contrast between map features."
+msgstr "Valitse taustakartan tarjoaja. Oletus on OpenStreetMap.Mapnik. Tarjoajat ovat käytettävissä sellaisenaan, eikä palvelun saatavuutta tai nopeutta taata. Avainta tai tunnistetta vaativat taustakartat käyttävät yleisissä asetuksissa annettuja tunnuksia ja näyttävät OpenStreetMapin, kunnes tunnukset on annettu. Heikkonäköisiä kävijöitä varten harkitse Esri.NatGeoWorldMapia tai OpenTopoMapia, joissa karttakohteiden kontrasti on suurempi."
+
+msgid "Select the basemap provider. The default is OpenStreetMap.Mapnik. These providers are offered AS-IS. There is no guarantee of service or speed. Stamen needs this installation's domain registered with a Stadia account at %s; one registration covers every site. To help visitors with low vision, consider Esri.NatGeoWorldMap or OpenTopoMap, which have higher contrast between map features."
+msgstr "Valitse taustakartan tarjoaja. Oletus on OpenStreetMap.Mapnik. Tarjoajat ovat käytettävissä sellaisenaan, eikä palvelun saatavuutta tai nopeutta taata. Stamen edellyttää, että tämän asennuksen verkkotunnus rekisteröidään Stadia-tilille osoitteessa %s; yksi rekisteröinti kattaa kaikki sivustot. Heikkonäköisiä kävijöitä varten harkitse Esri.NatGeoWorldMapia tai OpenTopoMapia, joissa karttakohteiden kontrasti on suurempi."
+
+msgid "Select the map view to fly to when navigating between events."
+msgstr "Valitse karttanäkymä, johon siirrytään tapahtumien välillä navigoitaessa."
+
+msgid "Select the position of the timeline navigation."
+msgstr "Valitse aikajanan navigoinnin sijainti."
+
+msgid "Select the timestamp or interval property to use when populating the timeline."
+msgstr "Valitse aikaleima- tai aikaväliominaisuus, jota käytetään aikajanan täyttämiseen."
+
+msgid "Set default map view"
+msgstr "Aseta kartan oletusnäkymä"
+
+msgid "Set the default bounds of the map by navigating to the desired view and clicking \"Set the current view as the default view\"."
+msgstr "Aseta kartan oletusrajaus siirtymällä haluttuun näkymään ja napsauttamalla \"Aseta nykyinen näkymä oletusnäkymäksi\"."
+
+msgid "Set the default bounds of the map by navigating to the desired view and clicking \"Set the current view as the default view\". Leave unconfigured to use the global setting."
+msgstr "Aseta kartan oletusrajaus siirtymällä haluttuun näkymään ja napsauttamalla \"Aseta nykyinen näkymä oletusnäkymäksi\". Jätä asettamatta käyttääksesi yleistä asetusta."
+
+msgid "Set the default view using the in-map controls. The current zoom level is %s."
+msgstr "Aseta oletusnäkymä kartan sisäisillä säätimillä. Nykyinen zoomaustaso on %s."
+
+msgid "Set the maximum zoom level of the map. Leave empty to use the global setting (%s)."
+msgstr "Aseta kartan suurin zoomaustaso. Jätä tyhjäksi käyttääksesi yleistä asetusta (%s)."
+
+msgid "Set the maximum zoom level up to which the map will be displayed. The default is 19."
+msgstr "Aseta enimmäiszoomaustaso, johon asti kartta näytetään. Oletus on 19."
+
+msgid "Set the minimum zoom level down to which the map will be displayed. The default is 0."
+msgstr "Aseta vähimmäiszoomaustaso, johon asti kartta näytetään. Oletus on 0."
+
+msgid "Set the minimum zoom level of the map. Leave empty to use the global setting (%s)."
+msgstr "Aseta kartan pienin zoomaustaso. Jätä tyhjäksi käyttääksesi yleistä asetusta (%s)."
+
+msgid "Set whether users can zoom with their mouse wheel when hovering over the map, either automatically upon page load or after clicking inside the map."
+msgstr "Määritä, voivatko käyttäjät zoomata hiiren rullalla, kun osoitin on kartan päällä, joko automaattisesti sivun latautuessa tai karttaa napsautettuaan."
+
+msgid "Show GeoJSON property list?"
+msgstr "Näytä GeoJSON-ominaisuusluettelo?"
+
+msgid "Show contemporaneous events?"
+msgstr "Näytä samanaikaiset tapahtumat?"
+
+msgid "Slash [/]"
+msgstr "Vinoviiva [/]"
+
+msgid "Space [ ]"
+msgstr "Välilyönti [ ]"
+
+msgid "Stamen (requires a Stadia account)"
+msgstr "Stamen (vaatii Stadia-tilin)"
+
+msgid "Style"
+msgstr "Tyyli"
+
+msgid "Styles"
+msgstr "Tyylit"
+
+msgid "The WMS layers, if any (comma-separated)."
+msgstr "WMS-tasot pilkulla erotettuna"
+
+msgid "The WMS styles, if any (comma-separated)."
+msgstr "WMS-tyylit pilkulla erotettuna"
+
+msgid "The WMTS style. Defaults to \"default\"."
+msgstr "WMTS-tyyli. Oletus on \"default\"."
+
+msgid "This block requires MySQL 8.0.24+ or MariaDB 11.7+. Your database version is %s."
+msgstr "Tämä lohko edellyttää MySQL 8.0.24+ tai MariaDB 11.7+. Tietokantasi versio on %s."
+
+msgid "Tile matrix set"
+msgstr "Tiilimatriisijoukko"
+
+msgid "Timeline"
+msgstr "Aikajana"
+
+msgid "Timeline navigation position"
+msgstr "Aikajanan navigoinnin sijainti"
+
+msgid "Timeline theme"
+msgstr "Aikajanan teema"
+
+msgid "Title headline"
+msgstr "Otsikon pääotsikko"
+
+msgid "Title text"
+msgstr "Otsikon teksti"
+
+msgid "Type"
+msgstr "Tyyppi"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Unit"
+msgstr "Yksikkö"
+
+msgid "Update features"
+msgstr "Päivitä kohteet"
+
+msgid "Values"
+msgstr "Arvot"
+
+msgid "View all results (%s total)"
+msgstr "Näytä kaikki tulokset (yhteensä %s)"
+
+msgid "Web Map Service (WMS)"
+msgstr "Web Map Service (WMS)"
+
+msgid "Web Map Tile Service (WMTS)"
+msgstr "Web Map Tile Service (WMTS)"
+
+msgid "Without a key, Carto watermarks every tile, so Carto basemaps show OpenStreetMap instead. Applies to every site in this installation, and is visible to anyone who views a map. Get a key at %s."
+msgstr "Ilman avainta Carto lisää jokaiseen karttatiileen vesileiman, joten Carto-taustakarttojen sijaan näytetään OpenStreetMap. Koskee kaikkia tämän asennuksen sivustoja ja näkyy kaikille kartan katsojille. Hanki avain osoitteesta %s."
+
+msgid "Without a token, Mapbox serves no tiles, so the Mapbox basemap shows OpenStreetMap instead. Usage is billed to the token's account. Applies to every site in this installation, and is visible to anyone who views a map. Get a token at %s."
+msgstr "Ilman tunnistetta Mapbox ei toimita karttatiiliä, joten Mapbox-taustakartan sijaan näytetään OpenStreetMap. Käyttö laskutetaan tunnisteen tililtä. Koskee kaikkia tämän asennuksen sivustoja ja näkyy kaikille kartan katsojille. Hanki tunniste osoitteesta %s."
+
+msgid "You must select a location on the map."
+msgstr "Valitse sijainti kartalta."
+
+msgid "[Any property]"
+msgstr "[Mikä tahansa ominaisuus]"
+
+msgid "[Default provider]"
+msgstr "[Oletustarjoaja]"
+
+msgid "[Global setting]"
+msgstr "[Yleinen asetus]"
+
+msgid "[No change]"
+msgstr "[Ei muutosta]"
+
+msgid "[Remove label]"
+msgstr "[Poista selite]"
+
+msgid "[Unassign media]"
+msgstr "[Poista median liitos]"

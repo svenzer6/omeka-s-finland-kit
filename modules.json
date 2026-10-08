@@ -1,0 +1,311 @@
+{
+  "omeka": {
+    "version": "4.2.1",
+    "url": "https://github.com/omeka/omeka-s/releases/download/v4.2.1/omeka-s-4.2.1.zip"
+  },
+  "modules": [
+    {
+      "name": "Access",
+      "repo": "Daniel-KM/Omeka-S-module-Access",
+      "version": "3.4.47",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-Access/releases/download/3.4.47/Access-3.4.47.zip",
+      "group": "install",
+      "requires": [
+        "Common"
+      ]
+    },
+    {
+      "name": "ActivityLog",
+      "repo": "omeka-s-modules/ActivityLog",
+      "version": "v1.0.1",
+      "url": "https://github.com/omeka-s-modules/ActivityLog/releases/download/v1.0.1/ActivityLog-1.0.1.zip",
+      "group": "install"
+    },
+    {
+      "name": "AdvancedResourceTemplate",
+      "repo": "Daniel-KM/Omeka-S-module-AdvancedResourceTemplate",
+      "version": "3.4.55",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-AdvancedResourceTemplate/releases/download/3.4.55/AdvancedResourceTemplate-3.4.55.zip",
+      "group": "install",
+      "requires": [
+        "Common"
+      ]
+    },
+    {
+      "name": "Analytics",
+      "repo": "Daniel-KM/Omeka-S-module-Analytics",
+      "version": "3.4.15",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-Analytics/releases/download/3.4.15/Analytics-3.4.15.zip",
+      "group": "install",
+      "requires": [
+        "Common"
+      ]
+    },
+    {
+      "name": "Banner",
+      "repo": "rochester-rcl/Omeka-S-Banner",
+      "version": "v1.0",
+      "url": "https://github.com/rochester-rcl/Omeka-S-Banner/releases/download/v1.0/Banner.zip",
+      "group": "install"
+    },
+    {
+      "name": "BlocksDisposition",
+      "repo": "Daniel-KM/Omeka-S-module-BlocksDisposition",
+      "version": "3.4.6",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-BlocksDisposition/releases/download/3.4.6/BlocksDisposition-3.4.6.zip",
+      "group": "install",
+      "requires": [
+        "Common"
+      ]
+    },
+    {
+      "name": "BulkEdit",
+      "repo": "Daniel-KM/Omeka-S-module-BulkEdit",
+      "version": "3.4.40",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-BulkEdit/releases/download/3.4.40/BulkEdit-3.4.40.zip",
+      "group": "install",
+      "requires": [
+        "Common"
+      ]
+    },
+    {
+      "name": "BulkImport",
+      "repo": "Daniel-KM/Omeka-S-module-BulkImport",
+      "version": "3.4.65",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-BulkImport/releases/download/3.4.65/BulkImport-3.4.65.zip",
+      "group": "install",
+      "requires": [
+        "Common",
+        "Mapper"
+      ]
+    },
+    {
+      "name": "Coins",
+      "repo": "biblibre/omeka-s-module-Coins",
+      "version": "v3.1.0",
+      "url": "https://github.com/biblibre/omeka-s-module-Coins/releases/download/v3.1.0/Coins-3.1.0.zip",
+      "group": "install"
+    },
+    {
+      "name": "Common",
+      "repo": "Daniel-KM/Omeka-S-module-Common",
+      "version": "3.4.93",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-Common/releases/download/3.4.93/Common-3.4.93.zip",
+      "group": "install"
+    },
+    {
+      "name": "CSSEditor",
+      "repo": "omeka-s-modules/CSSEditor",
+      "version": "v1.3.1",
+      "url": "https://github.com/omeka-s-modules/CSSEditor/releases/download/v1.3.1/CSSEditor-1.3.1.zip",
+      "group": "install"
+    },
+    {
+      "name": "CSVImport",
+      "repo": "omeka-s-modules/CSVImport",
+      "version": "v2.6.2",
+      "url": "https://github.com/omeka-s-modules/CSVImport/releases/download/v2.6.2/CSVImport-2.6.2.zip",
+      "group": "install"
+    },
+    {
+      "name": "CustomVocab",
+      "repo": "omeka-s-modules/CustomVocab",
+      "version": "v2.1.0",
+      "url": "https://github.com/omeka-s-modules/CustomVocab/releases/download/v2.1.0/CustomVocab-2.1.0.zip",
+      "group": "install"
+    },
+    {
+      "name": "DynamicItemSets",
+      "repo": "Daniel-KM/Omeka-S-module-DynamicItemSets",
+      "version": "3.4.7",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-DynamicItemSets/releases/download/3.4.7/DynamicItemSets-3.4.7.zip",
+      "group": "install",
+      "requires": [
+        "Common"
+      ]
+    },
+    {
+      "name": "EasyAdmin",
+      "repo": "Daniel-KM/Omeka-S-module-EasyAdmin",
+      "version": "3.4.49",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-EasyAdmin/releases/download/3.4.49/EasyAdmin-3.4.49.zip",
+      "group": "install",
+      "requires": [
+        "Common"
+      ]
+    },
+    {
+      "name": "FileSideload",
+      "repo": "omeka-s-modules/FileSideload",
+      "version": "v1.7.1",
+      "url": "https://github.com/omeka-s-modules/FileSideload/releases/download/v1.7.1/FileSideload-1.7.1.zip",
+      "group": "install"
+    },
+    {
+      "name": "LocaleSwitch",
+      "repo": "biblibre/omeka-s-module-LocaleSwitch",
+      "version": "v0.3.0",
+      "url": "https://github.com/biblibre/omeka-s-module-LocaleSwitch/releases/download/v0.3.0/LocaleSwitch-0.3.0.zip",
+      "group": "install"
+    },
+    {
+      "name": "Log",
+      "repo": "Daniel-KM/Omeka-S-module-Log",
+      "version": "3.4.41",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-Log/releases/download/3.4.41/Log-3.4.41.zip",
+      "group": "install",
+      "requires": [
+        "Common"
+      ]
+    },
+    {
+      "name": "OaiPmhRepository",
+      "repo": "Daniel-KM/Omeka-S-module-OaiPmhRepository",
+      "version": "3.4.14",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-OaiPmhRepository/releases/download/3.4.14/OaiPmhRepository-3.4.14.zip",
+      "group": "install",
+      "requires": [
+        "Common"
+      ]
+    },
+    {
+      "name": "PersistentIdentifiers",
+      "repo": "omeka-s-modules/PersistentIdentifiers",
+      "version": "v1.2.0",
+      "url": "https://github.com/omeka-s-modules/PersistentIdentifiers/releases/download/v1.2.0/PersistentIdentifiers-1.2.0.zip",
+      "group": "install"
+    },
+    {
+      "name": "ValueSuggest",
+      "repo": "omeka-s-modules/ValueSuggest",
+      "version": "v1.21.0",
+      "url": "https://github.com/omeka-s-modules/ValueSuggest/releases/download/v1.21.0/ValueSuggest-1.21.0.zip",
+      "group": "install"
+    },
+    {
+      "name": "AdvancedSearch",
+      "repo": "Daniel-KM/Omeka-S-module-AdvancedSearch",
+      "version": "3.4.65",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-AdvancedSearch/releases/download/3.4.65/AdvancedSearch-3.4.65.zip",
+      "group": "translate",
+      "requires": [
+        "Common"
+      ]
+    },
+    {
+      "name": "BlockPlus",
+      "repo": "Daniel-KM/Omeka-S-module-BlockPlus",
+      "version": "3.4.45",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-BlockPlus/releases/download/3.4.45/BlockPlus-3.4.45.zip",
+      "group": "translate",
+      "requires": [
+        "Common"
+      ]
+    },
+    {
+      "name": "BotChallenge",
+      "repo": "Daniel-KM/Omeka-S-module-BotChallenge",
+      "version": "3.4.5",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-BotChallenge/releases/download/3.4.5/BotChallenge-3.4.5.zip",
+      "group": "translate",
+      "requires": [
+        "Common"
+      ]
+    },
+    {
+      "name": "ContactUs",
+      "repo": "Daniel-KM/Omeka-S-module-ContactUs",
+      "version": "3.4.32",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-ContactUs/releases/download/3.4.32/ContactUs-3.4.32.zip",
+      "group": "translate",
+      "requires": [
+        "Common"
+      ]
+    },
+    {
+      "name": "Group",
+      "repo": "Daniel-KM/Omeka-S-module-Group",
+      "version": "3.4.8",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-Group/releases/download/3.4.8/Group-3.4.8.zip",
+      "group": "translate",
+      "requires": [
+        "Common"
+      ]
+    },
+    {
+      "name": "Guest",
+      "repo": "Daniel-KM/Omeka-S-module-Guest",
+      "version": "3.4.44",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-Guest/releases/download/3.4.44/Guest-3.4.44.zip",
+      "group": "translate",
+      "requires": [
+        "Common"
+      ]
+    },
+    {
+      "name": "GuestPrivate",
+      "repo": "Daniel-KM/Omeka-S-module-GuestPrivate",
+      "version": "3.4.8",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-GuestPrivate/releases/download/3.4.8/GuestPrivate-3.4.8.zip",
+      "group": "translate",
+      "requires": [
+        "Common"
+      ]
+    },
+    {
+      "name": "Hierarchy",
+      "repo": "omeka-s-modules/Hierarchy",
+      "version": "v1.2.2",
+      "url": "https://github.com/omeka-s-modules/Hierarchy/releases/download/v1.2.2/Hierarchy-1.2.2.zip",
+      "group": "translate"
+    },
+    {
+      "name": "Mapping",
+      "repo": "omeka-s-modules/Mapping",
+      "version": "v2.3.0",
+      "url": "https://github.com/omeka-s-modules/Mapping/releases/download/v2.3.0/Mapping-2.3.0.zip",
+      "group": "translate"
+    },
+    {
+      "name": "MetadataBrowse",
+      "repo": "omeka-s-modules/MetadataBrowse",
+      "version": "v1.6.1",
+      "url": "https://github.com/omeka-s-modules/MetadataBrowse/releases/download/v1.6.1/MetadataBrowse-1.6.1.zip",
+      "group": "translate"
+    },
+    {
+      "name": "Reference",
+      "repo": "Daniel-KM/Omeka-S-module-Reference",
+      "version": "3.4.64",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-Reference/releases/download/3.4.64/Reference-3.4.64.zip",
+      "group": "translate",
+      "requires": [
+        "Common"
+      ]
+    },
+    {
+      "name": "Mapper",
+      "repo": "Daniel-KM/Omeka-S-module-Mapper",
+      "version": "3.4.8",
+      "url": "https://github.com/Daniel-KM/Omeka-S-module-Mapper/releases/download/3.4.8/Mapper-3.4.8.zip",
+      "group": "dependency",
+      "requires": [
+        "Common"
+      ]
+    }
+  ],
+  "themes": [
+    {
+      "name": "foundation",
+      "repo": "omeka-s-themes/foundation-s",
+      "version": "v1.5.4",
+      "url": "https://github.com/omeka-s-themes/foundation/releases/download/v1.5.4/foundation-1.5.4.zip"
+    },
+    {
+      "name": "thanksroy",
+      "repo": "omeka-s-themes/thanksroy",
+      "version": "v1.2.2",
+      "url": "https://github.com/omeka-s-themes/thanksroy/releases/download/v1.2.2/theme-thanksroy-v1.2.2.zip"
+    }
+  ]
+}

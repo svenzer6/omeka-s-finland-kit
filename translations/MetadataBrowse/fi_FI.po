@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: fi_FI\n"
+"Project-Id-Version: MetadataBrowse (Omeka S Finland Kit)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Choose properties from the sidebar to be searchable"
+msgstr "Valitse valikosta kentät, jotka halutaan toimivan selauslinkkeinä."
+
+msgid "Choose properties from the sidebar to be searchable on the admin side."
+msgstr "Valitse ylläpitonäkymässä selauslinkkeinä näytettävät kentät."
+
+msgid "Direct Links"
+msgstr "Suorat linkit"
+
+msgid "Expand"
+msgstr "Laajenna"
+
+msgid "If checked, the properties selected below will be linked on the admin side, overriding all site-specific settings. Each site's own settings will be reflected on the public side. Otherwise, the admin side will reflect the aggregated settings for all sites; anything selected to be a link in any site will be a link on the admin side."
+msgstr "Asetuksen ollessa valittuna ylläpitonäkymässä käytetään kenttäselauksen asennuskohtaista asetusta sivustokohtaisten asetusten sijaan. Sivustojen julkisissa näkymissä käytetään sivustokohtaisia asetuksia. Mikäli asetus ei ole valittuna, kaikki ne kentät ovat selattavissa ylläpitonäkymissä jotka ovat valittu selattavaksi yhdellä tai useammalla sivustolla."
+
+msgid "Instead of printing a separate link for each value, apply the link to the value itself."
+msgstr "Erillisen linkin sijaan linkitä arvo itse."
+
+msgid "Metadata Browse"
+msgstr "Kenttäselaus"
+
+msgid "Property term for development use"
+msgstr "Ominaisuuden termi kehityskäyttöön"
+
+msgid "Property to be removed"
+msgstr "Poistettava kenttä"
+
+msgid "Remove property"
+msgstr "Poista ominaisuus"
+
+msgid "Restore property"
+msgstr "Palauta ominaisuus"
+
+msgid "See all %s with this value"
+msgstr "Näytä muut %s joilla on sama tieto."
+
+msgid "Select properties to be searchable"
+msgstr "Selauslinkkeinä näytettävät kentät"
+
+msgid "Use global configuration on admin side"
+msgstr "Käytä asennuskohtaista asetusta ylläpitonäkymässä."

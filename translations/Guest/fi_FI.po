@@ -1,0 +1,942 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: fi_FI\n"
+"Project-Id-Version: Guest (Omeka S Finland Kit)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "\"{email}\" is not an email."
+msgstr "\"{email}\" ei ole sähköpostiosoite."
+
+msgid "<p>Hi {user_name},</p>\n<p>We are happy to open your account on <a href=\"{site_url}\">{site_title}</a> ({main_title}).</p>\n<p>Please confirm your email by following this link: <a href=\"{token_url}\">{token_url}</a>.</p>\n<p>You can now log in and discover the site.</p>"
+msgstr "<p>Hei {user_name},</p>\n<p>Tilisi sivustolla <a href=\"{site_url}\">{site_title}</a> ({main_title}) on avattu.</p>\n<p>Vahvista sähköpostiosoitteesi tästä linkistä: <a href=\"{token_url}\">{token_url}</a>.</p>\n<p>Voit nyt kirjautua sisään ja tutustua sivustoon.</p>"
+
+msgid "<p>Hi {user_name},</p>\n<p>You have registered for an account on <a href=\"{site_url}\">{site_title}</a> ({main_title}).</p>\n<p>Please confirm your registration by following this link: <a href=\"{token_url}\"> {token_url}</a></p>\n<p>If you did not request to join {main_title} / {site_title}, please disregard this email.</p>"
+msgstr "<p>Hei {user_name},</p>\n<p>Olet rekisteröitynyt käyttäjäksi sivustolle <a href=\"{site_url}\">{site_title}</a> ({main_title}).</p>\n<p>Vahvista rekisteröitymisesi tästä linkistä: <a href=\"{token_url}\"> {token_url}</a></p>\n<p>Jos et ole rekisteröitynyt palveluun {main_title} / {site_title}, voit jättää tämän viestin huomiotta.</p>"
+
+msgid "<p>Hi {user_name},</p>\n<p>You have requested to update email on <a href=\"{site_url}\">{site_title}</a> ({main_title}).</p>\n<p>Please confirm your email by following this link: <a href=\"{token_url}\">{token_url}</a>.</p>\n<p>If you did not request to update your email on {main_title}, please disregard this email.</p>"
+msgstr "<p>Hei {user_name},</p>\n<p>Olet pyytänyt sähköpostiosoitteesi vaihtamista sivustolla <a href=\"{site_url}\">{site_title}</a> ({main_title}).</p>\n<p>Vahvista sähköpostiosoitteesi tästä linkistä: <a href=\"{token_url}\">{token_url}</a>.</p>\n<p>Jos et ole pyytänyt sähköpostiosoitteen vaihtamista palvelussa {main_title}, voit jättää tämän viestin huomiotta.</p>"
+
+msgid "<p>Hi,</p>\n<p>A new user, {user_name}, is registering on <a href=\"{site_url}\">{site_title}</a> ({main_title}).</p>\n<p>You may moderate this email: {user_email}.</p>\n<p>This is an automatic message.</p>"
+msgstr "<p>Hei,</p>\n<p>Uusi käyttäjä {user_name} on rekisteröitymässä sivustolle <a href=\"{site_url}\">{site_title}</a> ({main_title}).</p>\n<p>Voit tarkistaa sähköpostiosoitteen: {user_email}.</p>\n<p>Tämä on automaattinen viesti.</p>"
+
+msgid "A default site should be set or the user should have a site in order to confirm registration."
+msgstr "Rekisteröitymisen vahvistaminen edellyttää, että oletussivusto on asetettu tai käyttäjällä on sivusto."
+
+msgid "A logged user cannot change the password with this method."
+msgstr "Kirjautunut käyttäjä ei voi vaihtaa salasanaa tällä tavalla."
+
+msgid "A new code was resent."
+msgstr "Uusi koodi lähetettiin."
+
+msgid "A new user has confirmed that they want to join %s : %s"
+msgstr "Uusi käyttäjä on vahvistanut rekisteröitymisen %s : %s"
+
+msgid "A new user is registering and has confirmed email: {user_email} ({url})."
+msgstr "Uusi käyttäjä on rekisteröitymässä ja on vahvistanut sähköpostiosoitteensa: {user_email} ({url})."
+
+msgid "A new user is registering: {user_email} ({url})."
+msgstr "Uusi käyttäjä on rekisteröitymässä: {user_email} ({url})."
+
+msgid "A password must be set."
+msgstr "Salasana on annettava."
+
+msgid "A site is required to register."
+msgstr "Rekisteröityminen edellyttää sivustoa."
+
+msgid "Accept"
+msgstr "Hyväksy"
+
+msgid "Accept terms and conditions"
+msgstr "Hyväksy käyttöehdot"
+
+msgid "Access forbidden."
+msgstr "Pääsy estetty."
+
+msgid "Add new users to sites"
+msgstr "Lisää uudet käyttäjät sivustoille"
+
+msgid "Add some text to the registration screen so people will know what they get for registering. As you enable and configure plugins that make use of the guest, please give them guidance about what they can and cannot do."
+msgstr "Lisää rekisteröitymissivulle tekstiä, josta käyttäjät näkevät, mitä rekisteröityminen tarjoaa. Kun otat käyttöön vieraskäyttäjiä hyödyntäviä lisäosia, kerro käyttäjille, mitä he voivat ja eivät voi tehdä."
+
+msgid "Agreed terms"
+msgstr "Hyväksytyt ehdot"
+
+msgid "Agreed terms: %s"
+msgstr "Hyväksytyt ehdot: %s"
+
+msgid "All guests agreed the terms."
+msgstr "Kaikki vieraskäyttäjät ovat hyväksyneet ehdot."
+
+msgid "All guests must agreed the terms one more time."
+msgstr "Kaikkien vieraskäyttäjien on hyväksyttävä ehdot uudelleen."
+
+msgid "All roles"
+msgstr "Kaikki roolit"
+
+msgid "Allow guest registration without administrator approval. The link to use is \"/s/my-site/guest/register\"."
+msgstr "Salli vieraskäyttäjien rekisteröityminen ilman ylläpitäjän hyväksyntää. Käytettävä linkki on \"/s/my-site/guest/register\"."
+
+msgid "Allow instant access?"
+msgstr "Myönnä välitön pääsy"
+
+msgid "Allow open registration?"
+msgstr "Vapaa rekisteröityminen"
+
+msgid "Allowed roles for guest"
+msgstr "Vieraskäyttäjälle sallitut roolit"
+
+msgid "Allows to keep some pages available when terms are not yet agreed. Default pages are included (logout, terms page…). This is a regex, with \"~\" delimiter, checked against the end of the url."
+msgstr "Pitää tietyt sivut käytettävissä, vaikka ehtoja ei ole vielä hyväksytty. Oletussivut ovat mukana (uloskirjautuminen, ehtosivu…). Arvo on säännöllinen lauseke \"~\"-erottimella, ja sitä verrataan URL-osoitteen loppuun."
+
+msgid "Already registered."
+msgstr "Olet jo rekisteröitynyt."
+
+msgid "An admin has made your account active. You can now log in with your password"
+msgstr "Sivuston ylläpito on aktivoinut käyttäjätilisi. Voit nyt kirjautua salasanallasi."
+
+msgid "An error occurred after creation of the guest user: {exception}"
+msgstr "Vieraskäyttäjän luomisen jälkeen tapahtui virhe: {exception}"
+
+msgid "An error occurred during the authentication via a third party authenticator."
+msgstr "Ulkoisen tunnistuspalvelun kautta kirjauduttaessa tapahtui virhe."
+
+msgid "An error occurred when loading dialog."
+msgstr "Ikkunan lataamisessa tapahtui virhe."
+
+msgid "An error occurred when sending mail. Retry later or contact administrator."
+msgstr "Sähköpostin lähettämisessä tapahtui virhe. Yritä myöhemmin uudelleen tai ota yhteyttä ylläpitäjään."
+
+msgid "An error occurred when the email was sent."
+msgstr "Sähköpostin lähettämisessä tapahtui virhe."
+
+msgid "An error occurred when the notification email was sent."
+msgstr "Ilmoitussähköpostin lähettämisessä tapahtui virhe."
+
+msgid "Append cas/sso login links to login page"
+msgstr "Lisää CAS-/SSO-kirjautumislinkit kirjautumissivulle"
+
+msgid "Authentication error"
+msgstr "Tunnistautumisvirhe"
+
+msgid "Breadcrumb"
+msgstr "Murupolku"
+
+msgid "Browse and manage your work here."
+msgstr "Selaa"
+
+msgid "Buttons"
+msgstr "Painikkeet"
+
+msgid "CAS Login"
+msgstr "CAS-kirjautuminen"
+
+msgid "Check this to require passing a ReCaptcha test when registering"
+msgstr "Vaadi ReCaptcha rekisteröitymislomakkeella"
+
+msgid "Check your email \"{email}\" to confirm the change."
+msgstr "Vahvista muutos sähköpostiosoitteeseen \"{email}\" lähetetyn viestin kautta."
+
+msgid "Check your email \"{user_email}\" to confirm the change."
+msgstr "Vahvista muutos sähköpostiosoitteeseen \"{user_email}\" lähetetyn viestin kautta."
+
+msgid "Check your email to confirm your registration."
+msgstr "Vahvista rekisteröitymisesi sähköpostiisi lähetetyn viestin kautta."
+
+msgid "Classical board (pages of modules)"
+msgstr "Perinteinen näkymä (moduulien sivut)"
+
+msgid "Clear registration token"
+msgstr "Tyhjennä rekisteröitymistunniste"
+
+msgid "Closed to visitors"
+msgstr "Suljettu kävijöiltä"
+
+msgid "Comments"
+msgstr "Kommentit"
+
+msgid "Confirmation Error"
+msgstr "Vahvistusvirhe"
+
+msgid "Confirmation of registration"
+msgstr "Rekisteröitymisen vahvistus"
+
+msgid "Contact your administrator for more information."
+msgstr "Lisätietoja saat ylläpitäjältä."
+
+msgid "Create a local session cookie for api"
+msgstr "Luo API:lle paikallinen istuntoeväste"
+
+msgid "Create the account"
+msgstr "Luo tili"
+
+msgid "Current password (required to change it)"
+msgstr "Nykyinen salasana (vaaditaan vaihtamiseen)"
+
+msgid "Dashboard Label"
+msgstr "Käyttöliittymäteksti ohjausnäkymässä"
+
+msgid "Default dashboard label"
+msgstr "Oman näkymän oletusnimi"
+
+msgid "Default email sent to confirm registration"
+msgstr "Rekisteröitymisen vahvistusviestin oletusteksti"
+
+msgid "Default email sent to confirm registration after moderation"
+msgstr "Tarkistuksen jälkeisen vahvistusviestin oletusteksti"
+
+msgid "Default email sent to update email"
+msgstr "Sähköpostiosoitteen vaihtoviestin oletusteksti"
+
+msgid "Default emails to notify registrations"
+msgstr "Rekisteröitymisistä ilmoitettavat oletusosoitteet"
+
+msgid "Default log in text"
+msgstr "Kirjautumissivun oletusteksti"
+
+msgid "Default message to confirm email on the page"
+msgstr "Sähköpostin vahvistuksen oletusviesti sivulla"
+
+msgid "Default message to confirm registration and moderation on the page"
+msgstr "Rekisteröitymisen ja tarkistuksen oletusviesti sivulla"
+
+msgid "Default message to confirm registration on the page"
+msgstr "Rekisteröitymisen vahvistuksen oletusviesti sivulla"
+
+msgid "Default page for account"
+msgstr "Tilin oletussivu"
+
+msgid "Default page slug of the terms and conditions"
+msgstr "Käyttöehtosivun oletuslyhytnimi"
+
+msgid "Default redirect page after login"
+msgstr "Oletussivu kirjautumisen jälkeen"
+
+msgid "Default register text"
+msgstr "Rekisteröitymissivun oletusteksti"
+
+msgid "Default registration features"
+msgstr "Rekisteröitymisen oletusominaisuudet"
+
+msgid "Default role on register"
+msgstr "Oletusrooli rekisteröityessä"
+
+msgid "Default subject of email sent to update email"
+msgstr "Sähköpostiosoitteen vaihtoviestin oletusotsikko"
+
+msgid "Default subject of the email sent to confirm email"
+msgstr "Sähköpostin vahvistusviestin oletusotsikko"
+
+msgid "Default subject of the email sent to confirm registration after moderation"
+msgstr "Tarkistuksen jälkeisen vahvistusviestin oletusotsikko"
+
+msgid "Default text for terms and conditions"
+msgstr "Käyttöehtojen oletusteksti"
+
+msgid "Disable trigger"
+msgstr "Poista laukaisin käytöstä"
+
+msgid "Display label My board"
+msgstr "Näytä nimi Oma sivu"
+
+msgid "Display login form"
+msgstr "Näytä kirjautumislomake"
+
+msgid "Display register form on login page"
+msgstr "Näytä rekisteröitymislomake kirjautumissivulla"
+
+msgid "Display the form to recover the password."
+msgstr "Näytä salasanan palautuslomake."
+
+msgid "Display the login form."
+msgstr "Näytä kirjautumislomake."
+
+msgid "Display the register form. The options are set in site settings."
+msgstr "Näytä rekisteröitymislomake. Asetukset määritetään sivuston asetuksissa."
+
+msgid "Display user bar for guests (require Omeka option)"
+msgstr "Näytä käyttäjäpalkki vieraskäyttäjille (vaatii Omekan asetuksen)"
+
+msgid "Display user name"
+msgstr "Näytä käyttäjänimi"
+
+msgid "Email cannot be updated: the user is not related to a site."
+msgstr "Sähköpostiosoitetta ei voi päivittää: käyttäjä ei liity mihinkään sivustoon."
+
+msgid "Email invalid"
+msgstr "Virheellinen sähköpostiosoite"
+
+msgid "Email is required."
+msgstr "Sähköpostiosoite vaaditaan."
+
+msgid "Email or password invalid"
+msgstr "Virheellinen sähköpostiosoite tai salasana"
+
+msgid "Email sent to administrator to notify about a new user"
+msgstr "Ylläpitäjälle lähetettävä ilmoitus uudesta käyttäjästä"
+
+msgid "Email sent to confirm registration"
+msgstr "Rekisteröitymisen vahvistusviesti"
+
+msgid "Email sent to confirm registration after moderation"
+msgstr "Tarkistuksen jälkeinen vahvistusviesti"
+
+msgid "Email sent to update email"
+msgstr "Sähköpostiosoitteen vaihtoviesti"
+
+msgid "Emails to notify registrations"
+msgstr "Rekisteröitymisistä ilmoitettavat osoitteet"
+
+msgid "Existing password empty."
+msgstr "Nykyinen salasana puuttuu."
+
+msgid "Failed login attempt from %s"
+msgstr "Epäonnistunut kirjautumisyritys %s -sivustolla"
+
+msgid "Force terms agreement"
+msgstr "Vaadi käyttöehtojen hyväksyntä"
+
+msgid "Form invalid"
+msgstr "Lomakkeessa on virheitä"
+
+msgid "Greetings!\n\nTo reset your password on {site_title}, fill this token in the app: {token}.\n\nYour activation link will expire on {date}."
+msgstr "Hei!\n\nNollataksesi salasanasi palvelussa {site_title} syötä sovellukseen tämä tunniste: {token}.\n\nAktivointilinkkisi vanhenee {date}."
+
+msgid "Guest"
+msgstr "Vieras"
+
+msgid "Guest account"
+msgstr "Vierastili"
+
+msgid "Guest board (this menu)"
+msgstr "Vieraskäyttäjän näkymä (tämä valikko)"
+
+msgid "Guest navigation"
+msgstr "Vieraskäyttäjän navigaatio"
+
+msgid "Guest site"
+msgstr "Vieraskäyttäjän sivusto"
+
+msgid "Guest: Forgot password"
+msgstr "Vieraskäyttäjä: Unohtunut salasana"
+
+msgid "Guest: Log in"
+msgstr "Vieraskäyttäjä: Kirjaudu sisään"
+
+msgid "Guest: Log in / Log out"
+msgstr "Vieraskäyttäjä: Kirjaudu sisään / ulos"
+
+msgid "Guest: Log in / My board"
+msgstr "Vieraskäyttäjä: Kirjaudu sisään / Oma sivu"
+
+msgid "Guest: Log out"
+msgstr "Vieraskäyttäjä: Kirjaudu ulos"
+
+msgid "Guest: Login"
+msgstr "Vieraskäyttäjä: Kirjautuminen"
+
+msgid "Guest: Register"
+msgstr "Vieraskäyttäjä: Rekisteröidy"
+
+msgid "Guest: Reset terms agreement for all guests"
+msgstr "Vieraskäyttäjä: Nollaa käyttöehtojen hyväksyntä kaikilta"
+
+msgid "Guests"
+msgstr "Vieraskäyttäjät"
+
+msgid "Hi {user_name},\nWe are happy to open your account on {main_title} / {site_title} ({site_url}).\nYou can now log in and discover the site."
+msgstr "Hei {user_name},\nTilisi palvelussa {main_title} / {site_title} ({site_url}) on avattu.\nVoit nyt kirjautua sisään ja tutustua sivustoon."
+
+msgid "Hi {user_name},\nYou have registered for an account on {main_title} / {site_title} ({site_url}).\nPlease confirm your registration by following this link: {token_url}.\nIf you did not request to join {main_title} please disregard this email."
+msgstr "Hei {user_name},\nOlet rekisteröitynyt käyttäjäksi palveluun {main_title} / {site_title} ({site_url}).\nVahvista rekisteröitymisesi tästä linkistä: {token_url}.\nJos et ole rekisteröitynyt palveluun {main_title}, voit jättää tämän viestin huomiotta."
+
+msgid "Hi {user_name},\nYou have requested to update email on {main_title} / {site_title} ({site_url}).\nPlease confirm your email by following this link: {token_url}.\nIf you did not request to update your email on {main_title}, please disregard this email."
+msgstr "Hei {user_name},\nOlet pyytänyt sähköpostiosoitteesi vaihtamista palvelussa {main_title} / {site_title} ({site_url}).\nVahvista sähköpostiosoitteesi tästä linkistä: {token_url}.\nJos et ole pyytänyt sähköpostiosoitteen vaihtamista palvelussa {main_title}, voit jättää tämän viestin huomiotta."
+
+msgid "Hi,\nA new user, {user_name}, is registering on <a href=\"{site_url}\">{site_title}</a> ({main_title}).\nYou may moderate this email: {user_email}.\nThis is an automatic message."
+msgstr "Hei,\nUusi käyttäjä {user_name} on rekisteröitymässä sivustolle <a href=\"{site_url}\">{site_title}</a> ({main_title}).\nVoit tarkistaa sähköpostiosoitteen: {user_email}.\nTämä on automaattinen viesti."
+
+msgid "Hide the login form (for sso)"
+msgstr "Piilota kirjautumislomake (SSO:ta varten)"
+
+msgid "Html to display before the forgot-password form"
+msgstr "Salasanan palautuslomaketta ennen näytettävä HTML"
+
+msgid "Html to display before the login form"
+msgstr "Kirjautumislomaketta ennen näytettävä HTML"
+
+msgid "Html to display before the registration form"
+msgstr "Rekisteröitymislomaketta ennen näytettävä HTML"
+
+msgid "I agree the terms and conditions."
+msgstr "Hyväksyn käyttöehdot."
+
+msgid "I agree the {link}terms and conditions{/link}."
+msgstr "Hyväksyn {link}käyttöehdot{/link}."
+
+msgid "I agree with terms and conditions."
+msgstr "Hyväksyn käyttöehdot."
+
+msgid "If checked, a session cookie will be created, so the user will be able to log in in Omeka from an other web app."
+msgstr "Jos valittu, luodaan istuntoeväste, jolloin käyttäjä voi kirjautua Omekaan toisesta verkkosovelluksesta."
+
+msgid "If checked, a site id or slug will be required when registering via api. Note: when this setting is set, all previous users must be added to a site."
+msgstr "Jos valittu, API:n kautta rekisteröidyttäessä vaaditaan sivuston tunniste tai lyhytnimi. Huom: kun asetus on käytössä, kaikki aiemmat käyttäjät on lisättävä johonkin sivustoon."
+
+msgid "If checked, the user won’t have to validate his email, so he will be able to log in directly."
+msgstr "Jos valittu, käyttäjän ei tarvitse vahvistaa sähköpostiosoitettaan, ja hän voi kirjautua suoraan."
+
+msgid "If the text is on a specific page, or for other usage."
+msgstr "Jos teksti on omalla sivullaan tai muuta käyttöä varten."
+
+msgid "If unchecked, the user will be logged out if terms are not accepted."
+msgstr "Jos ei valittu, käyttäjä kirjataan ulos, jos hän ei hyväksy ehtoja."
+
+msgid "In the dialog Log In, use a link for forgot-password"
+msgstr "Käytä kirjautumisikkunassa linkkiä salasanan palautukseen"
+
+msgid "In the dialog Log In, use a link for register"
+msgstr "Käytä kirjautumisikkunassa linkkiä rekisteröitymiseen"
+
+msgid "Incorrect password"
+msgstr "Virheellinen salasana"
+
+msgid "Invalid email."
+msgstr "Virheellinen sähköpostiosoite."
+
+msgid "Invalid token"
+msgstr "Virheellinen avain"
+
+msgid "Invalid token stop"
+msgstr "Virheellinen tunniste, toiminto keskeytetty"
+
+msgid "Invalid token."
+msgstr "Virheellinen tunniste."
+
+msgid "Invalid token: your email was not confirmed for {site_title}."
+msgstr "Virheellinen tunniste: sähköpostiosoitettasi ei vahvistettu palveluun {site_title}."
+
+msgid "It is currently not possible to send a token for a private site. Set option to skip email validation."
+msgstr "Yksityiselle sivustolle ei voi tällä hetkellä lähettää tunnistetta. Ota käyttöön asetus, joka ohittaa sähköpostin vahvistuksen."
+
+msgid "Label Log in"
+msgstr "Kirjaudu sisään -linkin teksti"
+
+msgid "Label My board"
+msgstr "Oma sivu -linkin teksti"
+
+msgid "Label log in"
+msgstr "Sisäänkirjautumislinkin teksti"
+
+msgid "Label log out"
+msgstr "Uloskirjautumislinkin teksti"
+
+msgid "Limit access to api to these domains (cors)"
+msgstr "Rajaa API-pääsy näihin verkkotunnuksiin (CORS)"
+
+msgid "Links"
+msgstr "Linkit"
+
+msgid "Log in Text"
+msgstr "Kirjautumissivun teksti"
+
+msgid "Log out"
+msgstr "Kirjaudu ulos"
+
+msgid "Login"
+msgstr "Kirjaudu"
+
+msgid "Login Text"
+msgstr "Kirjautumislinkin käyttöliittymäteksti"
+
+msgid "Message to confirm email on the page"
+msgstr "Sähköpostin vahvistuksen viesti sivulla"
+
+msgid "Message to confirm registration and moderation on the page"
+msgstr "Rekisteröitymisen ja tarkistuksen viesti sivulla"
+
+msgid "Message to confirm registration on the page"
+msgstr "Rekisteröitymisen vahvistuksen viesti sivulla"
+
+msgid "Method Not Allowed"
+msgstr "Menetelmä ei ole sallittu"
+
+msgid "Missing site."
+msgstr "Sivusto puuttuu."
+
+msgid "My Account"
+msgstr "Käyttäjätili"
+
+msgid "My account"
+msgstr "Oma tili"
+
+msgid "My board"
+msgstr "Oma sivu"
+
+msgid "My dashboard"
+msgstr "Oma näkymä"
+
+msgid "My email"
+msgstr "Sähköpostiosoitteeni"
+
+msgid "Navigation Guest"
+msgstr "Vieraskäyttäjän navigaatio"
+
+msgid "New email empty."
+msgstr "Uusi sähköpostiosoite puuttuu."
+
+msgid "New password empty."
+msgstr "Uusi salasana puuttuu."
+
+msgid "New password should have 6 characters or more."
+msgstr "Uudessa salasanassa on oltava vähintään 6 merkkiä."
+
+msgid "New request to join %s"
+msgstr "Uusi sivuston %s rekisteröitymispyyntö"
+
+msgid "No change"
+msgstr "Ei muutosta"
+
+msgid "No process can be done without settings."
+msgstr "Toimintoa ei voi suorittaa ilman asetuksia."
+
+msgid "Open to everyone"
+msgstr "Avoin kaikille"
+
+msgid "Open with moderation"
+msgstr "Avoin tarkistuksen jälkeen"
+
+msgid "Options to reset agreement terms"
+msgstr "Ehtojen hyväksynnän nollausasetukset"
+
+msgid "Page slug of the terms and conditions"
+msgstr "Käyttöehtosivun lyhytnimi"
+
+msgid "Pages not to redirect"
+msgstr "Sivut, joita ei ohjata uudelleen"
+
+msgid "Pages where the user may select an allowed role"
+msgstr "Sivut, joilla käyttäjä voi valita sallitun roolin"
+
+msgid "Password again for match"
+msgstr "Salasana uudelleen"
+
+msgid "Password invalid"
+msgstr "Virheellinen salasana"
+
+msgid "Password is required."
+msgstr "Salasana vaaditaan."
+
+msgid "Password token expired."
+msgstr "Salasanatunniste on vanhentunut."
+
+msgid "Passwords do not match!"
+msgstr "Salasanat eivät täsmää"
+
+msgid "Passwords match!"
+msgstr "Salasanat täsmäävät"
+
+msgid "Please verify you're a human"
+msgstr "Roskapostituksen esto"
+
+msgid "Redirect page after logging in"
+msgstr "Sivu kirjautumisen jälkeen"
+
+msgid "Register"
+msgstr "Rekistöröidy"
+
+msgid "Register Text"
+msgstr "Rekisteröitymislinkin käyttöliittymäteksti"
+
+msgid "Registration"
+msgstr "Rekisteröityminen"
+
+msgid "Registration Features"
+msgstr "Rekisteröitymisen hyödyt"
+
+msgid "Registration for %s"
+msgstr "Rekisteröityminen %s -sivustolle"
+
+msgid "Request is empty."
+msgstr "Pyyntö on tyhjä."
+
+msgid "Require ReCaptcha"
+msgstr "Vaadi ReCaptcha"
+
+msgid "Require ReCaptcha?"
+msgstr "Vaadi ReCaptcha"
+
+msgid "Requires a site to register via api"
+msgstr "Vaadi sivusto API-rekisteröitymisessä"
+
+msgid "Resend a code"
+msgstr "Lähetä koodi uudelleen"
+
+msgid "Reset terms agreement for all guests"
+msgstr "Nollaa käyttöehtojen hyväksyntä kaikilta vieraskäyttäjiltä"
+
+msgid "Role \"{role]\" is not allowed to log in via api."
+msgstr "Rooli \"{role]\" ei voi kirjautua API:n kautta."
+
+msgid "Role \"{role}\" is not allowed to login via api."
+msgstr "Rooli \"{role}\" ei voi kirjautua API:n kautta."
+
+msgid "Roles that can log in via api"
+msgstr "Roolit, jotka voivat kirjautua API:n kautta"
+
+msgid "Search config"
+msgstr "Hakuasetukset"
+
+msgid "Search history"
+msgstr "Hakuhistoria"
+
+msgid "Search manager"
+msgstr "Haun hallinta"
+
+msgid "Select "
+msgstr "Valitse "
+
+msgid "Select roles…"
+msgstr "Valitse roolit…"
+
+msgid "Select your identity provider…"
+msgstr "Valitse tunnistautumispalvelu…"
+
+msgid "Selections"
+msgstr "Valinnat"
+
+msgid "Send an email to confirm registration after moderation (user should be activated first)"
+msgstr "Lähetä tarkistuksen jälkeen vahvistusviesti (käyttäjä on aktivoitava ensin)"
+
+msgid "Send an email to reset the password"
+msgstr "Lähetä salasanan nollausviesti"
+
+msgid "Set \"home\" for home page (admin or public), \"site\" for the current site home, \"top\" for main public page, \"me\" for guest account, or any path starting with \"/\", including \"/\" itself for main home page."
+msgstr "Anna \"home\" etusivulle (ylläpito tai julkinen), \"site\" nykyisen sivuston etusivulle, \"top\" julkiselle pääsivulle, \"me\" vierastilille tai mikä tahansa \"/\"-merkillä alkava polku, myös pelkkä \"/\" pääetusivulle."
+
+msgid "Set false"
+msgstr "Aseta epätodeksi"
+
+msgid "Set true"
+msgstr "Aseta todeksi"
+
+msgid "Short Registration Features"
+msgstr "Rekisteröitymisen hyödyt lyhyesti"
+
+msgid "Site: %s"
+msgstr "Sivusto: %s"
+
+msgid "Skip email validation on register"
+msgstr "Ohita sähköpostin vahvistus rekisteröityessä"
+
+msgid "Skip terms agreement"
+msgstr "Ohita käyttöehtojen hyväksyntä"
+
+msgid "Stale Token"
+msgstr "Käyttämätön avain"
+
+msgid "Subject of email sent to update email"
+msgstr "Sähköpostiosoitteen vaihtoviestin otsikko"
+
+msgid "Subject of the email sent to administrator to notify about a new user"
+msgstr "Ylläpitäjälle lähetettävän uuden käyttäjän ilmoituksen otsikko"
+
+msgid "Subject of the email sent to confirm email"
+msgstr "Sähköpostin vahvistusviestin otsikko"
+
+msgid "Subject of the email sent to confirm registration after moderation"
+msgstr "Tarkistuksen jälkeisen vahvistusviestin otsikko"
+
+msgid "Submit new password"
+msgstr "Tallenna uusi salasana"
+
+msgid "Successfully logged out."
+msgstr "Olet kirjautunut ulos."
+
+msgid "Text for terms and conditions"
+msgstr "Käyttöehtojen teksti"
+
+msgid "Text to display after the forgot-password form"
+msgstr "Salasanan palautuslomakkeen jälkeen näytettävä teksti"
+
+msgid "Text to display after the login form"
+msgstr "Kirjautumislomakkeen jälkeen näytettävä teksti"
+
+msgid "Text to display after the registration form"
+msgstr "Rekisteröitymislomakkeen jälkeen näytettävä teksti"
+
+msgid "Thank you for registering. Please check your email for a confirmation message. Once you have confirmed your request and we have confirmed it, you will be able to log in."
+msgstr "Kiitos rekisteröitymisestä. Tarkista sähköpostistasi vahvistusviesti. Kun olet vahvistanut pyyntösi ja me olemme hyväksyneet sen, voit kirjautua sisään."
+
+msgid "Thank you for registering. Please check your email for a confirmation message. Once you have confirmed your request, a moderator will confirm registration."
+msgstr "Kiitos rekisteröitymisestä. Tarkista sähköpostistasi vahvistusviesti. Kun olet vahvistanut pyyntösi, ylläpitäjä hyväksyy rekisteröitymisen."
+
+msgid "Thank you for registering. Please check your email for a confirmation message. Once you have confirmed your request, you will be able to log in."
+msgstr "Kiitos rekisteröitymisestä. Tarkista sähköpostistasi vahvistusviesti. Kun olet vahvistanut pyyntösi, voit kirjautua sisään."
+
+msgid "Thank you for registering. You can now log in and use the library."
+msgstr "Kiitos rekisteröitymisestä. Voit nyt kirjautua sisään ja käyttää palvelua."
+
+msgid "Thanks for accepting the terms and conditions."
+msgstr "Kiitos, että hyväksyit käyttöehdot."
+
+msgid "Thanks for joining %s!"
+msgstr "Kiitos rekisteröitymisestä %s -sivustolle!"
+
+msgid "Thanks for joining {site_title}! You can now log in using the password you chose."
+msgstr "Tervetuloa palveluun {site_title}! Voit nyt kirjautua sisään valitsemallasi salasanalla."
+
+msgid "Thanks for joining {site_title}! Your registration is under moderation. See you soon!"
+msgstr "Kiitos rekisteröitymisestä palveluun {site_title}! Rekisteröitymisesi odottaa hyväksyntää. Nähdään pian!"
+
+msgid "The access to this website requires you accept the current terms and conditions."
+msgstr "Sivuston käyttö edellyttää voimassa olevien käyttöehtojen hyväksymistä."
+
+msgid "The display name must be 50 characters or fewer."
+msgstr "Näyttönimessä voi olla enintään 50 merkkiä."
+
+msgid "The display name must contain only letters and numbers."
+msgstr "Näyttönimessä voi olla vain kirjaimia ja numeroita."
+
+msgid "The email \"{email}\" is not yours."
+msgstr "Sähköpostiosoite \"{email}\" ei ole sinun."
+
+msgid "The email \"{user_email}\" is not yours."
+msgstr "Sähköpostiosoite \"{user_email}\" ei ole sinun."
+
+msgid "The list of emails to notify when a user registers, one by row."
+msgstr "Sähköpostiosoitteet, joihin ilmoitetaan uusista rekisteröitymisistä, yksi per rivi."
+
+msgid "The message of confirmation of the registration has been sent."
+msgstr "Rekisteröitymisen vahvistusviesti on lähetetty."
+
+msgid "The message to  display after confirmation of a mail."
+msgstr "Sähköpostin vahvistamisen jälkeen näytettävä viesti."
+
+msgid "The module %1$s should be upgraded to version %2$s or later."
+msgstr "Moduuli %1$s on päivitettävä versioon %2$s tai uudempaan."
+
+msgid "The new email is the same than the current one."
+msgstr "Uusi sähköpostiosoite on sama kuin nykyinen."
+
+msgid "The new name is empty."
+msgstr "Uusi nimi puuttuu."
+
+msgid "The role {role} is an admin role and cannot be used for registering. Role \"guest\" is used instead."
+msgstr "Rooli {role} on ylläpitorooli, eikä sitä voi käyttää rekisteröitymisessä. Sen sijaan käytetään roolia \"guest\"."
+
+msgid "The role {role} is not valid. Role \"guest\" is used instead."
+msgstr "Rooli {role} ei ole kelvollinen. Sen sijaan käytetään roolia \"guest\"."
+
+msgid "The site doesn’t exist."
+msgstr "Sivustoa ei ole olemassa."
+
+msgid "The text of the email sent when the user wants to update it."
+msgstr "Viesti, joka lähetetään, kun käyttäjä haluaa vaihtaa sähköpostiosoitteensa."
+
+msgid "The text of the email to confirm the registration and to send the token."
+msgstr "Viesti, jolla rekisteröityminen vahvistetaan ja tunniste lähetetään."
+
+msgid "The text to display to accept conditions."
+msgstr "Ehtojen hyväksymiseen näytettävä teksti."
+
+msgid "The text to display to accept conditions. When a page is set, use {link}text{/link} to wrap the link text."
+msgstr "Ehtojen hyväksymiseen näytettävä teksti. Jos sivu on asetettu, merkitse linkkiteksti muodossa {link}teksti{/link}."
+
+msgid "The text to use for the \"Log in\" link in the user bar"
+msgstr "Käyttäjäpalkin \"Kirjaudu sisään\" -linkin teksti"
+
+msgid "The text to use for the \"Register\" link in the user bar"
+msgstr "Käyttäjäpalkin \"Rekisteröidy\" -linkin teksti"
+
+msgid "The text to use for the label on the user’s dashboard"
+msgstr "Käyttäjän oman näkymän otsikkoteksti"
+
+msgid "The two passwords do not match."
+msgstr "Salasanat eivät täsmää."
+
+msgid "This dialog is not managed."
+msgstr "Tätä ikkunaa ei tueta."
+
+msgid "This dialog requires module Two-Factor Authentication."
+msgstr "Tämä ikkuna vaatii Two-Factor Authentication -moduulin."
+
+msgid "This option allows to display only the links for the other modules, like Single Sign-On."
+msgstr "Tällä asetuksella näytetään vain muiden moduulien, kuten Single Sign-Onin, linkit."
+
+msgid "This option is useful for modules that create derivative roles for guests."
+msgstr "Tämä asetus on hyödyllinen moduuleille, jotka luovat vieraskäyttäjille johdettuja rooleja."
+
+msgid "This parameter is used to manage some site related features, in particular messages."
+msgstr "Tällä asetuksella hallitaan joitakin sivustokohtaisia toimintoja, erityisesti viestejä."
+
+msgid "This token is invalid. Check your email."
+msgstr "Tunniste on virheellinen. Tarkista sähköpostisi."
+
+msgid "To allow full access via api increases risks of intrusion."
+msgstr "Täyden pääsyn salliminen API:n kautta lisää tietomurron riskiä."
+
+msgid "Unable to send email."
+msgstr "Sähköpostia ei voitu lähettää."
+
+msgid "Unauthorized access."
+msgstr "Luvaton pääsy."
+
+msgid "Unexpected error during creation of guest user: {exception}"
+msgstr "Odottamaton virhe vieraskäyttäjää luotaessa: {exception}"
+
+msgid "Unknown error before creation of user."
+msgstr "Tuntematon virhe ennen käyttäjän luomista."
+
+msgid "Unknown error during creation of user."
+msgstr "Tuntematon virhe käyttäjää luotaessa."
+
+msgid "Update Account"
+msgstr "Päivitä käyttäjätili"
+
+msgid "Update account"
+msgstr "Päivitä tili"
+
+msgid "Update account info and password"
+msgstr "Päivitä käyttäjätilin tiedot ja salasana"
+
+msgid "Update email"
+msgstr "Vaihda sähköpostiosoite"
+
+msgid "Use name when connected"
+msgstr "Näytä nimi kirjautuneena"
+
+msgid "Use site setttings"
+msgstr "Käytä sivuston asetuksia"
+
+msgid "User #{user_id} wants to change email from \"{email}\" to \"{email_2}\", used by user #{user_id_2} (second check)."
+msgstr "Käyttäjä #{user_id} haluaa vaihtaa sähköpostiosoitteen \"{email}\" osoitteeseen \"{email_2}\", jota käyttää käyttäjä #{user_id_2} (toinen tarkistus)."
+
+msgid "User #{user_id} wants to change email from \"{email}\" to \"{email_2}\", used by user #{user_id_2}."
+msgstr "Käyttäjä #{user_id} haluaa vaihtaa sähköpostiosoitteen \"{email}\" osoitteeseen \"{email_2}\", jota käyttää käyttäjä #{user_id_2}."
+
+msgid "User cannot log in: already logged."
+msgstr "Kirjautuminen ei onnistu: olet jo kirjautunut."
+
+msgid "User cannot login: already logged."
+msgstr "Kirjautuminen ei onnistu: olet jo kirjautunut."
+
+msgid "User cannot register: already logged."
+msgstr "Rekisteröityminen ei onnistu: olet jo kirjautunut."
+
+msgid "User is not active and cannot update password."
+msgstr "Käyttäjä ei ole aktiivinen eikä voi vaihtaa salasanaa."
+
+msgid "User name, email, or password is invalid"
+msgstr "Käyttäjänimi, sähköpostiosoite tai salasana on virheellinen"
+
+msgid "User not logged."
+msgstr "Käyttäjä ei ole kirjautunut."
+
+msgid "User token for {site_title}"
+msgstr "Käyttäjätunniste palveluun {site_title}"
+
+msgid "Validation error during creation of guest user: {exception}"
+msgstr "Tarkistusvirhe vieraskäyttäjää luotaessa: {exception}"
+
+msgid "Validation error during creation of user. Please check your input."
+msgstr "Tarkistusvirhe käyttäjää luotaessa. Tarkista antamasi tiedot."
+
+msgid "Value is required and can't be empty"
+msgstr "Arvo vaaditaan, eikä se voi olla tyhjä"
+
+msgid "When terms and conditions are updated, you may want guests agree them one more time. Warning: to set false will impact all guests. So warn them some time before."
+msgstr "Kun käyttöehdot päivittyvät, voit pyytää vieraskäyttäjiä hyväksymään ne uudelleen. Varoitus: asetus vaikuttaa kaikkiin vieraskäyttäjiin, joten ilmoita heille hyvissä ajoin."
+
+msgid "When the moderation is set, the user may be informed automatically when the admin activates account (check box in second user tab)."
+msgstr "Kun tarkistus on käytössä, käyttäjälle voidaan ilmoittaa automaattisesti, kun ylläpitäjä aktivoi tilin (valintaruutu käyttäjän toisella välilehdellä)."
+
+msgid "Wrong email or password."
+msgstr "Väärä sähköpostiosoite tai salasana."
+
+msgid "Wrong password."
+msgstr "Väärä salasana."
+
+msgid "You already agreed the terms and conditions."
+msgstr "Olet jo hyväksynyt käyttöehdot."
+
+msgid "You can now log in using the password you chose."
+msgstr "Voit nyt kirjautua käyttäen valitsemaasi salasanaa."
+
+msgid "You cannot change your password here."
+msgstr "Et voi vaihtaa salasanaasi täällä."
+
+msgid "You cannot send a message to confirm registration: user is not active."
+msgstr "Vahvistusviestiä ei voi lähettää: käyttäjä ei ole aktiivinen."
+
+msgid "You cannot update email and another data in the same time."
+msgstr "Et voi vaihtaa sähköpostiosoitetta ja muita tietoja samanaikaisesti."
+
+msgid "You cannot update password and another data in the same time."
+msgstr "Et voi vaihtaa salasanaa ja muita tietoja samanaikaisesti."
+
+msgid "You have been logged out, but can continue browsing the site."
+msgstr "Sinut on kirjattu ulos. Voit kuitenkin jatkaa sivuston selailua."
+
+msgid "You have registered for an account on %s. Please confirm your registration by following %s.  If you did not request to join %s please disregard this email."
+msgstr "Olet lähettänyt rekisteröitymispyynnön %s -sivustolle. Vahvista rekisteröitymisesi seuraamalla %s.  Jos et mielestäsi ole lähettänyt rekisteröitymispyyntöä %s -sivustolle, voit poistaa tämän viestin."
+
+msgid "Your %s account"
+msgstr "Käyttäjätilisi %s -sivustolla"
+
+msgid "Your account has not been confirmed: check your email."
+msgstr "Tiliäsi ei ole vahvistettu: tarkista sähköpostisi."
+
+msgid "Your account is under moderation for opening."
+msgstr "Tilisi odottaa avaamista ja tarkistusta."
+
+msgid "Your email \"{user_email}\" is confirmed for {site_title}."
+msgstr "Sähköpostiosoitteesi \"{user_email}\" on vahvistettu palveluun {site_title}."
+
+msgid "Your modifications have been saved."
+msgstr "Muutokset on tallennettu."
+
+msgid "Your request contains metadata that cannot be updated."
+msgstr "Pyyntösi sisältää metatietoja, joita ei voi päivittää."
+
+msgid "Your request to join %s"
+msgstr "Pyyntösi rekisteröityä %s sivustolle"
+
+msgid "Your temporary access to the site has expired. Please check your email for the link to follow to confirm your registration."
+msgstr "Väliaikainen käyttöoikeutesi on päättynyt. Ole hyvä ja vie rekisteröityminen päätökseen klikkaamalla linkkiä sähköpostiosoitteeseesi lähetetyssä rekisteröintiviestissä."
+
+msgid "[GuestApi] An error occurred when the email was sent."
+msgstr "[GuestApi] Sähköpostin lähettämisessä tapahtui virhe."
+
+msgid "[Guest] An error occurred when the email was sent."
+msgstr "[Guest] Sähköpostin lähettämisessä tapahtui virhe."
+
+msgid "[Guest] An error occurred when the notification email was sent."
+msgstr "[Guest] Ilmoitussähköpostin lähettämisessä tapahtui virhe."
+
+msgid "[Guest] Site #{site_slug} is not available."
+msgstr "[Guest] Sivusto #{site_slug} ei ole käytettävissä."
+
+msgid "[No message]"
+msgstr "[Ei viestiä]"
+
+msgid "[No subject]"
+msgstr "[Ei otsikkoa]"
+
+msgid "[Omeka Guest] New registration"
+msgstr "[Omeka Guest] Uusi rekisteröityminen"
+
+msgid "[Unknown idp]"
+msgstr "[Tuntematon tunnistuspalvelu]"
+
+msgid "[{site_title}] A user is registering"
+msgstr "[{site_title}] Uusi käyttäjä rekisteröityy"
+
+msgid "[{site_title}] Account open"
+msgstr "[{site_title}] Tili avattu"
+
+msgid "[{site_title}] Confirm email"
+msgstr "[{site_title}] Vahvista sähköpostiosoite"
+
+msgid "this link"
+msgstr "tätä linkkiä"

@@ -1,0 +1,43 @@
+services:
+  db:
+    image: mariadb:11.4
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: ${OMEKA_DB_NAME:-omeka}
+      MARIADB_USER: ${OMEKA_DB_USER:-omeka}
+      MARIADB_PASSWORD: ${OMEKA_DB_PASSWORD:?Set OMEKA_DB_PASSWORD in .env}
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD:?Set MARIADB_ROOT_PASSWORD in .env}
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
+    volumes:
+      - db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  omeka:
+    build: .
+    image: omeka-s-finland-kit:latest
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${KIT_HTTP_PORT:-8080}:80"
+    environment:
+      OMEKA_DB_HOST: db
+      OMEKA_DB_NAME: ${OMEKA_DB_NAME:-omeka}
+      OMEKA_DB_USER: ${OMEKA_DB_USER:-omeka}
+      OMEKA_DB_PASSWORD: ${OMEKA_DB_PASSWORD}
+      OMEKA_ADMIN_EMAIL: ${OMEKA_ADMIN_EMAIL:-}
+      OMEKA_ADMIN_NAME: ${OMEKA_ADMIN_NAME:-Admin}
+      OMEKA_ADMIN_PASSWORD: ${OMEKA_ADMIN_PASSWORD:-}
+      OMEKA_TITLE: ${OMEKA_TITLE:-Omeka S Finland Kit}
+      KIT_DEMO: ${KIT_DEMO:-1}
+    volumes:
+      - files:/var/www/html/files
+
+volumes:
+  db:
+  files:

@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: fi_FI\n"
+"Project-Id-Version: BotChallenge (Omeka S Finland Kit)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Automated browser detected. Access denied."
+msgstr "Automatisoitu selain havaittu. Pääsy estetty."
+
+msgid "BotChallenge: the ranges of {bot} could not be written in {path}."
+msgstr "BotChallenge: kohteen {bot} osoitealueita ei voitu kirjoittaa sijaintiin {path}."
+
+msgid "BotChallenge: the source of {bot} is unreachable or empty ({url}): the bundled ranges are kept."
+msgstr "BotChallenge: kohteen {bot} lähde ei vastaa tai on tyhjä ({url}): moduulin mukana tulleet osoitealueet säilytetään."
+
+msgid "BotChallenge: {total} ranges updated for {bot}."
+msgstr "BotChallenge: {total} osoitealuetta päivitetty kohteelle {bot}."
+
+msgid "BotChallenge: {total} source(s) refreshed."
+msgstr "BotChallenge: {total} lähde(ttä) päivitetty."
+
+msgid "Challenge delay (seconds)"
+msgstr "Tarkistuksen viive (sekuntia)"
+
+msgid "Cookie lifetime (days)"
+msgstr "Evästeen voimassaolo (päivää)"
+
+msgid "Detect headless browsers"
+msgstr "Tunnista näkymättömät (headless) selaimet"
+
+msgid "Exception IPs"
+msgstr "Poikkeus-IP-osoitteet"
+
+msgid "Exception paths"
+msgstr "Poikkeuspolut"
+
+msgid "Exempted search engines"
+msgstr "Vapautetut hakukoneet"
+
+msgid "HMAC salt"
+msgstr "HMAC-suola"
+
+msgid "Ips v4 or v6 or cidr ranges to exclude from the challenge, one per line: the networks of the institution, a partner harvester, a specific bot. They are added to the ranges of the search engines above."
+msgstr "Tarkistuksesta vapautettavat IPv4- tai IPv6-osoitteet tai CIDR-alueet, yksi per rivi: esimerkiksi organisaation verkot, yhteistyökumppanin haravoija tai tietty botti. Ne lisätään yllä olevien hakukoneiden osoitealueisiin."
+
+msgid "JavaScript required"
+msgstr "JavaScript vaaditaan"
+
+msgid "Number of days the challenge cookie remains valid."
+msgstr "Kuinka monta päivää tarkistuseväste on voimassa."
+
+msgid "Number of seconds the visitor must wait before the cookie is set."
+msgstr "Kuinka monta sekuntia kävijän on odotettava ennen kuin eväste asetetaan."
+
+msgid "Please enable JavaScript in your browser to access this site."
+msgstr "Ota JavaScript käyttöön selaimessasi päästäksesi tälle sivustolle."
+
+msgid "Powered by %s"
+msgstr "Alustana %s"
+
+msgid "Run a job to fetch the ip ranges from the sources of the search engines. A source that is unreachable or truncated is skipped and the bundled ranges are kept."
+msgstr "Käynnistä työ, joka hakee osoitealueet hakukoneiden lähteistä. Lähde, joka ei vastaa tai on vajaa, ohitetaan ja moduulin mukana tulleet osoitealueet säilytetään."
+
+msgid "Run additional tests to detect headless browsers (Selenium, PhantomJS, Puppeteer, etc.)."
+msgstr "Suorita lisätestejä näkymättömien selainten tunnistamiseksi (Selenium, PhantomJS, Puppeteer jne.)."
+
+msgid "Search engines whose published ip ranges are excluded from the challenge. Without exemption, they receive the javascript challenge, do not solve it, and stop indexing the site. The ranges are bundled with the module and may be updated with the job below."
+msgstr "Hakukoneet, joiden julkaistut osoitealueet vapautetaan tarkistuksesta. Ilman vapautusta ne saavat JavaScript-tarkistuksen, eivät ratkaise sitä ja lopettavat sivuston indeksoinnin. Osoitealueet tulevat moduulin mukana, ja ne voidaan päivittää alla olevalla työllä."
+
+msgid "Secret salt used to generate challenge tokens. Leave empty to regenerate automatically. Changing this value invalidates all existing cookies."
+msgstr "Salainen suola, jolla tarkistustunnisteet luodaan. Jätä tyhjäksi, niin se luodaan automaattisesti. Arvon muuttaminen mitätöi kaikki olemassa olevat evästeet."
+
+msgid "This is an automatic process. Please wait."
+msgstr "Tämä on automaattinen tarkistus. Odota hetki."
+
+msgid "Update the ip ranges now"
+msgstr "Päivitä osoitealueet nyt"
+
+msgid "Updating the ip ranges of the search engines in the background (job %s)."
+msgstr "Hakukoneiden osoitealueita päivitetään taustalla (työ %s)."
+
+msgid "Url path prefixes to exclude from the challenge, one per line. Example: /api"
+msgstr "Tarkistuksesta vapautettavat URL-polun alut, yksi per rivi. Esimerkki: /api"
+
+msgid "Verified. Redirecting…"
+msgstr "Tarkistettu. Ohjataan eteenpäin…"
+
+msgid "Verifying your browser"
+msgstr "Selaintasi tarkistetaan"
+
+msgid "Verifying your browser…"
+msgstr "Selaintasi tarkistetaan…"
